@@ -1,0 +1,117 @@
+
+.ids__space {
+  height: calc(var(--ids__density) * 0.7em);
+
+  &.S {
+    height: calc(var(--ids__density) * 0.7em);
+  }
+  &.M {
+    height: calc(var(--ids__density) * 1.4em);
+  }
+  &.L {
+    height: calc(var(--ids__density) * 2.4em);
+  }
+  &.XL {
+    height: calc(var(--ids__density) * 4em);
+  }
+
+
+}
+
+
+.ids__wrapper {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 0 calc(var(--ids__density) * 0.6em);
+  }
+
+  &.wide {
+    width: 100%;
+    padding: 0 calc(var(--ids__density) * 0.75em);
+
+    @media (max-width: 767px) {
+      padding: 0 calc(var(--ids__density) * 0.6em);
+    }
+  }
+
+  &.edge {
+    width: 100%;   
+    
+    @media (max-width: 767px) {
+      padding: 0
+    }
+  }
+}
+
+.ids__text-width {
+  width: 85%;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+
+
+.ids__grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: calc(var(--ids__density) * 0.4em);
+  --gap: 0em;
+  gap: var(--gap);
+
+  &.gap-L {
+    --gap: 1.5em;  
+  }
+
+  &.gap-M {
+    --gap: 1em;  
+  }
+
+  &.gap-S {
+    --gap: 0.5em;      
+  }
+
+  .ids__grid-cell {
+    --columns: 4;
+    width: calc((100% - var(--gap) * (var(--columns) - 1)) / var(--columns));
+
+    @media (max-width: 767px) {
+      --columns: 2;
+    }
+  }
+
+  &.XL {
+    .ids__grid-cell {
+      --columns: 2;
+
+      @media (max-width: 767px) {
+        --columns: 1;
+      }
+    }
+  }
+
+  &.L {
+    .ids__grid-cell {
+      --columns: 3;
+
+      @media (max-width: 767px) {
+        --columns: 2;
+      }
+    }
+  }
+
+  &.S {
+    .ids__grid-cell {
+      --columns: 6;
+
+      @media (max-width: 767px) {
+        --columns: 3;
+      }
+    }
+  }
+}

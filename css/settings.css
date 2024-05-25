@@ -33,7 +33,6 @@ body {
 /* Fluid typography */
 
 html {
-  scroll-behavior: smooth;
 
   --mobile-font-size-min: 14;
   --mobile-font-size-max: 32;
@@ -60,3 +59,10 @@ html {
   font-size: calc(var(--mobile-font-size-min) * 1px);
 }
 
+/* Smooth scroll for anchored links */
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

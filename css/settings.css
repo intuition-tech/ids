@@ -7,6 +7,7 @@
 @font-face {
   font-family: "Root UI";  
   font-style: normal;
+  font-display: swap;
   src:
     url("../fonts/pt-root-ui_vf.woff2") format("woff2"),
     url("../fonts/pt-root-ui_vf.woff") format("woff");
@@ -14,6 +15,7 @@
 
 body {
   font-family: "Root UI";
+  -webkit-font-smoothing: antialiased;
   font-weight: 400;
 }
 

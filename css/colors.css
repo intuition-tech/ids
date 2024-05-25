@@ -1,5 +1,5 @@
 
-:root, .ids__basic-palette {
+:root {
   --ids__text-RGB:        5, 5, 5;
   --ids__link-RGB:        0, 100, 240;
   --ids__hover-RGB:       0, 200, 0;

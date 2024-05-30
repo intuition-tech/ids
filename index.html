@@ -17,7 +17,7 @@
     <header></header>
     <main>
       <div class="ids__wrapper"> 
-        <section id="intro"> 
+        <div id="intro"> 
           <div class="ids__space XL"></div>
           <div class="ids__text-width">
             <h1>.ids</h1>
@@ -32,17 +32,17 @@
 
 
           </div>
-        </section>
+        </div>
 
-        <section> 
+        <div> 
           <div class="ids__space L"></div>
           <div class="ids__text-width">
             <h2>Настройка</h2>
             <p>Базовые параметры дизайн-системы задаются в файле <code>settings.css</code>. Кроме того, в IDS включён <code><a href="https://necolas.github.io/normalize.css/">normalize.css</a></code> — набор корректировок, устраняющих неконсистентность реализации стилей в разных браузерах — с ним не надо ничего делать, он просто есть. </p>
           </div>
-        </section>
+        </div>
 
-        <section id="font"> 
+        <div id="font"> 
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Шрифт</h3>
@@ -50,8 +50,9 @@
             <p>TODO: Написать кусок об использовании числовых значений для font-weight
             
           </div>
-        </section>         
-        <section id="density"> 
+        </div>
+
+        <div id="density"> 
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Плотность</h3>
@@ -60,9 +61,9 @@
             
             
           </div>
-        </section>         
+        </div>         
         
-        <section id="fluid"> 
+        <div id="fluid"> 
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Адаптивность</h3>
@@ -83,12 +84,12 @@
             </aside>
           </div>
           
-        </section>
+        </div>
 
 
 
 
-        <section id="color"> 
+        <div id="color"> 
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Цвет</h3>
@@ -155,24 +156,24 @@
             <p>Все цветовые палитры — в файле <code>color-palettes.css</code>. 
             <p>В переменных хранятся строки из трёх значений в пространстве RGB, например, <code>253, 47, 75</code>. Для стилизации компонентов часто нужен цвет с прозрачностью, но информацию об альфа-канале удобнее хранить не в переменной, а в свойстве конкретного селектора, писать что-то вроде <code>color: rgba(var(--ids__accent-RGB), 0.5)</code>, чтобы получить цвет с прозрачностью 0.5.</p>
           </div>
-        </section>      
+        </div>      
 
-        <section> 
+        <div> 
           <div class="ids__space L"></div>
           <div class="ids__text-width">
             <h2>Каркас страницы</h2>
             <p>IDS создана для дизайна нарративов, поэтому мы отталкиваемся от идеи, что типичная страница состоит из шапки (хедера) в начале, длинной многоэтажной колбасы контента в середине, и подвала (футера) в конце.</p>
             <p>IDS не использует модульные сетки или колонки для организации пространства страницы. У нас всё намного проще: страница состоит из этажей, они идут сверху вниз друг за другом, каждый занимает всю доступную ширину и может быть любой высоты. Такой подход не мешает внутри этажа создавать модульные сетки и сложные композиции, но изолированность этажей позволяет легко менять их местами и избавляет от какой-либо взаимозависимости. </p>
           </div>
-        </section>        
+        </div>        
 
-        <section> 
+        <div> 
           <div class="ids__space"></div>        
           <div class="ids__text-width">
             <h3>Обёртки</h3>
             <p><code>.ids__wrapper</code> — стандартный этажа c большими полями на десктопе и с минимальными на мобиле. </p>
           </div>
-        </section>
+        </div>
       </div>
 
       <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
@@ -185,10 +186,10 @@
       </div>
 
       <div class="ids__wrapper">
-        <section> 
+        <div> 
           <div class="ids__space M"></div>
           <p><code>.ids__wrapper.wide</code> — этаж на всю ширину с минимальными полями</p>
-        </section>
+        </div>
       </div>
       
       <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
@@ -201,10 +202,10 @@
       </div>
 
       <div class="ids__wrapper">
-        <section> 
+        <div id="">
           <div class="ids__space M"></div>
           <p><code>.ids__wrapper.edge</code> — этаж на всю ширину без полей</p>
-        </section>
+        </div>
       </div>
       
       <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
@@ -218,7 +219,7 @@
 
       <div class="ids__wrapper">
 
-        <section> 
+        <div> 
           <div class="ids__space M"></div>
           <p>Внутри этажей используется обёртка для создания «текстовой ширины»</p>
           <p><code>.ids__text-width</code></p>
@@ -231,9 +232,9 @@
             </div>
           </div>
 
-        </section>
+        </div>
 
-        <section> 
+        <div> 
           <div class="ids__space L"></div>
           <div class="ids__text-width"> 
             <h3>Система отступов</h3>
@@ -271,9 +272,9 @@
             </aside>
 
           </div>
-        </section>
+        </div>
 
-        <section> 
+        <div> 
           <div class="ids__space L"></div>
           <div class="ids__text-width">
             <h2>Стилизация тегов</h2>
@@ -287,11 +288,11 @@
             
 
           </div>
-        </section>
+        </div>
 
 
 
-        <section> 
+        <div> 
           <div class="ids__space M"></div>
           <div class="ids__text-width">
             <h3>Заголовки</h3>
@@ -330,9 +331,9 @@
 
             <p>TODO: hgroup с лейблом</p>
           </div>
-        </section>
+        </div>
 
-        <section> 
+        <div> 
           <div class="ids__space M"></div>
           <div class="ids__text-width">
             <h3>Текст</h3>
@@ -342,27 +343,27 @@
             <code>code</code>
             <p>Используются, чтобы выделить <mark>важную мысль</mark> или <code>фрагмент кода</code>. 
           </div>
-        </section>
+        </div>
 
-        <section> 
+        <div> 
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Иллюстрация</h3>
             <p><code>figure</code> <code>figcaption</code></p>
 
           </div>
-        </section>
+        </div>
 
-        <section> 
+        <div> 
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Список</h3>
             <p><code>ul</code> <code>li</code></p>
             <p><code>ol</code> <code>li</code></p>
           </div>
-        </section>
+        </div>
 
-        <section> 
+        <div> 
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Ссылка</h3>
@@ -370,21 +371,21 @@
             <p><code>.ids__promo-link</code></p>
             <p>TODO: Псевдо-радиогруппа для скролл-навигации</p>
           </div>
-        </section>
+        </div>
 
-        <section> 
+        <div> 
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Дополнительный текст</h3>
             <p><code>aside</code></p>
             <p><code>.ids__note</code></p>
           </div>
-        </section>
+        </div>
 
    
 
               
-        <section> 
+        <div> 
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Сетка</h3>
@@ -392,9 +393,9 @@
             <p><code>.ids__grid-cell</code> — ячейка этой сетки</p>
             <aside>Мы рекомендуем никогда не стилизовать ячейку саму по себе, а всегда добавлять внутрь ещё один контейнер, и уже для него задавать цвет фона, скругление, поля и всё остальное. </aside>
           </div>
-        </section>
+        </div>
 
-        <section> 
+        <div> 
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Таблица</h3>
@@ -402,32 +403,32 @@
             <p><code>tr</code>, <code>th</code>, <code>td</code> — стандартные элементы таблицы. Ну разве что <code>th</code> приклеивается к верху окна.</p>
             
           </div>
-        </section>
+        </div>
 
-        <section> 
+        <div> 
           <div class="ids__space L"></div>
           <h2>Компоненты</h2>
-        </section>   
+        </div>   
 
-        <section> 
+        <div> 
           <div class="ids__space"></div>
           <h3><code>.ids__snooze</code></h3>
-        </section>
+        </div>
          
-        <section> 
+        <div> 
           <div class="ids__space"></div>
           <h3><code>.ids__footnote</code></h3>
-        </section>   
+        </div>   
 
-        <section> 
+        <div> 
           <div class="ids__space"></div>
           <h3><code>.ids__navbar</code></h3>
-        </section>   
+        </div>   
 
-        <section> 
+        <div> 
           <div class="ids__space"></div>
           <h3><code>.ids__gallery</code></h3>
-        </section>   
+        </div>   
         
 
 

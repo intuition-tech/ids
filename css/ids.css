@@ -3,29 +3,27 @@
     color: rgb(var(--ids__link-RGB));
     border-bottom: 1px solid rgba(var(--ids__link-RGB), 0.2);
     text-decoration: none;
+    transition: color 0.5s ease, border 0.5s ease;
+
 
     &:hover {
       color: rgb(var(--ids__hover-RGB));
       border-bottom: 1px solid rgba(var(--ids__hover-RGB), 0.2);
+      transition: color 0s ease, border 0s ease;
     }
   }
 
   & p {
     margin-top: 0;
     margin-bottom: calc(var(--ids__density) * 0.4em);
-  }
 
-  .ids__lead {
-    font-size: 1.2em;
-    font-weight: 500;
-    line-height: var(--ids__density);
-    margin-bottom: calc(var(--ids__density) * 0.4em);
-
-    @media (--ids__mobile) {
-      font-size: 1em;
-      line-height: var(--ids__density);
+    &.loud {
+      font-size: 2em;
+      line-height: 1.2;
     }
   }
+
+    
 
   & h1,
   & h2,

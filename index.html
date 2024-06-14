@@ -433,7 +433,14 @@
         </div>
         <div class="section">
           <div class="ids__space"></div>
-          <h3><code>ids-gallery</code></h3>
+          <h3>Галерея</h3>
+          <p><code>ids-gallery</code> — специальный тег для Галереи. </p>
+          <p>Для разделения изображений используем тег <code>figure</code>.</p>
+          <p><code>a</code> содержит ссылку на полноразмерное изображение.
+            Если оно отличается от того, которое используется для превью,
+            ему нужно указать размеры в атрибутах <code>data-pswp-width</code>
+            и <code>data-pswp-height</code>
+          </p>
           <div class="ids__space XL"></div>
         </div>
       </div>
@@ -441,15 +448,15 @@
         <div class="section">
           <ids-gallery>
             <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-                 data-pswp-width="960"
-                 data-pswp-height="960"
-              >
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="bulbasaur">
               </a>
             </figure>
             <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png">
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+                 data-pswp-width="960"
+                 data-pswp-height="960"
+              >
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="ivysaur">
               </a>
             </figure>

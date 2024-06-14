@@ -11,13 +11,16 @@
     <link rel="stylesheet" href="css/settings.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/ids.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+
+    <script src="js/gallery.js" type="module"></script>
   </head>
 
   <body class="ids">
     <header></header>
     <main>
-      <div class="ids__wrapper"> 
-        <div class="section" id="intro"> 
+      <div class="ids__wrapper">
+        <div class="section" id="intro">
           <div class="ids__space XL"></div>
           <div class="ids__text-width">
             <h1>.ids</h1>
@@ -25,16 +28,16 @@
             <p>Она упрощает создание лендингов, онлайн-изданий и любых цифровых продуктов для веба, в основе которых лежит история, объяснение, текст. Технически IDS — это набор CSS-классов, JS-компонентов и всяких секретных приёмчиков.</p>
             <aside>
               <p>Публичный репозиторий: <code><a href="https://github.com/intuition-tech/ids">github.com/intuition-tech/ids</a></code></p>
-              <p>Превью: <code><a href="https://intuition-tech.github.io/ids">intuition-tech.github.io/ids</a></code></p> 
+              <p>Превью: <code><a href="https://intuition-tech.github.io/ids">intuition-tech.github.io/ids</a></code></p>
             </aside>
             <p>Сама эта страница, <code>index.html</code>, служит образцом вёрстки. Вы можете скачать гит-репозиторий, открыть файл в редакторе кода и делать в этой копии что-то своё.
-            <p>IDS — это не библиотека, а шаблон. Вы не подключаете её в проект как зависимость, не расширяете классы, не переопределяете свойства. Вместо этого вы тупо копируете к себе код и меняете, как захочется. Без совместимости версий, без апдейтов. </p> 
+            <p>IDS — это не библиотека, а шаблон. Вы не подключаете её в проект как зависимость, не расширяете классы, не переопределяете свойства. Вместо этого вы тупо копируете к себе код и меняете, как захочется. Без совместимости версий, без апдейтов. </p>
 
 
           </div>
         </div>
 
-        <div class="section"> 
+        <div class="section">
           <div class="ids__space L"></div>
           <div class="ids__text-width">
             <h2>Настройка</h2>
@@ -42,32 +45,32 @@
           </div>
         </div>
 
-        <div class="section" id="font"> 
+        <div class="section" id="font">
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Шрифт</h3>
             <p>В IDS по умолчанию используется шрифт <a href=https://www.paratype.com/fonts/pt/pt-root-ui" target="_BLANK">PT Root UI</a>, вариативная веб-версия. Он классный! Но дизайн-система не завязана на конкретный шрифт, вы можете подключить любой, достаточно положить шрифт в папку <code>/fonts</code> и отредактировать раздел Fonts в файле <code>settings.css</code>.</p>
             <p>TODO: Написать кусок об использовании числовых значений для font-weight
-            
+
           </div>
         </div>
 
-        <div class="section" id="density"> 
+        <div class="section" id="density">
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Плотность</h3>
             <p>Разным шрифтам подходит разная плотность вёрстки. Кроме того, плотность это эстетический выбор — иногда хочется тесные поля, иногда нужна воздушность.</p>
             <p>В IDS есть переменная <code>--ids__density</code>, которая влияет на интерлиньяж текста, а также на поля и отступы всех текстовых элементов. Чтобы настроить плотность вёрстки, попробуйте сначала найти оптимальное значение этой переменной, а потом уже редактировать отдельные стили.</p>
-            
-            
+
+
           </div>
-        </div>         
-        
-        <div class="section" id="fluid"> 
+        </div>
+
+        <div class="section" id="fluid">
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Адаптивность</h3>
-            <p>IDS поддерживает два типа устройств: <code>mobile</code> и <code>desktop</code>. Разница только в ширине вьюпорта: если меньше 768 px, значит мобила, если больше — десктоп. Идея в том, чтобы иметь как можно более одинаковый сайт на разных устройствах — как можно меньше менять элементы, сделать адаптацию как можно незаметнее.</p> 
+            <p>IDS поддерживает два типа устройств: <code>mobile</code> и <code>desktop</code>. Разница только в ширине вьюпорта: если меньше 768 px, значит мобила, если больше — десктоп. Идея в том, чтобы иметь как можно более одинаковый сайт на разных устройствах — как можно меньше менять элементы, сделать адаптацию как можно незаметнее.</p>
             <p>Fluid Typography — это когда для разной ширины окна рассчитывается разной значение font-size для body, и это значение наследуется всеми элементами страницы.  Выходит, что с изменением ширины вьюпорта, меняется не только ширина элементов, заданная в процентах, но и масштаб всей страницы. Если использовать емы не только для типографики, но и для габаритов элементов — можно настроить все пропорции в одной ширине, и знать, что они сохранятся при любой </p>
 
             <p><code>--mobile-font-size-min</code></p>
@@ -78,27 +81,27 @@
 
             <aside>
                 <p>Основная размерность в IDS — это em. В этих единицах задаются не только параметры текста, но и отступы, поля, радиусы. Поэтому </p>
-  
+
               <p>Мы рекомендуем использовать em или rem для любых свойств, которые уместно масштабировать вместе с текстом. Тогда, получив удачные пропорции при одной ширине, вы автоматически получите их при любой ширине, и отладка дизайна для разных экранов сильно упростится.</p>
               <p>Разумеется, для толщин обводок уместнее абсолютные значения (в общем-то это пиксели, px) а для размеров, высчитываемых относительно габаритов родительских контейнеров, подойдут только %, vh и vw.</p>
             </aside>
           </div>
-          
+
         </div>
 
 
 
 
-        <div class="section" id="color"> 
+        <div class="section" id="color">
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Цвет</h3>
             <p>IDS хранит цветовые палитры в переменных, именование цветов функциональное: для чего используется, так и называется. Вот эти палитры: </p>
 
-            
+
           </div>
           <style>
-            .guide-color-plate {              
+            .guide-color-plate {
               height: 6em;
               font-size: 0.8em;
               padding: 0.6em 0.8em;
@@ -109,66 +112,66 @@
           <div class="ids__grid">
             <div class="ids__grid-cell">
               <div class="guide-color-plate" style="background-color: rgba(var(--ids__text-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
-                <p>--ids__text-RGB</p>                
+                <p>--ids__text-RGB</p>
               </div>
             </div>
 
             <div class="ids__grid-cell">
               <div class="guide-color-plate" style="background-color: rgba(var(--ids__link-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
-                <p>--ids__link-RGB</p>                
+                <p>--ids__link-RGB</p>
               </div>
             </div>
             <div class="ids__grid-cell">
               <div class="guide-color-plate" style="background-color: rgba(var(--ids__hover-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
-                <p>--ids__hover-RGB</p>                
+                <p>--ids__hover-RGB</p>
               </div>
             </div>
             <div class="ids__grid-cell">
               <div class="guide-color-plate" style="background-color: rgba(var(--ids__mark-RGB), 1)">
-                <p>--ids__mark-RGB</p>                
+                <p>--ids__mark-RGB</p>
               </div>
-            </div>              
-        
+            </div>
+
             <div class="ids__grid-cell">
               <div class="guide-color-plate" style="background-color: rgba(var(--ids__code-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
-                <p>--ids__code-RGB</p>                
+                <p>--ids__code-RGB</p>
               </div>
-            </div>            
+            </div>
             <div class="ids__grid-cell">
               <div class="guide-color-plate" style="background-color: rgba(var(--ids__accent-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
-                <p>--ids__accent-RGB</p>                
+                <p>--ids__accent-RGB</p>
               </div>
-            </div>    
+            </div>
             <div class="ids__grid-cell">
               <div class="guide-color-plate" style="background-color: rgba(var(--ids__surface-RGB), 1)">
-                <p>--ids__surface-RGB</p>                
+                <p>--ids__surface-RGB</p>
               </div>
-            </div>            
+            </div>
             <div class="ids__grid-cell">
               <div class="guide-color-plate" style="background-color: rgba(var(--ids__background-RGB), 1)">
-                <p>--ids__background-RGB</p>                
+                <p>--ids__background-RGB</p>
               </div>
-            </div>            
+            </div>
           </div>
 
           <div class="ids__space"></div>
           <div class="ids__text-width">
-            <p>Все цветовые палитры — в файле <code>color-palettes.css</code>. 
+            <p>Все цветовые палитры — в файле <code>color-palettes.css</code>.
             <p>В переменных хранятся строки из трёх значений в пространстве RGB, например, <code>253, 47, 75</code>. Для стилизации компонентов часто нужен цвет с прозрачностью, но информацию об альфа-канале удобнее хранить не в переменной, а в свойстве конкретного селектора, писать что-то вроде <code>color: rgba(var(--ids__accent-RGB), 0.5)</code>, чтобы получить цвет с прозрачностью 0.5.</p>
           </div>
-        </div>      
+        </div>
 
-        <div class="section"> 
+        <div class="section">
           <div class="ids__space L"></div>
           <div class="ids__text-width">
             <h2>Каркас страницы</h2>
             <p>IDS создана для дизайна нарративов, поэтому мы отталкиваемся от идеи, что типичная страница состоит из шапки (хедера) в начале, длинной многоэтажной колбасы контента в середине, и подвала (футера) в конце.</p>
             <p>IDS не использует модульные сетки или колонки для организации пространства страницы. У нас всё намного проще: страница состоит из этажей, они идут сверху вниз друг за другом, каждый занимает всю доступную ширину и может быть любой высоты. Такой подход не мешает внутри этажа создавать модульные сетки и сложные композиции, но изолированность этажей позволяет легко менять их местами и избавляет от какой-либо взаимозависимости. </p>
           </div>
-        </div>        
+        </div>
 
-        <div class="section"> 
-          <div class="ids__space"></div>        
+        <div class="section">
+          <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Обёртки</h3>
             <p><code>.ids__wrapper</code> — стандартный этажа c большими полями на десктопе и с минимальными на мобиле. </p>
@@ -181,23 +184,23 @@
           <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
             <div class="ids__space XL"></div>
             <div class="ids__space XL"></div>
-          </div>  
+          </div>
         </div>
       </div>
 
       <div class="ids__wrapper">
-        <div class="section"> 
+        <div class="section">
           <div class="ids__space M"></div>
           <p><code>.ids__wrapper.wide</code> — этаж на всю ширину с минимальными полями</p>
         </div>
       </div>
-      
+
       <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
         <div class="ids__wrapper wide">
           <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
             <div class="ids__space XL"></div>
             <div class="ids__space XL"></div>
-          </div>  
+          </div>
         </div>
       </div>
 
@@ -207,19 +210,19 @@
           <p><code>.ids__wrapper.edge</code> — этаж на всю ширину без полей</p>
         </div>
       </div>
-      
+
       <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
         <div class="ids__wrapper edge">
           <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
             <div class="ids__space XL"></div>
             <div class="ids__space XL"></div>
-          </div>  
+          </div>
         </div>
       </div>
 
       <div class="ids__wrapper">
 
-        <div class="section"> 
+        <div class="section">
           <div class="ids__space M"></div>
           <p>Внутри этажей используется обёртка для создания «текстовой ширины»</p>
           <p><code>.ids__text-width</code></p>
@@ -228,15 +231,15 @@
               <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
                 <div class="ids__space XL"></div>
                 <div class="ids__space XL"></div>
-              </div>  
+              </div>
             </div>
           </div>
 
         </div>
 
-        <div class="section"> 
+        <div class="section">
           <div class="ids__space L"></div>
-          <div class="ids__text-width"> 
+          <div class="ids__text-width">
             <h3>Система отступов</h3>
             <p>В IDS у обёрток нулевые отступы, а у большинства других элементов задан только отступ снизу, минимальный, чтобы верстать элементы одним потоком.</p>
 
@@ -259,10 +262,10 @@
             <div class="ids__grid-cell">
               <p><code>ids__space.XL</code></p>
               <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
-            </div>            
+            </div>
           </div>
           <div class="ids__space L"></div>
-          <div class="ids__text-width"> 
+          <div class="ids__text-width">
 
             <aside>
               <h4>Почему так</h4>
@@ -274,7 +277,7 @@
           </div>
         </div>
 
-        <div class="section"> 
+        <div class="section">
           <div class="ids__space L"></div>
           <div class="ids__text-width">
             <h2>Стилизация тегов</h2>
@@ -285,14 +288,14 @@
             </aside>
             <p>Вот что у нас есть:</p>
 
-            
+
 
           </div>
         </div>
 
 
 
-        <div class="section"> 
+        <div class="section">
           <div class="ids__space M"></div>
           <div class="ids__text-width">
             <h3>Заголовки</h3>
@@ -314,7 +317,7 @@
             <code>h6</code>
             <h6>Заголовок шестого уровня</h6>
             <hr>
-            
+
             <div class="ids__space"></div>
             <p>Бывает, что тексту не нужны такие крупные заголовки как h1 или h2. Проблема в том, что по стандартам доступности на странице должен быть h1, а следующим уровнем не может быть h3, должен быть h2. Чтобы разрешить это противоречие, мы подготовили специальные классы, визуально уменьшающие h1 и h2:</p>
 
@@ -327,13 +330,13 @@
             <code>h2.XS</code>
             <h2 class="XS">Заголовок второго уровня, уменьшенный как-то</h2>
             <hr>
-            
+
 
             <p>TODO: hgroup с лейблом</p>
           </div>
         </div>
 
-        <div class="section"> 
+        <div class="section">
           <div class="ids__space M"></div>
           <div class="ids__text-width">
             <h3>Текст</h3>
@@ -345,12 +348,12 @@
             <code>mark</code>
             <code>code</code>
             <p>Используются, чтобы выделить <mark>важную мысль</mark> или <code>фрагмент кода</code>.</p>
-            
+
           </div>
 
         </div>
 
-        <div class="section"> 
+        <div class="section">
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Иллюстрация</h3>
@@ -359,7 +362,7 @@
           </div>
         </div>
 
-        <div class="section"> 
+        <div class="section">
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Список</h3>
@@ -368,7 +371,7 @@
           </div>
         </div>
 
-        <div class="section"> 
+        <div class="section">
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Ссылка</h3>
@@ -378,7 +381,7 @@
           </div>
         </div>
 
-        <div class="section"> 
+        <div class="section">
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Дополнительный текст</h3>
@@ -387,10 +390,10 @@
           </div>
         </div>
 
-   
 
-              
-        <div class="section"> 
+
+
+        <div class="section">
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Сетка</h3>
@@ -400,43 +403,148 @@
           </div>
         </div>
 
-        <div class="section"> 
+        <div class="section">
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Таблица</h3>
             <p><code>table</code> — обычная таблица</p>
             <p><code>tr</code>, <code>th</code>, <code>td</code> — стандартные элементы таблицы. Ну разве что <code>th</code> приклеивается к верху окна.</p>
-            
           </div>
         </div>
 
-        <div class="section"> 
+        <div class="section">
           <div class="ids__space L"></div>
           <h2>Компоненты</h2>
-        </div>   
+        </div>
 
-        <div class="section"> 
+        <div class="section">
           <div class="ids__space"></div>
           <h3><code>.ids__snooze</code></h3>
         </div>
-         
-        <div class="section"> 
+
+        <div class="section">
           <div class="ids__space"></div>
           <h3><code>.ids__footnote</code></h3>
-        </div>   
+        </div>
 
-        <div class="section"> 
+        <div class="section">
           <div class="ids__space"></div>
           <h3><code>.ids__navbar</code></h3>
-        </div>   
-
-        <div class="section"> 
+        </div>
+        <div class="section">
           <div class="ids__space"></div>
-          <h3><code>.ids__gallery</code></h3>
-        </div>   
-        
-
-
+          <h3><code>ids-gallery</code></h3>
+          <div class="ids__space XL"></div>
+        </div>
+      </div>
+      <div class="ids__wrapper wide">
+        <div class="section">
+          <ids-gallery>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+                 data-pswp-width="960"
+                 data-pswp-height="960"
+              >
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="bulbasaur">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="ivysaur">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" alt="venusaur">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="charmander">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png" alt="charmeleon">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" alt="charizard">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="squirtle">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png" alt="wartortle">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png" alt="blastoise">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png" alt="caterpie">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png" alt="metapod">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png" alt="butterfree">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png" alt="weedle">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png" alt="kakuna">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png" alt="beedrill">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png" alt="pidgey">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png" alt="pidgeotto">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png" alt="pidgeot" >
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png" alt="ratata">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png" alt="raticate">
+              </a>
+            </figure>
+          </ids-gallery>
+        </div>
         <div class="ids__space XL"></div>
       </div>
 

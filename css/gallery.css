@@ -1,6 +1,6 @@
 @import '../js/lib/photoswipe/photoswipe.css';
 
-.ids__gallery {
+ids-gallery, .ids__gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

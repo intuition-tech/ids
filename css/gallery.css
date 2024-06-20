@@ -1,4 +1,4 @@
-@import '../js/lib/photoswipe/photoswipe.css';
+@import 'lib/photoswipe.css';
 
 ids-gallery, .ids__gallery {
     display: flex;

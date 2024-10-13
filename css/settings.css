@@ -31,7 +31,7 @@ body {
 
 /* Fluid typography 
 
-By default, the font-size in IDS is calculated using the clamp() function. On the one hand, this simplifies the code, and on the other, it can help improve performance with larger values. The previous method of calculating font-size using variables is still available and is commented out below. If needed, simply comment out or delete the clamp() block and uncomment the block with variables. */
+By default, the font-size in IDS is calculated using the clamp() function. On the one hand, this simplifies the code, and on the other, it can help improve performance for big projects. The previous method of calculating font-size using variables is still available and is commented out below. If needed, simply comment out or delete the clamp() block and uncomment the block with variables. */
 
 
 

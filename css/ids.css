@@ -5,7 +5,6 @@
     text-decoration: none;
     transition: color 0.5s ease, border 0.5s ease;
 
-
     &:hover {
       color: rgb(var(--ids__hover-RGB));
       border-bottom: 1px solid rgba(var(--ids__hover-RGB), 0.2);
@@ -22,8 +21,6 @@
       line-height: 1.2;
     }
   }
-
-    
 
   & h1,
   & h2,
@@ -44,11 +41,11 @@
 
     &.S {
       font-size: 2.4em;
-      font-weight: 650;  
+      font-weight: 650;
     }
     &.XS {
       font-size: 1.5em;
-      font-weight: 600;  
+      font-weight: 600;
     }
   }
 
@@ -60,7 +57,7 @@
 
     &.XS {
       font-size: 1.5em;
-      font-weight: 600;  
+      font-weight: 600;
     }
   }
 
@@ -119,9 +116,9 @@
       &:before {
         position: absolute;
         left: 0;
-        content: '⋅ ';
+        content: "⋅ ";
       }
-    }    
+    }
   }
 
   & ol {
@@ -151,10 +148,14 @@
     @media (--ids__mobile) {
       padding-right: calc(var(--ids__density) * 0.75em);
     }
+
+    code {
+      background: none;
+      padding: 0;
+    }
   }
 
   & code {
-   
     font-size: 0.9em;
     font-family: "Root UI";
     letter-spacing: 0.02em;
@@ -163,9 +164,7 @@
     border-radius: 0.2em;
     color: rgba(var(--ids__code-RGB), 1);
     background: rgba(var(--ids__text-RGB), 0.05);
-    
   }
-
 
   & figure {
     margin: 0 0 calc(var(--ids__density) * 0.5em) 0;
@@ -202,12 +201,7 @@
   }
 
   & table {
-
-
-
-
     & caption {
-
     }
   }
 
@@ -215,6 +209,4 @@
     border-top-color: rgba(var(--ids__text-RGB), 0.2);
     border-bottom: 0;
   }
-  
 }
-

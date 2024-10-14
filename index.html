@@ -384,16 +384,138 @@
           </div>
         </div>
 
-
-
+        <div class="ids__space M"></div>
 
         <div class="section">
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Сетка</h3>
-            <p><code>.ids__sequence</code> — сетка из одинаковых элементов, реализована через display:flex</p>
-            <p><code>.ids__sequence-item</code> — ячейка этой сетки</p>
+            <p>С помощью класса <code>.ids__sequence</code> можно быстро сделать сетку из одинаковых элементов, которая реализована через display:flex. Сделайте <code>.ids__sequence</code> родителем, а каждую ячейку сетки оберните в <code>.ids__sequence-item</code>.</p>                      
+
             <aside>Мы рекомендуем никогда не стилизовать ячейку саму по себе, а всегда добавлять внутрь ещё один контейнер, и уже для него задавать цвет фона, скругление, поля и всё остальное. </aside>
+
+            <div class="ids__space S"></div>
+            <h4>Модификатор размера</h4>
+            <p>У сетки есть модификатор размера, который регулирует количество колонок сетки. Например, XL — 2 колонки, XL — 2, L — 3 и S — 6 колонок:</p>
+            
+            
+            <div class="ids__sequence XL gap-S">
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
+                  <p>Текст в ячейке</p>
+                </div>
+              </div>
+              <div class="ids__sequence-item">                
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
+                  <p>Текст в ячейке</p>
+                </div>
+              </div>
+            </div>
+            <aside>
+              <code>
+                <pre>.ids__sequence.XL.gap-S 
+  .ids__sequence-item
+    p Текст в ячейке
+  .ids__sequence-item
+    p Текст в ячейке</pre>
+
+
+              </code>
+            </aside>
+            
+            <div class="ids__sequence L gap-S">
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
+              </div>
+              <div class="ids__sequence-item">                
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
+              </div>
+              <div class="ids__sequence-item">                
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
+              </div>              
+            </div>
+            <aside><code>.ids__sequence.L</code></aside>
+                        
+            <div class="ids__sequence S gap-S">
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
+              </div>
+              <div class="ids__sequence-item">                
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
+              </div>
+              <div class="ids__sequence-item">                
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
+              </div>
+              <div class="ids__sequence-item">                
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
+              </div>
+              <div class="ids__sequence-item">                
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
+              </div>
+              <div class="ids__sequence-item">                
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
+              </div>
+            </div>
+            <aside><code>.ids__sequence.S</code></aside>
+
+            <div class="ids__space S"></div>
+
+            <h4>Отступы между ячейками</h4>
+            <p>С помошью модификатора <code>gap</code> можно задавать отступы между ячейками:</p>
+            
+            <div class="example-container" style="background-color: rgb(255,235,237); padding-bottom: 0.001em;">
+              <div class="ids__sequence XL gap-L">
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
+                </div>
+                <div class="ids__sequence-item">                
+                  <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
+                </div>
+                <div class="ids__sequence-item">                
+                  <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
+                </div>
+                <div class="ids__sequence-item">                
+                  <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
+                </div>
+              </div>
+            </div>              
+            <aside><code>.ids__sequence.XL.gap-L</code></aside>
+
+            <div class="example-container" style="background-color: rgb(255,235,237); padding-bottom: 0.001em;">
+              <div class="ids__sequence XL gap-M">
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
+                </div>
+                <div class="ids__sequence-item">                
+                  <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
+                </div>
+                <div class="ids__sequence-item">                
+                  <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
+                </div>
+                <div class="ids__sequence-item">                
+                  <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
+                </div>
+              </div>
+            </div>
+            <aside><code>.ids__sequence.XL.gap-M</code></aside>
+
+            <div class="example-container" style="background-color: rgb(255,235,237); padding-bottom: 0.001em;">
+              <div class="ids__sequence XL gap-S">
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
+                </div>
+                <div class="ids__sequence-item">                
+                  <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
+                </div>
+                <div class="ids__sequence-item">                
+                  <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
+                </div>
+                <div class="ids__sequence-item">                
+                  <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
+                </div>
+              </div>
+            </div>
+            <aside><code>.ids__sequence.XL.gap-S</code></aside> 
           </div>
         </div>
 

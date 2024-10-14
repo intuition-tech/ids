@@ -60,14 +60,17 @@
 
   &.gap-L {
     --gap: 1.5em;
+    margin-bottom: calc(var(--gap) * 1.5);
   }
 
   &.gap-M {
     --gap: 1em;
+    margin-bottom: calc(var(--gap) * 1.5);
   }
 
   &.gap-S {
     --gap: 0.5em;
+    margin-bottom: calc(var(--gap) * 1.5);
   }
 
   .ids__sequence-item {

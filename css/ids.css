@@ -3,7 +3,7 @@
     color: rgb(var(--ids__link-RGB));
     text-decoration: underline;
     text-decoration-thickness: 1px;
-    text-underline-offset: 4px;
+    text-underline-offset: 0.25em;
     text-decoration-color: rgba(var(--ids__link-RGB), 0.2);
     transition: color 0.5s ease, text-decoration 0.5s ease;
 

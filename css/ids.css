@@ -2,6 +2,7 @@
   & a {
     color: rgb(var(--ids__link-RGB));
     text-decoration: underline;
+    will-change: color;
     text-decoration-thickness: 1px;
     text-underline-offset: 0.25em;
     text-decoration-color: rgba(var(--ids__link-RGB), 0.2);

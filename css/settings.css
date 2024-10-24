@@ -5,11 +5,10 @@
 /* Fonts */
 
 @font-face {
-  font-family: "Root UI";  
+  font-family: "Root UI";
   font-style: normal;
   font-display: swap;
-  src:
-    url("../fonts/pt-root-ui_vf.woff2") format("woff2"),
+  src: url("../fonts/pt-root-ui_vf.woff2") format("woff2"),
     url("../fonts/pt-root-ui_vf.woff") format("woff");
 }
 
@@ -18,7 +17,6 @@ body {
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
 }
-
 
 /* Density */
 
@@ -31,11 +29,36 @@ body {
   line-height: var(--ids__density);
 }
 
+/* Fluid typography 
 
-/* Fluid typography */
+By default, the font-size in IDS is calculated using the clamp() function. On the one hand, this simplifies the code, and on the other, it can help improve performance for big projects. The previous method of calculating font-size using variables is still available and is commented out below. If needed, simply comment out or delete the clamp() block and uncomment the block with variables. */
 
 html {
+  
+  /* Font-size calculation using clamp() */    
 
+  @media screen and (min-width: 320px) {
+
+    /* Generator for the clamp() string for min-width 320px and max-width 768px:
+    
+    You can open the link to configure the parameters:
+    https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjMyMHB4IiwibWF4V2lkdGgiOiI3NjhweCIsIm1pbkZvbnRTaXplIjoiMTRweCIsIm1heEZvbnRTaXplIjoiMzJweCJ9 */
+
+    font-size: clamp(0.875rem, 0.0714rem + 4.0179vw, 2rem);
+  }
+
+  @media screen and (min-width: 768px) {
+
+    /* Generator for the clamp() string for min-width 768px and max-width 1500px:
+
+    You can open the link to configure the parameters: 
+    https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6Ijc2OHB4IiwibWF4V2lkdGgiOiIxNTAwcHgiLCJtaW5Gb250U2l6ZSI6IjExLjVweCIsIm1heEZvbnRTaXplIjoiMjIuNXB4In0%3D */
+
+    font-size: clamp(0.71875rem, -0.0026rem + 1.5027vw, 1.40625rem);
+  }
+
+  /* Font-size calculation using variables
+  
   --mobile-font-size-min: 14;
   --mobile-font-size-max: 32;
   
@@ -58,7 +81,7 @@ html {
     font-size: calc(var(--desktop-font-size-max) * 1px);
   }
 
-  font-size: calc(var(--mobile-font-size-min) * 1px);
+  font-size: calc(var(--mobile-font-size-min) * 1px); */
 }
 
 /* Smooth scroll for anchored links */

@@ -1,15 +1,17 @@
 .ids {
   & a {
     color: rgb(var(--ids__link-RGB));
-    border-bottom: 1px solid rgba(var(--ids__link-RGB), 0.2);
-    text-decoration: none;
-    transition: color 0.5s ease, border 0.5s ease;
-
+    text-decoration: underline;
+    will-change: color;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+    text-decoration-color: rgba(var(--ids__link-RGB), 0.2);
+    transition: color 0.5s ease, text-decoration 0.5s ease;
 
     &:hover {
       color: rgb(var(--ids__hover-RGB));
-      border-bottom: 1px solid rgba(var(--ids__hover-RGB), 0.2);
-      transition: color 0s ease, border 0s ease;
+      text-decoration-color: rgba(var(--ids__hover-RGB), 0.2);
+      transition: color 0s ease, text-decoration 0s ease;
     }
   }
 
@@ -22,8 +24,6 @@
       line-height: 1.2;
     }
   }
-
-    
 
   & h1,
   & h2,
@@ -44,11 +44,11 @@
 
     &.S {
       font-size: 2.4em;
-      font-weight: 650;  
+      font-weight: 650;
     }
     &.XS {
       font-size: 1.5em;
-      font-weight: 600;  
+      font-weight: 600;
     }
   }
 
@@ -60,7 +60,7 @@
 
     &.XS {
       font-size: 1.5em;
-      font-weight: 600;  
+      font-weight: 600;
     }
   }
 
@@ -119,9 +119,9 @@
       &:before {
         position: absolute;
         left: 0;
-        content: '⋅ ';
+        content: "⋅ ";
       }
-    }    
+    }
   }
 
   & ol {
@@ -154,7 +154,6 @@
   }
 
   & code {
-   
     font-size: 0.9em;
     font-family: "Root UI";
     letter-spacing: 0.02em;
@@ -163,9 +162,7 @@
     border-radius: 0.2em;
     color: rgba(var(--ids__code-RGB), 1);
     background: rgba(var(--ids__text-RGB), 0.05);
-    
   }
-
 
   & figure {
     margin: 0 0 calc(var(--ids__density) * 0.5em) 0;
@@ -202,12 +199,7 @@
   }
 
   & table {
-
-
-
-
     & caption {
-
     }
   }
 
@@ -215,6 +207,4 @@
     border-top-color: rgba(var(--ids__text-RGB), 0.2);
     border-bottom: 0;
   }
-  
 }
-

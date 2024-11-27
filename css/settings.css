@@ -46,6 +46,8 @@ html {
   --mobile-desktop-breakpoint: 768;
   --desktop-viewport-max: 1500;
 
+  font-size: calc(var(--mobile-font-size-min) * 1px);
+
   @media screen and (min-width: 320px) {
     font-size: calc(
       var(--mobile-font-size-min) * 1px +
@@ -72,7 +74,7 @@ html {
     font-size: calc(var(--desktop-font-size-max) * 1px);
   }
 
-  font-size: calc(var(--mobile-font-size-min) * 1px);
+  
 
   /* Font-size calculation using clamp() */
 

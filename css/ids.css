@@ -151,6 +151,11 @@
     @media (--ids__mobile) {
       padding-right: calc(var(--ids__density) * 0.75em);
     }
+
+    code {
+      background: none;
+      padding: 0;
+    }
   }
 
   & code {

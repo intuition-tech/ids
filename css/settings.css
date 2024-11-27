@@ -31,37 +31,14 @@ body {
 
 /* Fluid typography 
 
-By default, the font-size in IDS is calculated using the clamp() function. On the one hand, this simplifies the code, and on the other, it can help improve performance for big projects. The previous method of calculating font-size using variables is still available and is commented out below. If needed, simply comment out or delete the clamp() block and uncomment the block with variables. */
+By default, the font-size in IDS is calculated using variables. However, there is option to use the clamp() function. It providing automatic responsiveness and performance improvements, especially for large projects. The clamp() version is commented out below. If needed, simply comment out or delete the variable block and uncomment the clamp() block. */
 
 html {
-  
-  /* Font-size calculation using clamp() */    
+  /* Font-size calculation using variables */
 
-  @media screen and (min-width: 320px) {
-
-    /* Generator for the clamp() string for min-width 320px and max-width 768px:
-    
-    You can open the link to configure the parameters:
-    https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjMyMHB4IiwibWF4V2lkdGgiOiI3NjhweCIsIm1pbkZvbnRTaXplIjoiMTRweCIsIm1heEZvbnRTaXplIjoiMzJweCJ9 */
-
-    font-size: clamp(0.875rem, 0.0714rem + 4.0179vw, 2rem);
-  }
-
-  @media screen and (min-width: 768px) {
-
-    /* Generator for the clamp() string for min-width 768px and max-width 1500px:
-
-    You can open the link to configure the parameters: 
-    https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6Ijc2OHB4IiwibWF4V2lkdGgiOiIxNTAwcHgiLCJtaW5Gb250U2l6ZSI6IjExLjVweCIsIm1heEZvbnRTaXplIjoiMjIuNXB4In0%3D */
-
-    font-size: clamp(0.71875rem, -0.0026rem + 1.5027vw, 1.40625rem);
-  }
-
-  /* Font-size calculation using variables
-  
   --mobile-font-size-min: 14;
   --mobile-font-size-max: 32;
-  
+
   --desktop-font-size-min: 11.5;
   --desktop-font-size-max: 22.5;
 
@@ -69,19 +46,59 @@ html {
   --mobile-desktop-breakpoint: 768;
   --desktop-viewport-max: 1500;
 
-  @media screen and (min-width: 320px) {    
-    font-size: calc(var(--mobile-font-size-min) * 1px + (var(--mobile-font-size-max) - var(--mobile-font-size-min)) * ((100vw - var(--mobile-viewport-min) * 1px) / (var(--mobile-desktop-breakpoint) - var(--mobile-viewport-min))));
+  font-size: calc(var(--mobile-font-size-min) * 1px);
+
+  @media screen and (min-width: 320px) {
+    font-size: calc(
+      var(--mobile-font-size-min) * 1px +
+        (var(--mobile-font-size-max) - var(--mobile-font-size-min)) *
+        (
+          (100vw - var(--mobile-viewport-min) * 1px) /
+            (var(--mobile-desktop-breakpoint) - var(--mobile-viewport-min))
+        )
+    );
   }
 
-  @media screen and (min-width: 768px) {    
-    font-size: calc(var(--desktop-font-size-min) * 1px + (var(--desktop-font-size-max) - var(--desktop-font-size-min)) * ((100vw - var(--mobile-desktop-breakpoint) * 1px) / (var(--desktop-viewport-max) - var(--mobile-desktop-breakpoint))));
+  @media screen and (min-width: 768px) {
+    font-size: calc(
+      var(--desktop-font-size-min) * 1px +
+        (var(--desktop-font-size-max) - var(--desktop-font-size-min)) *
+        (
+          (100vw - var(--mobile-desktop-breakpoint) * 1px) /
+            (var(--desktop-viewport-max) - var(--mobile-desktop-breakpoint))
+        )
+    );
   }
 
-  @media screen and (min-width: 1500px) {    
+  @media screen and (min-width: 1500px) {
     font-size: calc(var(--desktop-font-size-max) * 1px);
   }
 
-  font-size: calc(var(--mobile-font-size-min) * 1px); */
+  
+
+  /* Font-size calculation using clamp() */
+
+  /* Generator for the clamp() string for min-width 320px and max-width 768px:
+    
+    You can open the link to configure the parameters:
+    https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjMyMHB4IiwibWF4V2lkdGgiOiI3NjhweCIsIm1pbkZvbnRTaXplIjoiMTRweCIsIm1heEZvbnRTaXplIjoiMzJweCJ9 */
+
+  /* 
+  @media screen and (min-width: 320px) {    
+    font-size: clamp(0.875rem, 0.0714rem + 4.0179vw, 2rem);
+  } 
+  */
+
+  /* Generator for the clamp() string for min-width 768px and max-width 1500px:
+
+    You can open the link to configure the parameters: 
+    https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6Ijc2OHB4IiwibWF4V2lkdGgiOiIxNTAwcHgiLCJtaW5Gb250U2l6ZSI6IjExLjVweCIsIm1heEZvbnRTaXplIjoiMjIuNXB4In0%3D */
+
+  /* 
+  @media screen and (min-width: 768px) {
+    font-size: clamp(0.71875rem, -0.0026rem + 1.5027vw, 1.40625rem);
+  }
+  */
 }
 
 /* Smooth scroll for anchored links */

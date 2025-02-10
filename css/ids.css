@@ -1,215 +1,220 @@
 .ids {
-  & a {
-    color: rgb(var(--ids__link-RGB));
-    text-decoration: underline;
-    will-change: color;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.25em;
-    text-decoration-color: rgba(var(--ids__link-RGB), 0.2);
-    transition: color 0.5s ease, text-decoration 0.5s ease;
+    & a {
+        color: rgb(var(--ids__link-RGB));
+        text-decoration: underline;
+        will-change: color;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.25em;
+        text-decoration-color: rgba(var(--ids__link-RGB), 0.2);
+        text-decoration-skip-ink: none;
+        transition:
+            color 0.5s ease,
+            text-decoration 0.5s ease;
 
-    &:hover {
-      color: rgb(var(--ids__hover-RGB));
-      text-decoration-color: rgba(var(--ids__hover-RGB), 0.2);
-      transition: color 0s ease, text-decoration 0s ease;
-    }
-  }
-
-  & p {
-    margin-top: 0;
-    margin-bottom: calc(var(--ids__density) * 0.4em);
-
-    &.loud {
-      font-size: 2em;
-      line-height: 1.2;
-    }
-  }
-
-  & h1,
-  & h2,
-  & h3,
-  & h4,
-  & h5,
-  & h6 {
-    margin: 0;
-    font-weight: 600;
-  }
-
-  & h1 {
-    font-size: 4.6em;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    line-height: calc(var(--ids__density) / 1.3);
-    margin-bottom: 0.4em;
-
-    &.S {
-      font-size: 2.4em;
-      font-weight: 650;
-    }
-    &.XS {
-      font-size: 1.5em;
-      font-weight: 600;
-    }
-  }
-
-  & h2 {
-    font-size: 2.4em;
-    font-weight: 650;
-    line-height: calc(var(--ids__density) / 1.2);
-    margin-bottom: 0.5em;
-
-    &.XS {
-      font-size: 1.5em;
-      font-weight: 600;
-    }
-  }
-
-  & h3 {
-    font-size: 1.5em;
-    line-height: calc(var(--ids__density) / 1.1);
-    margin-bottom: 0.6em;
-  }
-
-  & h4 {
-    font-size: 1.1em;
-    line-height: var(--ids__density);
-    margin-bottom: 0.5em;
-  }
-
-  & h5 {
-    font-size: 1em;
-    line-height: var(--ids__density);
-    margin-bottom: 0.5em;
-  }
-
-  & h6 {
-    font-size: 0.8em;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    line-height: var(--ids__density);
-    margin-bottom: 0.5em;
-  }
-
-  & strong,
-  & b {
-    font-weight: 600;
-  }
-
-  & mark {
-    color: rgb(var(--ids__text-RGB));
-    background-color: rgb(var(--ids__mark-RGB));
-  }
-
-  & ul,
-  & ol {
-    margin: 0 0 calc(var(--ids__density) * 0.75em) 0;
-    padding: 0;
-
-    & li {
-      position: relative;
-      margin-bottom: calc(var(--ids__density) * 0.5em);
-    }
-  }
-
-  & ul {
-    & li {
-      list-style-type: none;
-      padding-left: calc(var(--ids__density) * 0.75em);
-
-      &:before {
-        position: absolute;
-        left: 0;
-        content: "⋅ ";
-      }
-    }
-  }
-
-  & ol {
-    & li {
-      list-style: decimal inside none;
-    }
-  }
-
-  & blockquote {
-    font-size: 1.4em;
-    line-height: var(--ids__density);
-    margin: 0;
-    padding-left: calc(var(--ids__density) * 0.75em);
-    margin-bottom: calc(var(--ids__density) * 1em);
-  }
-
-  & aside {
-    margin: 0;
-    margin-bottom: calc(var(--ids__density) * 0.5em);
-    background: rgb(var(--ids__surface-RGB));
-    padding-top: calc(var(--ids__density) * 0.4em);
-    padding-right: calc(var(--ids__density) * 1.5em);
-    padding-bottom: calc(var(--ids__density) * 0.4em);
-    padding-left: calc(var(--ids__density) * 0.5em);
-    border-radius: 0.2em;
-
-    @media (--ids__mobile) {
-      padding-right: calc(var(--ids__density) * 0.75em);
+        &:hover {
+            color: rgb(var(--ids__hover-RGB));
+            text-decoration-color: rgba(var(--ids__hover-RGB), 0.2);
+            transition:
+                color 0s ease,
+                text-decoration 0s ease;
+        }
     }
 
-    code {
-      background: none;
-      padding: 0;
-    }
-  }
+    & p {
+        margin-top: 0;
+        margin-bottom: calc(var(--ids__density) * 0.4em);
 
-  & code {
-    font-size: 0.9em;
-    font-family: "Root UI";
-    letter-spacing: 0.02em;
-    font-weight: 450;
-    padding: 0.1em 0.25em;
-    border-radius: 0.2em;
-    color: rgba(var(--ids__code-RGB), 1);
-    background: rgba(var(--ids__text-RGB), 0.05);
-  }
-
-  & figure {
-    margin: 0 0 calc(var(--ids__density) * 0.5em) 0;
-
-    &.XXS,
-    &.ids__figure__XXS {
-      width: 25%;
-    }
-    &.XS,
-    &.ids__figure__XS {
-      width: 50%;
-    }
-    &.S,
-    &.ids__figure__S {
-      width: 75%;
+        &.loud {
+            font-size: 2em;
+            line-height: 1.2;
+        }
     }
 
-    & figcaption {
-      margin-top: calc(var(--ids__density) * 0.25em);
-      font-size: 0.8em;
-      line-height: var(--ids__density);
-      opacity: 0.7;
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6 {
+        margin: 0;
+        font-weight: 600;
     }
-  }
 
-  & details {
-    padding: 0.5em;
-    cursor: pointer;
-    border-radius: var(--ids__radius);
+    & h1 {
+        font-size: 4.6em;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        line-height: calc(var(--ids__density) / 1.3);
+        margin-bottom: 0.4em;
 
-    & summary {
-      padding-bottom: var(--ids__micro-padding);
+        &.S {
+            font-size: 2.4em;
+            font-weight: 650;
+        }
+        &.XS {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
     }
-  }
 
-  & table {
-    & caption {
+    & h2 {
+        font-size: 2.4em;
+        font-weight: 650;
+        line-height: calc(var(--ids__density) / 1.2);
+        margin-bottom: 0.5em;
+
+        &.XS {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
     }
-  }
 
-  & hr {
-    border-top-color: rgba(var(--ids__text-RGB), 0.2);
-    border-bottom: 0;
-  }
+    & h3 {
+        font-size: 1.5em;
+        line-height: calc(var(--ids__density) / 1.1);
+        margin-bottom: 0.6em;
+    }
+
+    & h4 {
+        font-size: 1.1em;
+        line-height: var(--ids__density);
+        margin-bottom: 0.5em;
+    }
+
+    & h5 {
+        font-size: 1em;
+        line-height: var(--ids__density);
+        margin-bottom: 0.5em;
+    }
+
+    & h6 {
+        font-size: 0.8em;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        line-height: var(--ids__density);
+        margin-bottom: 0.5em;
+    }
+
+    & strong,
+    & b {
+        font-weight: 600;
+    }
+
+    & mark {
+        color: rgb(var(--ids__text-RGB));
+        background-color: rgb(var(--ids__mark-RGB));
+    }
+
+    & ul,
+    & ol {
+        margin: 0 0 calc(var(--ids__density) * 0.75em) 0;
+        padding: 0;
+
+        & li {
+            position: relative;
+            margin-bottom: calc(var(--ids__density) * 0.5em);
+        }
+    }
+
+    & ul {
+        & li {
+            list-style-type: none;
+            padding-left: calc(var(--ids__density) * 0.75em);
+
+            &:before {
+                position: absolute;
+                left: 0;
+                content: "⋅ ";
+            }
+        }
+    }
+
+    & ol {
+        & li {
+            list-style: decimal inside none;
+        }
+    }
+
+    & blockquote {
+        font-size: 1.4em;
+        line-height: var(--ids__density);
+        margin: 0;
+        padding-left: calc(var(--ids__density) * 0.75em);
+        margin-bottom: calc(var(--ids__density) * 1em);
+    }
+
+    & aside {
+        margin: 0;
+        margin-bottom: calc(var(--ids__density) * 0.5em);
+        background: rgb(var(--ids__surface-RGB));
+        padding-top: calc(var(--ids__density) * 0.4em);
+        padding-right: calc(var(--ids__density) * 1.5em);
+        padding-bottom: calc(var(--ids__density) * 0.4em);
+        padding-left: calc(var(--ids__density) * 0.5em);
+        border-radius: 0.2em;
+
+        @media (--ids__mobile) {
+            padding-right: calc(var(--ids__density) * 0.75em);
+        }
+
+        code {
+            background: none;
+            padding: 0;
+        }
+    }
+
+    & code {
+        font-size: 0.9em;
+        font-family: "Root UI";
+        letter-spacing: 0.02em;
+        font-weight: 450;
+        padding: 0.1em 0.25em;
+        border-radius: 0.2em;
+        color: rgba(var(--ids__code-RGB), 1);
+        background: rgba(var(--ids__text-RGB), 0.05);
+    }
+
+    & figure {
+        margin: 0 0 calc(var(--ids__density) * 0.5em) 0;
+
+        &.XXS,
+        &.ids__figure__XXS {
+            width: 25%;
+        }
+        &.XS,
+        &.ids__figure__XS {
+            width: 50%;
+        }
+        &.S,
+        &.ids__figure__S {
+            width: 75%;
+        }
+
+        & figcaption {
+            margin-top: calc(var(--ids__density) * 0.25em);
+            font-size: 0.8em;
+            line-height: var(--ids__density);
+            opacity: 0.7;
+        }
+    }
+
+    & details {
+        padding: 0.5em;
+        cursor: pointer;
+        border-radius: var(--ids__radius);
+
+        & summary {
+            padding-bottom: var(--ids__micro-padding);
+        }
+    }
+
+    & table {
+        & caption {
+        }
+    }
+
+    & hr {
+        border-top-color: rgba(var(--ids__text-RGB), 0.2);
+        border-bottom: 0;
+    }
 }

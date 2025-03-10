@@ -4,23 +4,21 @@ ids-gallery, .ids__gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 90px;
-    place-content: start;
-    place-items: center;
+    gap: 5em;
+
 
     figure {
-        flex: 0 0 160px;
-        max-height: 160px;
-        max-width: 160px;
-        overflow: hidden;
+        flex: 0 0 5em;
 
         &:focus-within:has(a:focus-visible) {
             outline: 2px solid rgb(var(--ids__link-RGB));
             outline-offset: 2px;
         }
+
         a:hover, a:focus-visible {
             opacity: 0.9;
         }
+
         img {
             object-fit: contain;
             max-height: 100%;

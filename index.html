@@ -24,16 +24,16 @@
         <div class="section" id="intro">
           <div class="ids__space XL"></div>
           <div class="ids__text-width">
-            <ids-nav-item id="ids" text=".ids"><h1>.ids</h1></ids-nav-item>
-            <p>IDS (Intuition Design System) – дизайн-система для вёрстки нарративов.</p>
-            <p>Упрощает создание лендингов, онлайн-изданий и любых цифровых продуктов для веба, в основе которых лежит история, объяснение, иллюстрированный текст.</p>
-            <p>Технически IDS – это набор CSS-классов, JS-компонентов и всяких секретных приёмчиков. Это не библиотека, а шаблон – вы не подключаете IDS в проект как зависимость, не расширяете классы, не переопределяете свойства. Вместо этого вы тупо копируете к себе её исходный код, и меняете его как захочется. Без проблем с совместимостью, без апдейтов. </p>
+            <ids-nav-item id="intro" label="Дизайн-система"><h1>.ids</h1></ids-nav-item>
+            <p>Intuition Design System, IDS – дизайн-система для вёрстки лендингов, онлайн-изданий и любых цифровых продуктов для веба, в основе которых лежат нарративы.</p>
+            <p>Технически IDS – набор CSS-классов и JS-компонентов. Это не библиотека, а готовый шаблон вёрстки. Вы не подключаете IDS в проект как зависимость, не расширяете классы, не переопределяете свойства. Вместо этого вы тупо копируете её исходный код, и меняете его как захочется. Без проблем с совместимостью и без ломающих вёрстку апдейтов. </p>
             <aside>
               <p>Публичный репозиторий: <code><a href="https://github.com/intuition-tech/ids">github.com/intuition-tech/ids</a></code></p>
               
             </aside>
-            <p>Если у вас нет навыков разработчика, то простейший способ начать проект – скачать архив репозитория, открыть файлы в редакторе кода и делать из них что-то своё. Вы можете смело менять свою копию, эталонный образец всегда доступен здесь: <code><a href="https://intuition-tech.github.io/ids">intuition-tech.github.io/ids</a></code>.</p>
+            <p>Если у вас нет навыков разработчика, то простейший способ начать проект – скачать архив репозитория, вы увидите там эту страницу, она одновременно является и инструкцией, и примером реализации. Открываете файлы в редакторе кода и смело делаете из них что-то своё. Эталонный образец этой страницы всегда доступен здесь: <code><a href="https://intuition-tech.github.io/ids">intuition-tech.github.io/ids</a></code>.</p>
             <p>Если вы разработчик – делайте что хотите. IDS работает в статике, у неё ноль зависимостей и ванильный JS.</p>
+            <p>IDS распростаняется по лицензии СС (или как её? надо найти), можно бесплатно использовать и модифицировать, никаких ограничений. (Претензии тоже не принимаем, сорян!)</p>
 
           </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="section">
           <div class="ids__space L"></div>
           <div class="ids__text-width">
-            <ids-nav-item id="setup" text="Настройка"><h2>Настройка</h2></ids-nav-item>
+            <ids-nav-item id="setup" label="Настройка"><h2>Настройка</h2></ids-nav-item>
             <p>Базовые параметры дизайн-системы задаются в файле <code>settings.css</code>.</p>
             <p> Кроме того, в IDS включён <code><a href="https://necolas.github.io/normalize.css/">normalize.css</a></code> – набор корректировок, устраняющих неконсистентность реализации стилей в разных браузерах – с ним не надо ничего делать, он просто есть. </p>
           </div>
@@ -154,7 +154,7 @@
         <div class="section">
           <div class="ids__space L"></div>
           <div class="ids__text-width">
-            <ids-nav-item id="frame" text="Каркас страницы"><h2>Каркас страницы</h2></ids-nav-item>
+            <ids-nav-item id="frame" label="Каркас страницы"><h2>Каркас страницы</h2></ids-nav-item>
             <p>IDS не использует модульные сетки или колонки для организации пространства страницы. У нас всё намного проще: страница состоит из этажей, они идут сверху вниз друг за другом, каждый занимает всю доступную ширину и может быть любой высоты. Такой подход не мешает внутри этажа создавать модульные сетки и сложные композиции, но изолированность этажей позволяет легко менять их местами и избавляет от какой-либо взаимозависимости. </p>
           </div>
         </div>
@@ -268,7 +268,7 @@
         <div class="section">
           <div class="ids__space L"></div>
           <div class="ids__text-width">
-            <ids-nav-item id="tags-style" text="Стилизация тегов"><h2>Стилизация тегов</h2></ids-nav-item>
+            <ids-nav-item id="tags-style" label="Теги"><h2>Стилизация тегов</h2></ids-nav-item>
             <p>IDS стилизует некоторые часто используемые теги — чтобы можно было верстать большие объёмы текста, сохраняя минималистичную разметку. Стили тегов определены только внутри контейнера <code>.ids</code>. Вы можете повесить этот класс на <code>body</code> и знать, что стили дизайн-системы применятся везде.</p>
               <aside>
                 <p>Иногда это может мешать. Например, подчёркнутой станет любая ссылка, не только текстовая, и любой ненумерованный список получит точки и отступы, даже когда это не текст. Можно переопределять стили, а можно просто не вешать <code>.ids</code> на <code>body</code>, а повесить где-то внутри, где у вас начинается основной поток текста. </p>
@@ -520,7 +520,7 @@
 
         <div class="section">
           <div class="ids__space L"></div>
-          <ids-nav-item id="components" text="Компоненты"><h2>Компоненты</h2></ids-nav-item>
+          <ids-nav-item id="components" label="Компоненты"><h2>Компоненты</h2></ids-nav-item>
         </div>
 
         <div class="section">
@@ -550,112 +550,75 @@
           <div class="ids__space XL"></div>
         </div>
       </div>
-      <div class="ids__wrapper wide">
+      <div class="ids__wrapper L">
         <div class="section">
           <ids-gallery>
             <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="bulbasaur">
+              <a href="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11978833.jpg">
+                <img src="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11978833.jpg" alt="Photo by Jan van der Wolf">
               </a>
             </figure>
             <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
-                 data-pswp-width="960"
-                 data-pswp-height="960"
-              >
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="ivysaur">
+              <a href="images/gallery/Photo by Mehmet Turgut  Kirkgoz_geometric-modern-architecture-16615613.jpg">
+                <img src="images/gallery/Photo by Mehmet Turgut  Kirkgoz_geometric-modern-architecture-16615613.jpg" alt="Photo by Mehmet Turgut Kirkgoz">
               </a>
             </figure>
             <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" alt="venusaur">
+              <a href="images/gallery/Photo by Jan van der Wolf_abstract-image-of-a-shadow-on-a-green-wall-and-blue-sky-11895895.jpg">
+                <img src="images/gallery/Photo by Jan van der Wolf_abstract-image-of-a-shadow-on-a-green-wall-and-blue-sky-11895895.jpg" alt="Photo by Jan van der Wolf">
               </a>
             </figure>
             <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="charmander">
+              <a href="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11986204.jpg">
+                <img src="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11986204.jpg" alt="Photo by Jan van der Wolf">
               </a>
             </figure>
             <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png" alt="charmeleon">
+              <a href="images/gallery/Photo by Mehmet Turgut  Kirkgoz_white-geometric-building-corner-18075244.jpg">
+                <img src="images/gallery/Photo by Mehmet Turgut  Kirkgoz_white-geometric-building-corner-18075244.jpg" alt="Photo by Mehmet Turgut Kirkgoz">
               </a>
             </figure>
             <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" alt="charizard">
+              <a href="images/gallery/icon1.png">
+                <img src="images/gallery/icon1.png" alt="abstract geometry">
               </a>
             </figure>
             <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="squirtle">
+              <a href="images/gallery/icon2.png">
+                <img src="images/gallery/icon2.png" alt="abstract geometry">
               </a>
             </figure>
             <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png" alt="wartortle">
+              <a href="images/gallery/icon3.png">
+                <img src="images/gallery/icon3.png" alt="abstract geometry">
               </a>
             </figure>
             <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png" alt="blastoise">
+              <a href="images/gallery/icon4.png">
+                <img src="images/gallery/icon4.png" alt="abstract geometry">
               </a>
             </figure>
             <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png" alt="caterpie">
+              <a href="images/gallery/icon5.png">
+                <img src="images/gallery/icon5.png" alt="abstract geometry">
               </a>
             </figure>
             <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png" alt="metapod">
+              <a href="images/gallery/icon6.png">
+                <img src="images/gallery/icon6.png" alt="abstract geometry">
               </a>
             </figure>
             <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png" alt="butterfree">
+              <a href="images/gallery/icon7.png">
+                <img src="images/gallery/icon7.png" alt="abstract geometry">
               </a>
             </figure>
             <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png" alt="weedle">
+              <a href="images/gallery/icon8.png">
+                <img src="images/gallery/icon8.png" alt="abstract geometry">
               </a>
             </figure>
-            <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png" alt="kakuna">
-              </a>
-            </figure>
-            <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png" alt="beedrill">
-              </a>
-            </figure>
-            <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png" alt="pidgey">
-              </a>
-            </figure>
-            <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png" alt="pidgeotto">
-              </a>
-            </figure>
-            <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png" alt="pidgeot" >
-              </a>
-            </figure>
-            <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png" alt="ratata">
-              </a>
-            </figure>
-            <figure>
-              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png" alt="raticate">
-              </a>
-            </figure>
+
           </ids-gallery>
         </div>
         <div class="ids__space XL"></div>
@@ -807,7 +770,7 @@
                 ${IdsNavbar.#items.map(item => `
                     <li>
                         <a href="#${item.getAttribute('id')}">
-                            ${item.getAttribute('text')}
+                            ${item.getAttribute('label')}
                         </a>
                     </li>
                 `).join('')}

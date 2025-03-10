@@ -1,0 +1,14 @@
+.ids__navbar {
+    display: block;
+    position: fixed;
+    top: 1em;
+    left: 1em;
+}
+.ids__navbar li {
+    border: solid 1px transparent;
+}
+.ids__navbar .current {
+    border: solid 1px rgba(var(--ids__link-RGB), 0.4);
+}
+.ids__nav-item {
+}

@@ -12,17 +12,19 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/ids.css" />
     <link rel="stylesheet" href="css/gallery.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
 
   </head>
 
   <body class="ids">
     <header></header>
+    <ids-navbar></ids-navbar>
     <main>
       <div class="ids__wrapper">
         <div class="section" id="intro">
           <div class="ids__space XL"></div>
           <div class="ids__text-width">
-            <h1>.ids</h1>
+            <ids-nav-item id="ids" text=".ids"><h1>.ids</h1></ids-nav-item>
             <p>IDS (Intuition Design System) – дизайн-система для вёрстки нарративов.</p>
             <p>Упрощает создание лендингов, онлайн-изданий и любых цифровых продуктов для веба, в основе которых лежит история, объяснение, иллюстрированный текст.</p>
             <p>Технически IDS – это набор CSS-классов, JS-компонентов и всяких секретных приёмчиков. Это не библиотека, а шаблон – вы не подключаете IDS в проект как зависимость, не расширяете классы, не переопределяете свойства. Вместо этого вы тупо копируете к себе её исходный код, и меняете его как захочется. Без проблем с совместимостью, без апдейтов. </p>
@@ -39,7 +41,7 @@
         <div class="section">
           <div class="ids__space L"></div>
           <div class="ids__text-width">
-            <h2>Настройка</h2>
+            <ids-nav-item id="setup" text="Настройка"><h2>Настройка</h2></ids-nav-item>
             <p>Базовые параметры дизайн-системы задаются в файле <code>settings.css</code>.</p>
             <p> Кроме того, в IDS включён <code><a href="https://necolas.github.io/normalize.css/">normalize.css</a></code> – набор корректировок, устраняющих неконсистентность реализации стилей в разных браузерах – с ним не надо ничего делать, он просто есть. </p>
           </div>
@@ -152,7 +154,7 @@
         <div class="section">
           <div class="ids__space L"></div>
           <div class="ids__text-width">
-            <h2>Каркас страницы</h2>
+            <ids-nav-item id="frame" text="Каркас страницы"><h2>Каркас страницы</h2></ids-nav-item>
             <p>IDS не использует модульные сетки или колонки для организации пространства страницы. У нас всё намного проще: страница состоит из этажей, они идут сверху вниз друг за другом, каждый занимает всю доступную ширину и может быть любой высоты. Такой подход не мешает внутри этажа создавать модульные сетки и сложные композиции, но изолированность этажей позволяет легко менять их местами и избавляет от какой-либо взаимозависимости. </p>
           </div>
         </div>
@@ -266,7 +268,7 @@
         <div class="section">
           <div class="ids__space L"></div>
           <div class="ids__text-width">
-            <h2>Стилизация тегов</h2>
+            <ids-nav-item id="tags-style" text="Стилизация тегов"><h2>Стилизация тегов</h2></ids-nav-item>
             <p>IDS стилизует некоторые часто используемые теги — чтобы можно было верстать большие объёмы текста, сохраняя минималистичную разметку. Стили тегов определены только внутри контейнера <code>.ids</code>. Вы можете повесить этот класс на <code>body</code> и знать, что стили дизайн-системы применятся везде.</p>
               <aside>
                 <p>Иногда это может мешать. Например, подчёркнутой станет любая ссылка, не только текстовая, и любой ненумерованный список получит точки и отступы, даже когда это не текст. Можно переопределять стили, а можно просто не вешать <code>.ids</code> на <code>body</code>, а повесить где-то внутри, где у вас начинается основной поток текста. </p>
@@ -518,7 +520,7 @@
 
         <div class="section">
           <div class="ids__space L"></div>
-          <h2>Компоненты</h2>
+          <ids-nav-item id="components" text="Компоненты"><h2>Компоненты</h2></ids-nav-item>
         </div>
 
         <div class="section">
@@ -742,7 +744,6 @@
       }
 
       window.customElements.define('ids-gallery', IdsGallery);
-    </script>
 
 
     <script>
@@ -760,7 +761,97 @@
         observer.observe(el);
       })
     </script>
+    <script>  
 
+      class IdsNavbar extends HTMLElement {
+        static #items = [];
+        static #instances = [];
+
+        constructor() {
+          super();
+          this.classList.add('ids__navbar');
+          this.render();
+        }
+
+        static updateItems() {
+          // Сейчас оно будет запускаться слишком часто, нужно будет переделать
+          this.#items = [...document.querySelectorAll('.ids__nav-item')];
+          for (const instance of this.#instances) {
+            instance.render();
+          }
+          this.updateCurrent();
+        }
+
+        static updateCurrent() {
+          let highestTopPositionIndex = 0;
+          for (let i = 0; i < this.#items.length; i++) {
+            let { bottom, top } = this.#items[i].getBoundingClientRect() ?? {
+              top: 0,
+              bottom: 0
+            };
+            let topPosition = (top + bottom) / 2;
+            if (topPosition < 0) {
+              highestTopPositionIndex = i;
+            }
+            if (topPosition >= 0 && topPosition < window.innerHeight / 2) {
+              highestTopPositionIndex = i;
+              break;
+            }
+          }
+          let id = this.#items[highestTopPositionIndex].getAttribute('id');
+          history.replaceState({}, '', `#${id}`);
+          for (const instance of this.#instances) {
+            for (const /** @type {HTMLElement} */ li of instance.querySelectorAll('li:has(a)')) {
+              li.classList.toggle('current', li.firstElementChild.getAttribute('href') === '#' + id);
+            }
+          }
+        }
+
+        connectedCallback() {
+          IdsNavbar.#instances.push(this);
+        }
+
+        disconnectedCallback() {
+          IdsNavbar.#instances.splice(IdsNavbar.#instances.indexOf(this), 1);
+        }
+
+        render() {
+          // Тут стоит делать через манипуляции с dom и не пересоздавать одни и те же записи по 100 раз
+          this.innerHTML = `
+            <ul>
+                ${IdsNavbar.#items.map(item => `
+                    <li>
+                        <a href="#${item.getAttribute('id')}">
+                            ${item.getAttribute('text')}
+                        </a>
+                    </li>
+                `).join('')}
+            </ul>
+          `
+        }
+
+      }
+
+      // TODO можно добавлять/убирать этот лисенер
+      document.addEventListener('scroll', () => IdsNavbar.updateCurrent());
+
+      class IdsNavItem extends HTMLElement {
+        constructor() {
+          super();
+          this.classList.add('ids__nav-item');
+        }
+
+        connectedCallback() {
+          IdsNavbar.updateItems();
+        }
+        disconnectedCallback() {
+          IdsNavbar.updateItems();
+        }
+      }
+
+      window.customElements.define('ids-navbar', IdsNavbar);
+      window.customElements.define('ids-nav-item', IdsNavItem);
+    </script>
   </body>
 
 </html>

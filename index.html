@@ -662,22 +662,7 @@
       </div>
 
     </main>
-    <footer></footer>
-    <script>
-      let observer = new IntersectionObserver((elements)=>{
-        elements.forEach((el) => {
-          if(el.intersectionRatio > .3) {
-            el.target.classList.remove("sleep");
-          } else {
-            el.target.classList.add("sleep");
-          }
-        })
-      }, {threshold: [0, .5]});
-
-      document.querySelectorAll('.awake').forEach(el => {
-        observer.observe(el);
-      })
-    </script>
+  
 
     <!-- Encoded with base64 versions of libraries -->
     <script type="importmap">
@@ -745,7 +730,7 @@
 
       window.customElements.define('ids-gallery', IdsGallery);
 
-
+    </script>
     <script>
       let observer = new IntersectionObserver((elements)=>{
         elements.forEach((el) => {

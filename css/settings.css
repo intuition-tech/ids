@@ -75,30 +75,6 @@ html {
   }
 
   
-
-  /* Font-size calculation using clamp() */
-
-  /* Generator for the clamp() string for min-width 320px and max-width 768px:
-    
-    You can open the link to configure the parameters:
-    https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjMyMHB4IiwibWF4V2lkdGgiOiI3NjhweCIsIm1pbkZvbnRTaXplIjoiMTRweCIsIm1heEZvbnRTaXplIjoiMzJweCJ9 */
-
-  /* 
-  @media screen and (min-width: 320px) {    
-    font-size: clamp(0.875rem, 0.0714rem + 4.0179vw, 2rem);
-  } 
-  */
-
-  /* Generator for the clamp() string for min-width 768px and max-width 1500px:
-
-    You can open the link to configure the parameters: 
-    https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6Ijc2OHB4IiwibWF4V2lkdGgiOiIxNTAwcHgiLCJtaW5Gb250U2l6ZSI6IjExLjVweCIsIm1heEZvbnRTaXplIjoiMjIuNXB4In0%3D */
-
-  /* 
-  @media screen and (min-width: 768px) {
-    font-size: clamp(0.71875rem, -0.0026rem + 1.5027vw, 1.40625rem);
-  }
-  */
 }
 
 /* Smooth scroll for anchored links */

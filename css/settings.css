@@ -29,9 +29,6 @@ body {
   line-height: var(--ids__density);
 }
 
-/* Fluid typography 
-
-By default, the font-size in IDS is calculated using variables. However, there is option to use the clamp() function. It providing automatic responsiveness and performance improvements, especially for large projects. The clamp() version is commented out below. If needed, simply comment out or delete the variable block and uncomment the clamp() block. */
 
 html {
   /* Font-size calculation using variables */

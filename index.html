@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8" />
     <title>Intuition Design System Template</title>
-    <link rel="icon" type="image/png" href="images/favicon-inverted.png">
+    <link rel="icon" type="image/png" href="images/favicon-inverted.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/colors.css" />
     <link rel="stylesheet" href="css/normalize.css" />
@@ -13,37 +12,52 @@
     <link rel="stylesheet" href="css/ids.css" />
     <link rel="stylesheet" href="css/gallery.css" />
     <link rel="stylesheet" href="css/navbar.css" />
-
   </head>
 
   <body class="ids">
     <header></header>
-    
+
     <main>
       <div class="ids__wrapper">
         <div class="section" id="intro">
           <div class="ids__space XL"></div>
           <div class="ids__text-width">
             <ids-nav-item id="intro" label="О дизайн-системе">
-              <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">.ids</h1>              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.52 148.95" style="width: 15em;">
-                <path style="fill: rgba(var(--ids__accent-RGB), 1)" d="M87.51,42.44c-13.74,34.36-24.86,69.73-24.86,84.88,0,10.11,10.71,20.21,21.22,20.21,8.08,0,20.01-7.88,28.9-19.2l-13.95-10.91c-6.06,6.06-11.12,9.9-14.15,9.9-1.01,0-2.02-1.01-2.02-3.03,0-7.07,5.46-29.3,23.85-74.78l-19-7.07ZM40.42,128.34c0,9.9-9.9,20.21-20.21,20.21S0,138.44,0,128.34s10.11-20.21,20.21-20.21c10.71,0,20.21,10.71,20.21,20.21M125.51,17.18c0,8.49-8.49,17.18-17.18,17.18s-17.18-8.69-17.18-17.18S99.84,0,108.33,0s17.18,8.49,17.18,17.18M318.52,57.8c-7.68-11.72-20.61-21.42-33.75-21.42-17.99,0-34.36,16.98-34.36,31.73,0,26.27,38.6,33.75,38.6,47.9,0,6.06-8.49,12.33-16.57,12.33-10.11,0-17.79-8.08-23.85-16.17l-13.34,13.14c6.26,9.1,21.83,22.23,38.2,22.23,18.19,0,36.38-17.38,36.38-34.56,0-23.24-40.22-32.74-40.22-47.49,0-5.66,6.06-11.32,13.34-11.32,8.29,0,15.16,6.27,22.23,16.57l13.34-12.93ZM199.07,78.82c-15.16,29.31-38.4,48.51-45.47,48.51-3.03,0-5.05-3.03-5.05-6.06,0-15.16,19.2-64.67,31.33-64.67,8.09,0,16.17,13.14,19.2,22.23M204.13,66.09l9.09,11.72c-3.03-23.24-21.22-41.43-35.37-41.43-29.3,0-50.53,66.69-50.53,87.91,0,12.13,12.13,24.25,24.25,24.25,15.16,0,34.36-20.21,61.64-62.65l-15.97,12.53c-3.43,15.16-9.09,31.12-13.14,46.28l20.21,4.24c11.12-47.49,22.03-94.99,36.18-142.48l-20.21-4.45c-5.05,20.21-10.51,43.65-16.17,64.07"/>
-              </svg>          
+              <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0">.ids</h1>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.52 148.95" style="width: 15em">
+                <path
+                  style="fill: rgba(var(--ids__accent-RGB), 1)"
+                  d="M87.51,42.44c-13.74,34.36-24.86,69.73-24.86,84.88,0,10.11,10.71,20.21,21.22,20.21,8.08,0,20.01-7.88,28.9-19.2l-13.95-10.91c-6.06,6.06-11.12,9.9-14.15,9.9-1.01,0-2.02-1.01-2.02-3.03,0-7.07,5.46-29.3,23.85-74.78l-19-7.07ZM40.42,128.34c0,9.9-9.9,20.21-20.21,20.21S0,138.44,0,128.34s10.11-20.21,20.21-20.21c10.71,0,20.21,10.71,20.21,20.21M125.51,17.18c0,8.49-8.49,17.18-17.18,17.18s-17.18-8.69-17.18-17.18S99.84,0,108.33,0s17.18,8.49,17.18,17.18M318.52,57.8c-7.68-11.72-20.61-21.42-33.75-21.42-17.99,0-34.36,16.98-34.36,31.73,0,26.27,38.6,33.75,38.6,47.9,0,6.06-8.49,12.33-16.57,12.33-10.11,0-17.79-8.08-23.85-16.17l-13.34,13.14c6.26,9.1,21.83,22.23,38.2,22.23,18.19,0,36.38-17.38,36.38-34.56,0-23.24-40.22-32.74-40.22-47.49,0-5.66,6.06-11.32,13.34-11.32,8.29,0,15.16,6.27,22.23,16.57l13.34-12.93ZM199.07,78.82c-15.16,29.31-38.4,48.51-45.47,48.51-3.03,0-5.05-3.03-5.05-6.06,0-15.16,19.2-64.67,31.33-64.67,8.09,0,16.17,13.14,19.2,22.23M204.13,66.09l9.09,11.72c-3.03-23.24-21.22-41.43-35.37-41.43-29.3,0-50.53,66.69-50.53,87.91,0,12.13,12.13,24.25,24.25,24.25,15.16,0,34.36-20.21,61.64-62.65l-15.97,12.53c-3.43,15.16-9.09,31.12-13.14,46.28l20.21,4.24c11.12-47.49,22.03-94.99,36.18-142.48l-20.21-4.45c-5.05,20.21-10.51,43.65-16.17,64.07" />
+              </svg>
             </ids-nav-item>
             <div class="ids__space S"></div>
-            
+
             <p>Intuition Design System, IDS – дизайн-система для вёрстки лендингов, онлайн-изданий и любых цифровых продуктов для веба, в основе которых лежат нарративы.</p>
             <ids-navbar></ids-navbar>
-            <p>Технически IDS – набор CSS-классов и JS-компонентов. Это не библиотека, а готовый шаблон вёрстки. Вы не подключаете IDS в проект как зависимость, не расширяете классы, не переопределяете свойства. Вместо этого вы тупо копируете её исходный код, и меняете его как захочется. Без проблем с совместимостью и без ломающих вёрстку апдейтов. </p>
+            <p>
+              Технически IDS – набор CSS-классов и JS-компонентов. Это не библиотека, а готовый шаблон вёрстки. Вы не подключаете IDS в проект как зависимость, не расширяете
+              классы, не переопределяете свойства. Вместо этого вы тупо копируете её исходный код, и меняете его как захочется. Без проблем с совместимостью и без ломающих вёрстку
+              апдейтов.
+            </p>
             <aside>
               <p>Публичный репозиторий: <a href="https://github.com/intuition-tech/ids">github.com/intuition-tech/ids</a></p>
               <p>Версия: 0.9.</p>
-              
-              <p>Если у вас нет навыков разработчика, то простейший способ начать проект – скачать архив репозитория. Вы увидите там файл <code>index.html</code>, и в нём эту же самую страницу, которая одновременно является и инструкцией, и примером вёрстки. Открываете файлы в редакторе кода и смело делаете из них что-то своё. А инструкция не потеряется, она всегда здесь: <a href="https://intuition-tech.github.io/ids">intuition-tech.github.io/ids</a>.</p>
-              <p>Если вы разработчик – делайте, что хотите. IDS работает в статике, у неё ноль зависимостей и ванильный JS. Если заметите ошибку, чисто по-братски сделайте пулреквест, пжлст.</p>
-            </aside>
-            <p>IDS распростаняется по лицензии MIT — можно бесплатно использовать и модифицировать, никаких ограничений. Претензии тоже не принимаем, подсказать не сможем, службы поддержки нет. Если вам интересно, но не очень понятно, как с этим работать – велкам на курс <a href="https://intuition.team/ru/how-to-design-with-code">«Как дизайнить кодом»</a>, он поможет.</p>
 
+              <p>
+                Если у вас нет навыков разработчика, то простейший способ начать проект – скачать архив репозитория. Вы увидите там файл <code>index.html</code>, и в нём эту же
+                самую страницу, которая одновременно является и инструкцией, и примером вёрстки. Открываете файлы в редакторе кода и смело делаете из них что-то своё. А инструкция
+                не потеряется, она всегда здесь: <a href="https://intuition-tech.github.io/ids">intuition-tech.github.io/ids</a>.
+              </p>
+              <p>
+                Если вы разработчик – делайте, что хотите. IDS работает в статике, у неё ноль зависимостей и ванильный JS. Если заметите ошибку, чисто по-братски сделайте
+                пулреквест, пжлст.
+              </p>
+            </aside>
+            <p>
+              IDS распростаняется по лицензии MIT — можно бесплатно использовать и модифицировать, никаких ограничений. Претензии тоже не принимаем, подсказать не сможем, службы
+              поддержки нет. Если вам интересно, но не очень понятно, как с этим работать – велкам на курс
+              <a href="https://intuition.team/ru/how-to-design-with-code">«Как дизайнить кодом»</a>, он поможет.
+            </p>
           </div>
         </div>
 
@@ -52,7 +66,10 @@
           <div class="ids__text-width">
             <ids-nav-item id="setup" label="Настройка"><h2>Настройка</h2></ids-nav-item>
             <p>Базовые параметры дизайн-системы задаются в файле <code>settings.css</code>.</p>
-            <p>В IDS включён <code><a href="https://necolas.github.io/normalize.css/">normalize.css</a></code> – набор корректировок неконсистентности реализации стилей в разных браузерах – с ним не надо ничего делать, он просто есть. Может, он и не нужен уже, но пока пусть будет.</p>
+            <p>
+              В IDS включён <code><a href="https://necolas.github.io/normalize.css/">normalize.css</a></code> – набор корректировок неконсистентности реализации стилей в разных
+              браузерах – с ним не надо ничего делать, он просто есть. Может, он и не нужен уже, но пока пусть будет.
+            </p>
           </div>
         </div>
 
@@ -60,11 +77,18 @@
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Шрифт</h3>
-            <p>В IDS по умолчанию используется шрифт <a href="https://www.paratype.com/fonts/pt/pt-root-ui" target="_BLANK">PT Root UI</a>, вариативная веб-версия. Он классный! Но дизайн-система не завязана на конкретный шрифт, вы можете подключить любой. Достаточно положить файлы шрифта в папку <code>fonts</code> и отредактировать раздел Fonts в файле <code>settings.css</code>. Постарайтесь не пиратить шрифты.</p> 
+            <p>
+              В IDS по умолчанию используется шрифт <a href="https://www.paratype.com/fonts/pt/pt-root-ui" target="_BLANK">PT Root UI</a>, вариативная веб-версия. Он классный!
+              Но дизайн-система не завязана на конкретный шрифт, вы можете подключить любой. Достаточно положить файлы шрифта в папку <code>fonts</code> и отредактировать раздел
+              Fonts в файле <code>settings.css</code>. Постарайтесь не пиратить шрифты.
+            </p>
             <aside>
-              <p>Когда подключаете отдельные шрифтовые файлы для разной насыщенности (например, regular и bold),убедитесь, что числовые значения в свойстве font-weight везде-везде соответствуют насыщенности подключённого файла, указанной в блоке <code>@font-face</code>. Разные браузеры по-разному реагируют на несоответствие, могут добавлять буквам обводку, чтобы восполнить «недостающую жирность».</p>
+              <p>
+                Когда подключаете отдельные шрифтовые файлы для разной насыщенности (например, regular и bold),убедитесь, что числовые значения в свойстве font-weight везде-везде
+                соответствуют насыщенности подключённого файла, указанной в блоке @font-face. Разные браузеры по-разному реагируют на несоответствие, могут добавлять буквам
+                обводку, чтобы восполнить «недостающую жирность».
+              </p>
             </aside>
-
           </div>
         </div>
 
@@ -73,7 +97,10 @@
           <div class="ids__text-width">
             <h3>Плотность</h3>
             <p>Разным шрифтам подходит разная плотность вёрстки. Кроме того, плотность это эстетический выбор – иногда нужна тесная вёрстка, иногда воздушная.</p>
-            <p>В IDS есть переменная <code>ids__density</code>, которая влияет на интерлиньяж текста, а также на поля и отступы всех текстовых элементов. Чтобы настроить плотность вёрстки, попробуйте сначала найти оптимальное значение этой переменной, а потом уже редактировать отдельные стили.</p>
+            <p>
+              В IDS есть переменная <code>ids__density</code>, которая влияет на интерлиньяж текста, а также на поля и отступы всех текстовых элементов. Чтобы настроить плотность
+              вёрстки, попробуйте сначала найти оптимальное значение этой переменной, а потом уже редактировать отдельные стили.
+            </p>
           </div>
         </div>
 
@@ -81,19 +108,39 @@
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Адаптивность</h3>
-            <p>IDS считает, что есть только два типа устройств: <code>mobile</code> и <code>desktop</code>. Это определяется по ширине вьюпорта (если упрощать, это ширина окна браузера): меньше 768 px – значит мобила, больше – десктоп.</p>
-            <p>IDS реализует концепцию Fluid Typography – это когда в зависимости от ширины вьюпорта рассчитывается значение font-size для body, а затем единицы em или rem используются не только для текста, но и для полей, отступов, радиусов скруглений, а иногда и габаритов отдельных элементов.</p>
+            <p>
+              IDS считает, что есть только два типа устройств: mobile и desktop. Это определяется по ширине вьюпорта (если упрощать, это ширина окна браузера): меньше 768 px –
+              значит мобила, больше – десктоп.
+            </p>
+            <p>
+              IDS реализует концепцию Fluid Typography – это когда в зависимости от ширины вьюпорта рассчитывается значение font-size для <code>body,</code> а затем единицы em или
+              rem используются не только для текста, но и для полей, отступов, радиусов скруглений, а иногда и габаритов отдельных элементов.
+            </p>
             <aside>
               <p>Конечно, толщину обводки уместнее задавать в px, а для размеров, зависящих от габаритов родительских контейнеров, подойдут только %, vh и vw.</p>
             </aside>
 
-            <p>Этот подход упрощает отладку дизайна. Сначала нужно найти оптимальный диапазон значений font-size, подходящий выбранному шрифту и желаемой крупности «обычного» текста.</p>
-            <p>Этот диапазон задают переменные <code>--desktop-font-size-min</code> и <code>--desktop-font-size-max</code>. Нужно подобрать такие значения, чтобы при изменении ширины текст масштабировался, сохраняя разбивку слов по строкам. И тогда можно проверять вёрстку только на одной ширине, зная, что при любой ширине компоновка элементов сохранится. </p>
-            <p>Для мобилы нужно найти свою пару значений <code>--mobile-font-size-min</code> и <code>--mobile-font-size-max</code>, но идея ровно та же – одинаковая вёрстка на телефончиках разной ширины.</p>
-            <aside>У этого подхода есть минус: читатель не сможет укрупнить текст через изменение масштаба в браузере (Zoom In/Out, Ctrl/Cmd+/–). Мы считаем это допустимым, потому то а) рекомендуем в принципе не мельчить, чтобы и не надо было зумить, б) зум жестом на экранах и тачпадах – работает. </p>
-              <p>Если вы считаете эту проблему критичной – отключите весь блок <code>Font-size calculation using variables</code> в файле <code>settings.css</code>.</aside>
+            <p>
+              Этот подход упрощает отладку дизайна. Сначала нужно найти оптимальный диапазон значений font-size, подходящий выбранному шрифту и желаемой крупности «обычного»
+              текста.
+            </p>
+            <p>
+              Этот диапазон задают переменные <code>--desktop-font-size-min</code> и <code>--desktop-font-size-max</code>. Нужно подобрать такие значения, чтобы при изменении
+              ширины текст масштабировался, сохраняя разбивку слов по строкам. И тогда можно проверять вёрстку только на одной ширине, зная, что при любой ширине компоновка
+              элементов сохранится.
+            </p>
+            <p>
+              Для мобилы нужно найти свою пару значений <code>--mobile-font-size-min</code> и <code>--mobile-font-size-max</code>, но идея ровно та же – одинаковая вёрстка на
+              телефончиках разной ширины.
+            </p>
+            <aside>
+              <p>
+                У этого подхода есть минус: читатель не сможет укрупнить текст через изменение масштаба в браузере (Zoom In/Out, Ctrl/Cmd+/–). Мы считаем это допустимым, потому то
+                а) рекомендуем в принципе не мельчить, чтобы и не надо было зумить, б) зум жестом на экранах и тачпадах – работает.
+              </p>
+              <p>Если вы считаете эту проблему критичной – отключите весь блок <code>Font-size calculation using variables</code> в файле <code>settings.css</code>.</p>
+            </aside>
           </div>
-
         </div>
 
         <div class="section" id="color">
@@ -159,90 +206,94 @@
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <p>Цветовая палитра живёт в файле <code>colors.css</code>.</p>
-            <p> Каждая переменная хранит строку из трёх значений в пространстве RGB через запятую, например: <code>253, 47, 75</code>.<p>
-          
+            <p>Каждая переменная хранит строку из трёх значений в пространстве RGB через запятую, например: <code>253, 47, 75</code>.</p>
+            <p></p>
+
             <div class="ids__space"></div>
             <aside>
               <h4>Зачем так</h4>
 
-              <p>Информацию о прозрачности удобнее хранить в свойствах селектора, а не в переменных. Вместо 30-40 переменных для каждого варианта прозрачности — десяток цветов с понятными названиями и очевидный код в свойствах селекторов.</p>  
-                
-            </aside>   
+              <p>
+                Информацию о прозрачности удобнее хранить в свойствах селектора, а не в переменных. Вместо 30-40 переменных для каждого варианта прозрачности — десяток цветов с
+                понятными названиями и очевидный код в свойствах селекторов.
+              </p>
+            </aside>
             <div class="ids__sequence XL">
               <div class="ids__sequence-item">
                 <p>Не так</p>
-                <p><code><strike>color: var(--ids__accent-RGB);</strike></code></p>
-                
+                <p>
+                  <code><strike>color: var(--ids__accent-RGB);</strike></code>
+                </p>
               </div>
               <div class="ids__sequence-item">
-                <p>А вот так </p>
+                <p>А вот так</p>
                 <p><code>color: rgb(var(--ids__accent-RGB));</code></p>
                 <p><code>color: rgba(var(--ids__accent-RGB), 0.5);</code></p>
-
               </div>
-              
-          </div>       
-        </div>
-
-        <div class="section">
-          <div class="ids__space L"></div>
-          <div class="ids__text-width">
-            <ids-nav-item id="frame" label="Каркас страницы"><h2>Каркас страницы</h2></ids-nav-item>
-            <p>IDS не использует модульные сетки или колонки для организации пространства страницы. Всё проще: страница состоит из «этажей», они идут сверху вниз друг за другом, каждый занимает всю доступную ширину и может быть любой высоты. Такой подход не мешает внутри этажа создавать модульные сетки и сложные композиции, но изолированность этажей позволяет легко менять их местами и избавляет от какой-либо взаимозависимости. </p>
-          </div>
-        </div>
-
-        <div class="section">
-          <div class="ids__space"></div>
-          <div class="ids__text-width">
-            <h3>Обёртки</h3>
-            <p><code>.ids__wrapper</code> – стандартный этаж c большими полями на десктопе и с минимальными на мобиле.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-      <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
-        <div class="ids__wrapper">
-          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
-            <div class="ids__space XL"></div>
-            <div class="ids__space XL"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="ids__wrapper">
-        <div class="section">
-          <div class="ids__space M"></div>
-          <div class="ids__text-width">
-            
-              <p><code>.ids__wrapper.L</code> – этаж с увеличенной шириной. Отличается только для десктопа, а на мобиле совпадает со стандартным.</p>
-            
-          </div>
-        </div>
-      </div>
-
-      <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
-        <div class="ids__wrapper L">
-          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
-            <div class="ids__space XL"></div>
-            <div class="ids__space XL"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="ids__wrapper">
-        <div class="section">
-          <div class="ids__space M"></div>
-            <div class="ids__text-width">
-              <p><code>.ids__wrapper.XL</code> – этаж на всю ширину с минимальными полями. Отличается только для десктопа, а на мобиле совпадает со стандартным.</p>
             </div>
+          </div>
+
+          <div class="section">
+            <div class="ids__space L"></div>
+            <div class="ids__text-width">
+              <ids-nav-item id="frame" label="Каркас страницы"><h2>Каркас страницы</h2></ids-nav-item>
+              <p>
+                IDS не использует модульные сетки или колонки для организации пространства страницы. Всё проще: страница состоит из «этажей», они идут сверху вниз друг за другом,
+                каждый занимает всю доступную ширину и может быть любой высоты. Такой подход не мешает внутри этажа создавать модульные сетки и сложные композиции, но
+                изолированность этажей позволяет легко менять их местами и избавляет от какой-либо взаимозависимости.
+              </p>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="ids__space"></div>
+            <div class="ids__text-width">
+              <h3>Обёртки</h3>
+              <p><code>.ids__wrapper</code> – стандартный этаж c большими полями на десктопе и с минимальными на мобиле.</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
+      <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+        <div class="ids__wrapper">
+          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+            <div class="ids__space XL"></div>
+            <div class="ids__space XL"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ids__wrapper">
+        <div class="section">
+          <div class="ids__space M"></div>
+          <div class="ids__text-width">
+            <p><code>.ids__wrapper.L</code> – этаж с увеличенной шириной. Отличается только для десктопа, а на мобиле совпадает со стандартным.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+        <div class="ids__wrapper L">
+          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+            <div class="ids__space XL"></div>
+            <div class="ids__space XL"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ids__wrapper">
+        <div class="section">
+          <div class="ids__space M"></div>
+          <div class="ids__text-width">
+            <p><code>.ids__wrapper.XL</code> – этаж на всю ширину с минимальными полями. Отличается только для десктопа, а на мобиле совпадает со стандартным.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
         <div class="ids__wrapper XL">
-          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
+          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
             <div class="ids__space XL"></div>
             <div class="ids__space XL"></div>
           </div>
@@ -256,527 +307,571 @@
         </div>
       </div>
 
-      <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
+      <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
         <div class="ids__wrapper XXL">
-          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
+          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
             <div class="ids__space XL"></div>
             <div class="ids__space XL"></div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="ids__wrapper">
-
-      <div class="section">
-        <div class="ids__space M"></div>
-        <div class="ids__text-width">
-          <p>Для текста в одну колонку внутри стандартного этажа используется дополнительная обёртка, которая уменьшает ширину и оставляет справа дополнительное поле. Это только на десктопе, а на мобиле остаётся полная ширина. </p>
-        </div>
-        <p><code>.ids__text-width</code></p>
-        <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
-          <div class="ids__text-width">
-            <div style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
-              <div class="ids__space XL"></div>
-              <div class="ids__space XL"></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="section">
-        <div class="ids__space L"></div>
-        <div class="ids__text-width">
-          <h3>Система вертикальных отступов</h3>
-          <p>В IDS у обёрток нулевые отступы, а у большинства других элементов задан только отступ снизу, минимальный, чтобы верстать элементы сплошным потоком.</p>
-
-          <p>Когда нужны заметные отступы – например, между этажами или перед заголовком, чтобы он не прилипал к предыдущему абзацу – используются специальные заглушки, спейсеры.</p>
-        </div>
-        <div class="ids__space M"></div>
-        <div class="ids__sequence M gap-S">
-          <div class="ids__sequence-item">
-            <p><code>ids__space.S</code></p>
-            <div class="ids__space S" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
-          </div>
-          <div class="ids__sequence-item">
-            <p><code>ids__space.M</code></p>
-            <div class="ids__space M" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
-          </div>
-          <div class="ids__sequence-item">
-            <p><code>ids__space.L</code></p>
-            <div class="ids__space L" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
-          </div>
-          <div class="ids__sequence-item">
-            <p><code>ids__space.XL</code></p>
-            <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
-          </div>
-        </div>
-        <div class="ids__space L"></div>
-        <div class="ids__text-width">
-
-          <aside>
-            <h4>Зачем так</h4>
-
-            <p>Спейсеры – довольно примитивное решение, как свинцовые бруски во времена ручного металлического набора. Неужели нельзя как-то элегантнее? Практика показала, что не надо.</p>
-            <p>Если бы мы решили хранить информацию об отступах в свойствах отдельных элементов, пришлось бы учитывать все возможные контексты. Например, на этой самой плашке верхний отступ у заголовка «Зачем так» помешал бы поставить его аккуратно в угол – пришлось бы добавлять класс-модификатор, отменяющий отступ, или писать более сложные стили с условиями, менее очевидные и более хрупкие.</p>
-            <p>И даже после этого элементы не смогли бы всегда знать, какой нужен отступ – только дизайнер это знает. Поэтому у нас свинцовые брусочки.</p>
-          </aside>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="ids__space L"></div>
-        <div class="ids__text-width">
-          <ids-nav-item id="tags-style" label="Стилизация тегов"><h2>Стилизация тегов</h2></ids-nav-item>
-          <p>IDS стилизует некоторые часто используемые теги, чтобы можно было верстать большие объёмы текста, сохраняя минималистичную разметку. Стили тегов определены только внутри контейнера <code>.ids</code>. По умолчанию этот класс висит на теге <code>body</code>, а значит теги стилизуются везде.</p>
-            <aside>
-              <p>Иногда это может мешать. Например, подчёркнутой станет любая ссылка, не только текстовая; любой ненумерованный список получит буллиты и отступы, даже когда это не текст. </p>
-              <p>Если вам это мешает, переместите класс <code>.ids</code> куда-то поглубже, где у вас начинается основной поток текста. Класс <code>.ids</code> изолирует только стили тегов – остальные настройки продолжат работать везде, классы с префиксом <code>.ids__</code> тоже будут работать везде. </p>
-            </aside>
-          <p>Вот какие теги стилизованы внутри <code>.ids</code>.</p>
-        </div>
-      </div>
-
-
-
-      <div class="section">
-        <div class="ids__space M"></div>
-        <div class="ids__text-width">
-          <h3>Заголовки</h3>
-          <code>h1</code>
-          <h1>Главный заголовок страницы</h1>
-          <hr>
-          <code>h2</code>
-          <h2>Заголовок второго уровня</h2>
-          <hr>
-          <code>h3</code>
-          <h3>Заголовок третьего уровня</h3>
-          <hr>
-          <code>h4</code>
-          <h4>Заголовок четвёртого уровня</h4>
-          <hr>
-          <code>h5</code>
-          <h5>Заголовок пятого уровня</h5>
-          <hr>
-          <code>h6</code>
-          <h6>Заголовок шестого уровня</h6>
-          <hr>
-
-          <div class="ids__space"></div>
-          <p>Бывает, что тексту не нужны такие крупные заголовки как h1 или h2. Проблема в том, что по стандартам доступности на странице должен быть h1, а следующим уровнем не может быть h3, должен быть h2. Чтобы разрешить это противоречие, мы подготовили специальные классы, визуально уменьшающие h1 и h2:</p>
-
-          <code>h1.S</code>
-          <h1 class="S">Главный заголовок, уменьшенный</h1>
-          <hr>
-          <code>h1.XS</code>
-          <h1 class="XS">Главный заголовок, уменьшенный ещё сильнее</h1>
-          <hr>
-          <code>h2.XS</code>
-          <h2 class="XS">Заголовок второго уровня, уменьшенный как-то</h2>
-          <hr>
-
-
-          <p>TODO: hgroup с лейблом</p>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="ids__space M"></div>
-        <div class="ids__text-width">
-          <h3>Текст</h3>
-          <code>p</code>
-          <p>TODO: показать абзац +помельче +покрупнее +супер-крупный</p>
-            <code>p.loud</code>          
-          <p class="loud">Дизайн цифровых продуктов – это в первую очередь дизайн взаимодействия.</p>
-          <code>mark</code>
-          <code>code</code>
-          <p>Используются, чтобы выделить <mark>важную мысль</mark> или <code>фрагмент кода</code>.</p>
-
-        </div>
-
-      </div>
-
-      <div class="section">
-        <div class="ids__space"></div>
-        <div class="ids__text-width">
-          <h3>Иллюстрация</h3>
-          <p><code>figure</code> <code>figcaption</code></p>
-
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="ids__space"></div>
-        <div class="ids__text-width">
-          <h3>Список</h3>
-          <p><code>ul</code> <code>li</code></p>
-          <p><code>ol</code> <code>li</code></p>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="ids__space"></div>
-        <div class="ids__text-width">
-          <h3>Ссылка</h3>
-          <p><code>a</code></p>
-          <p><code>.ids__promo-link</code></p>
-          <p>TODO: Псевдо-радиогруппа для скролл-навигации</p>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="ids__space"></div>
-        <div class="ids__text-width">
-          <h3>Дополнительный текст</h3>
-          <p><code>aside</code></p>
-          <p><code>.ids__note</code></p>
-        </div>
-      </div>
-
-      <div class="ids__space M"></div>
-
-      <div class="section">
-        <div class="ids__space"></div>
-        <div class="ids__text-width">
-          <h3>Сетка</h3>
-          <p>С помощью класса <code>.ids__sequence</code> можно быстро сделать сетку из одинаковых элементов, которая реализована через <code>display:flex</code>. Сделайте <code>.ids__sequence</code> родителем, а каждую ячейку сетки оберните в <code>.ids__sequence-item</code>:</p>                      
-          <div class="ids__space XS"></div>
-          <p><code>.ids__sequence</code></p>
-          <p>    <code>.ids__sequence-item</code></p>
-          <p>    <code>.ids__sequence-item</code></p>
-          <div class="ids__space S"></div>
-          <aside>Мы рекомендуем никогда не стилизовать ячейку саму по себе, а всегда добавлять внутрь ещё один контейнер, и уже для него задавать цвет фона, скругление, поля и всё остальное. </aside>
-
-          <div class="ids__space S"></div>
-          <h4>Модификатор крупности</h4>
-          
-          <p><code>ids__sequence.XL</code></p>                
-          <div class="ids__sequence XL gap-S">
-            <div class="ids__sequence-item">
-              <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
-                <p>Текст в ячейке</p>
-              </div>
-            </div>
-            <div class="ids__sequence-item">                
-              <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);">
-                <p>Текст в ячейке</p>
-              </div>
-            </div>
-          </div>            
-          <div class="ids__space S"></div> 
-          <p><code>ids__sequence.L</code></p>
-          <div class="ids__sequence L gap-S">
-            <div class="ids__sequence-item">
-              <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
-            </div>
-            <div class="ids__sequence-item">                
-              <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
-            </div>
-            <div class="ids__sequence-item">                
-              <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
-            </div>              
-          </div>
-          
-          <div class="ids__space S"></div> 
-          <p><code>ids__sequence.S</code></p>
-                      
-          <div class="ids__sequence S gap-S">
-            <div class="ids__sequence-item">
-              <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
-            </div>
-            <div class="ids__sequence-item">                
-              <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
-            </div>
-            <div class="ids__sequence-item">                
-              <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
-            </div>
-            <div class="ids__sequence-item">                
-              <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
-            </div>
-            <div class="ids__sequence-item">                
-              <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
-            </div>
-            <div class="ids__sequence-item">                
-              <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1);"></div>
-            </div>
-          </div>
-
-
-          <div class="ids__space S"></div>
-
-          <h4>Управление отступами</h4>
-          
-          <p><code>.ids__sequence.XL.gap-L</code></p>
-          <div class="example-container" style="background-color: rgb(255,235,237); padding-bottom: 0.001em;">
-            <div class="ids__sequence XL gap-L">
-              <div class="ids__sequence-item">
-                <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
-              </div>
-              <div class="ids__sequence-item">                
-                <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
-              </div>
-              <div class="ids__sequence-item">                
-                <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
-              </div>
-              <div class="ids__sequence-item">                
-                <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
-              </div>
-            </div>
-          </div>              
+      <div class="ids__wrapper">
+        <div class="section">
           <div class="ids__space M"></div>
-
-          <p><code>.ids__sequence.XL.gap-M</code></p>
-          <div class="example-container" style="background-color: rgb(255,235,237); padding-bottom: 0.001em;">
-            <div class="ids__sequence XL gap-M">
-              <div class="ids__sequence-item">
-                <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
-              </div>
-              <div class="ids__sequence-item">                
-                <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
-              </div>
-              <div class="ids__sequence-item">                
-                <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
-              </div>
-              <div class="ids__sequence-item">                
-                <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
+          <div class="ids__text-width">
+            <p>
+              Для текста в одну колонку внутри стандартного этажа используется дополнительная обёртка, которая уменьшает ширину и оставляет справа дополнительное поле. Это только
+              на десктопе, а на мобиле остаётся полная ширина.
+            </p>
+          </div>
+          <p><code>.ids__text-width</code></p>
+          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+            <div class="ids__text-width">
+              <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+                <div class="ids__space XL"></div>
+                <div class="ids__space XL"></div>
               </div>
             </div>
           </div>
-          
-          <div class="ids__space S"></div>
-          
-          <p><code>.ids__sequence.XL.gap-S</code></p> 
-          <div class="example-container" style="background-color: rgb(255,235,237); padding-bottom: 0.001em;">
+        </div>
+
+        <div class="section">
+          <div class="ids__space L"></div>
+          <div class="ids__text-width">
+            <h3>Система вертикальных отступов</h3>
+            <p>В IDS у обёрток нулевые отступы, а у большинства других элементов задан только отступ снизу, минимальный, чтобы верстать элементы сплошным потоком.</p>
+
+            <p>
+              Когда нужны заметные отступы – например, между этажами или перед заголовком, чтобы он не прилипал к предыдущему абзацу – используются специальные заглушки, спейсеры.
+            </p>
+          </div>
+          <div class="ids__space M"></div>
+          <div class="ids__sequence M gap-S">
+            <div class="ids__sequence-item">
+              <p><code>ids__space.S</code></p>
+              <div class="ids__space S" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+            </div>
+            <div class="ids__sequence-item">
+              <p><code>ids__space.M</code></p>
+              <div class="ids__space M" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+            </div>
+            <div class="ids__sequence-item">
+              <p><code>ids__space.L</code></p>
+              <div class="ids__space L" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+            </div>
+            <div class="ids__sequence-item">
+              <p><code>ids__space.XL</code></p>
+              <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+            </div>
+          </div>
+          <div class="ids__space L"></div>
+          <div class="ids__text-width">
+            <aside>
+              <h4>Зачем так</h4>
+
+              <p>
+                Спейсеры – довольно примитивное решение, как свинцовые бруски во времена ручного металлического набора. Неужели нельзя как-то элегантнее? Практика показала, что не
+                надо.
+              </p>
+              <p>
+                Если бы мы решили хранить информацию об отступах в свойствах отдельных элементов, пришлось бы учитывать все возможные контексты. Например, на этой самой плашке
+                верхний отступ у заголовка «Зачем так» помешал бы поставить его аккуратно в угол – пришлось бы добавлять класс-модификатор, отменяющий отступ, или писать более
+                сложные стили с условиями, менее очевидные и более хрупкие.
+              </p>
+              <p>И даже после этого элементы не смогли бы всегда знать, какой нужен отступ – только дизайнер это знает. Поэтому у нас свинцовые брусочки.</p>
+            </aside>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space L"></div>
+          <div class="ids__text-width">
+            <ids-nav-item id="tags-style" label="Стилизация тегов"><h2>Стилизация тегов</h2></ids-nav-item>
+            <p>
+              IDS стилизует некоторые часто используемые теги, чтобы можно было верстать большие объёмы текста, сохраняя минималистичную разметку. Стили тегов определены только
+              внутри контейнера <code>.ids</code>.
+            </p>
+            <aside>
+              <p>
+                В нашем стандартном шаблоне класс <code>.ids</code> висит на теге <code>body</code>, а значит теги стилизуются везде. Это может мешать — например, подчёркнутой
+                станет любая ссылка, не только текстовая; любой ненумерованный список получит буллиты и отступы, даже когда это не текст.
+              </p>
+              <p>
+                Чтобы избежать этого эффекта, переместите класс <code>.ids</code> куда-то поглубже, где у вас начинается основной поток текста. Класс <code>.ids</code> изолирует
+                только стили тегов. Масштабирование продолжит работать везде, и классы с префиксом <code>.ids__</code> тоже.
+              </p>
+            </aside>
+            <p>Вот какие теги стилизованы внутри <code>.ids</code>.</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space M"></div>
+          <div class="ids__text-width">
+            <h3>Заголовки</h3>
+            <code>h1</code>
+            <div class="ids__space M"></div>
+            <h1>Главный заголовок страницы</h1>
+            <div class="ids__space"></div>
+            <hr />
+            <code>h2</code>
+            <div class="ids__space M"></div>
+            <h2>Заголовок второго уровня</h2>
+            <div class="ids__space"></div>
+            <hr />
+            <code>h3</code>
+            <div class="ids__space M"></div>
+            <h3>Заголовок третьего уровня</h3>
+            <div class="ids__space"></div>
+            <hr />
+            <code>h4</code>
+            <div class="ids__space M"></div>
+            <h4>Заголовок четвёртого уровня</h4>
+            <div class="ids__space"></div>
+            <hr />
+            <code>h5</code>
+            <div class="ids__space M"></div>
+            <h5>Заголовок пятого уровня</h5>
+            <div class="ids__space"></div>
+            <hr />
+            <code>h6</code>
+            <div class="ids__space M"></div>
+            <h6>Заголовок шестого уровня</h6>
+            <div class="ids__space"></div>
+            <hr />
+
+            <div class="ids__space"></div>
+            <p>
+              Бывает, визуально не нужны такие крупные заголовки как h1 или h2. Но по стандартам доступности на странице должен быть h1, а следующим уровнем, должен быть h2 и так
+              далее, без пропусков. Чтобы разрешить это противоречие, мы подготовили специальные классы, уменьшающие h1 и h2:
+            </p>
+
+            <code>h1.S</code>
+            <h1 class="S">Главный заголовок, уменьшенный</h1>
+            <hr />
+            <code>h1.XS</code>
+            <h1 class="XS">Главный заголовок, уменьшенный ещё сильнее</h1>
+            <hr />
+            <code>h2.XS</code>
+            <h2 class="XS">Заголовок второго уровня, уменьшенный</h2>
+            <hr />
+
+            <div class="ids__space"></div>
+            <p>Иногда к заголовку хочется сверху присоединить лейбл, ярлык, бирку — называйте, как хотите. Для этого используется тег <code>hgroup</code>.</p>
+
+            <div class="ids__space XS"></div>
+            <p><code>hgroup</code></p>
+            <p>    <code>p</code></p>
+            <p>    <code>h1</code></p>
+            <div class="ids__space S"></div>
+
+            <hgroup>
+              <p>Лейбл заголовка</p>
+              <h1>Главный заголовок страницы</h1>
+            </hgroup>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space M"></div>
+          <div class="ids__text-width">
+            <h3>Текст</h3>
+            <code>p</code>
+            <p>TODO: показать абзац +помельче +покрупнее +супер-крупный</p>
+            <code>p.loud</code>
+            <p class="loud">Дизайн цифровых продуктов – это в первую очередь дизайн взаимодействия.</p>
+            <code>mark</code>
+            <code>code</code>
+            <p>Используются, чтобы выделить <mark>важную мысль</mark> или <code>фрагмент кода</code>.</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Иллюстрация</h3>
+            <p><code>figure</code> <code>figcaption</code></p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Список</h3>
+            <p><code>ul</code> <code>li</code></p>
+            <p><code>ol</code> <code>li</code></p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Ссылка</h3>
+            <p><code>a</code></p>
+            <p><code>.ids__promo-link</code></p>
+            <p>TODO: Псевдо-радиогруппа для скролл-навигации</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Дополнительный текст</h3>
+            <p><code>aside</code></p>
+            <p><code>.ids__note</code></p>
+          </div>
+        </div>
+
+        <div class="ids__space M"></div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Сетка</h3>
+            <p>
+              С помощью класса <code>.ids__sequence</code> можно быстро сделать сетку из одинаковых элементов, которая реализована через <code>display:flex</code>. Сделайте
+              <code>.ids__sequence</code> родителем, а каждую ячейку сетки оберните в <code>.ids__sequence-item</code>:
+            </p>
+            <div class="ids__space XS"></div>
+            <p><code>.ids__sequence</code></p>
+            <p>    <code>.ids__sequence-item</code></p>
+            <p>    <code>.ids__sequence-item</code></p>
+            <div class="ids__space S"></div>
+            <aside>
+              Мы рекомендуем никогда не стилизовать ячейку саму по себе, а всегда добавлять внутрь ещё один контейнер, и уже для него задавать цвет фона, скругление, поля и всё
+              остальное.
+            </aside>
+
+            <div class="ids__space S"></div>
+            <h4>Модификатор крупности</h4>
+
+            <p><code>ids__sequence.XL</code></p>
             <div class="ids__sequence XL gap-S">
               <div class="ids__sequence-item">
-                <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+                  <p>Текст в ячейке</p>
+                </div>
               </div>
-              <div class="ids__sequence-item">                
-                <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
-              </div>
-              <div class="ids__sequence-item">                
-                <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
-              </div>
-              <div class="ids__sequence-item">                
-                <div class="ids__space XL" style="background-color: rgb(255,218,221);"></div>
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+                  <p>Текст в ячейке</p>
+                </div>
               </div>
             </div>
-          </div>            
+            <div class="ids__space S"></div>
+            <p><code>ids__sequence.L</code></p>
+            <div class="ids__sequence L gap-S">
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+            </div>
+
+            <div class="ids__space S"></div>
+            <p><code>ids__sequence.S</code></p>
+
+            <div class="ids__sequence S gap-S">
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+            </div>
+
+            <div class="ids__space S"></div>
+
+            <h4>Управление отступами</h4>
+
+            <p><code>.ids__sequence.XL.gap-L</code></p>
+            <div class="example-container" style="background-color: rgb(255, 235, 237); padding-bottom: 0.001em">
+              <div class="ids__sequence XL gap-L">
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+              </div>
+            </div>
+            <div class="ids__space M"></div>
+
+            <p><code>.ids__sequence.XL.gap-M</code></p>
+            <div class="example-container" style="background-color: rgb(255, 235, 237); padding-bottom: 0.001em">
+              <div class="ids__sequence XL gap-M">
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ids__space S"></div>
+
+            <p><code>.ids__sequence.XL.gap-S</code></p>
+            <div class="example-container" style="background-color: rgb(255, 235, 237); padding-bottom: 0.001em">
+              <div class="ids__sequence XL gap-S">
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ids__space M"></div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Таблица</h3>
+            <p><code>table</code> — обычная таблица</p>
+            <p>
+              <code>tr</code>, <code>th</code>, <code>td</code> — стандартные элементы таблицы. Ну разве что <code>th</code> приклеивается к верху окна. (TODO: реализовать
+              залипание)
+            </p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space L"></div>
+          <ids-nav-item id="components" label="Компоненты"><h2>Компоненты</h2></ids-nav-item>
+          <p>TODO: что такое компоненты</p>
+        </div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <h3><code>.ids__snooze</code></h3>
+          <p>TODO: описание (реализация есть)</p>
+        </div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <h3><code>.ids__footnote</code></h3>
+          <p>TODO: реализация</p>
+        </div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <h3><code>.ids__navbar</code></h3>
+          <p>TODO: описание (реализация есть)</p>
+        </div>
+        <div class="section">
+          <div class="ids__space"></div>
+          <h3>Галерея</h3>
+          <p><code>ids-gallery</code> — специальный тег для Галереи.</p>
+          <p>Для разделения изображений используем тег <code>figure</code>.</p>
+          <p>
+            <code>a</code> содержит ссылку на полноразмерное изображение. Если оно отличается от того, которое используется для превью, ему нужно указать размеры в атрибутах
+            <code>data-pswp-width</code> и <code>data-pswp-height</code>
+          </p>
+          <div class="ids__space XL"></div>
         </div>
       </div>
-      
-      <div class="ids__space M"></div>
-      
-      <div class="section">
-        <div class="ids__space"></div>
-        <div class="ids__text-width">
-          <h3>Таблица</h3>
-          <p><code>table</code> — обычная таблица</p>
-          <p><code>tr</code>, <code>th</code>, <code>td</code> — стандартные элементы таблицы. Ну разве что <code>th</code> приклеивается к верху окна. (TODO: реализовать залипание)</p>
+      <div class="ids__wrapper L">
+        <div class="section">
+          <ids-gallery>
+            <figure>
+              <a href="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11978833.jpg">
+                <img src="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11978833.jpg" alt="Photo by Jan van der Wolf" />
+              </a>
+            </figure>
+            <figure>
+              <a href="images/gallery/Photo by Mehmet Turgut  Kirkgoz_geometric-modern-architecture-16615613.jpg">
+                <img src="images/gallery/Photo by Mehmet Turgut  Kirkgoz_geometric-modern-architecture-16615613.jpg" alt="Photo by Mehmet Turgut Kirkgoz" />
+              </a>
+            </figure>
+            <figure>
+              <a href="images/gallery/Photo by Jan van der Wolf_abstract-image-of-a-shadow-on-a-green-wall-and-blue-sky-11895895.jpg">
+                <img src="images/gallery/Photo by Jan van der Wolf_abstract-image-of-a-shadow-on-a-green-wall-and-blue-sky-11895895.jpg" alt="Photo by Jan van der Wolf" />
+              </a>
+            </figure>
+            <figure>
+              <a href="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11986204.jpg">
+                <img src="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11986204.jpg" alt="Photo by Jan van der Wolf" />
+              </a>
+            </figure>
+            <figure>
+              <a href="images/gallery/Photo by Mehmet Turgut  Kirkgoz_white-geometric-building-corner-18075244.jpg">
+                <img src="images/gallery/Photo by Mehmet Turgut  Kirkgoz_white-geometric-building-corner-18075244.jpg" alt="Photo by Mehmet Turgut Kirkgoz" />
+              </a>
+            </figure>
+            <figure>
+              <a href="images/gallery/icon1.png">
+                <img src="images/gallery/icon1.png" alt="abstract geometry" />
+              </a>
+            </figure>
+            <figure>
+              <a href="images/gallery/icon2.png">
+                <img src="images/gallery/icon2.png" alt="abstract geometry" />
+              </a>
+            </figure>
+            <figure>
+              <a href="images/gallery/icon3.png">
+                <img src="images/gallery/icon3.png" alt="abstract geometry" />
+              </a>
+            </figure>
+            <figure>
+              <a href="images/gallery/icon4.png">
+                <img src="images/gallery/icon4.png" alt="abstract geometry" />
+              </a>
+            </figure>
+            <figure>
+              <a href="images/gallery/icon5.png">
+                <img src="images/gallery/icon5.png" alt="abstract geometry" />
+              </a>
+            </figure>
+            <figure>
+              <a href="images/gallery/icon6.png">
+                <img src="images/gallery/icon6.png" alt="abstract geometry" />
+              </a>
+            </figure>
+            <figure>
+              <a href="images/gallery/icon7.png">
+                <img src="images/gallery/icon7.png" alt="abstract geometry" />
+              </a>
+            </figure>
+            <figure>
+              <a href="images/gallery/icon8.png">
+                <img src="images/gallery/icon8.png" alt="abstract geometry" />
+              </a>
+            </figure>
+          </ids-gallery>
         </div>
-      </div>
-
-      <div class="section">
-        <div class="ids__space L"></div>
-        <ids-nav-item id="components" label="Компоненты"><h2>Компоненты</h2></ids-nav-item>
-        <p>TODO: что такое компоненты</p>
-      </div>
-      
-      <div class="section">
-        <div class="ids__space"></div>
-        <h3><code>.ids__snooze</code></h3>
-        <p>TODO: описание (реализация есть)</p>
-      </div>
-      
-      <div class="section">
-        <div class="ids__space"></div>
-        <h3><code>.ids__footnote</code></h3>
-        <p>TODO: реализация</p>
-      </div>
-
-      <div class="section">
-        <div class="ids__space"></div>
-        <h3><code>.ids__navbar</code></h3>
-        <p>TODO: описание (реализация есть)</p>
-      </div>
-      <div class="section">
-        <div class="ids__space"></div>
-        <h3>Галерея</h3>
-        <p><code>ids-gallery</code> — специальный тег для Галереи. </p>
-        <p>Для разделения изображений используем тег <code>figure</code>.</p>
-        <p><code>a</code> содержит ссылку на полноразмерное изображение.
-          Если оно отличается от того, которое используется для превью,
-          ему нужно указать размеры в атрибутах <code>data-pswp-width</code>
-          и <code>data-pswp-height</code>
-        </p>
         <div class="ids__space XL"></div>
       </div>
-    </div>
-    <div class="ids__wrapper L">
-      <div class="section">
-        <ids-gallery>
-          <figure>
-            <a href="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11978833.jpg">
-              <img src="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11978833.jpg" alt="Photo by Jan van der Wolf">
-            </a>
-          </figure>
-          <figure>
-            <a href="images/gallery/Photo by Mehmet Turgut  Kirkgoz_geometric-modern-architecture-16615613.jpg">
-              <img src="images/gallery/Photo by Mehmet Turgut  Kirkgoz_geometric-modern-architecture-16615613.jpg" alt="Photo by Mehmet Turgut Kirkgoz">
-            </a>
-          </figure>
-          <figure>
-            <a href="images/gallery/Photo by Jan van der Wolf_abstract-image-of-a-shadow-on-a-green-wall-and-blue-sky-11895895.jpg">
-              <img src="images/gallery/Photo by Jan van der Wolf_abstract-image-of-a-shadow-on-a-green-wall-and-blue-sky-11895895.jpg" alt="Photo by Jan van der Wolf">
-            </a>
-          </figure>
-          <figure>
-            <a href="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11986204.jpg">
-              <img src="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11986204.jpg" alt="Photo by Jan van der Wolf">
-            </a>
-          </figure>
-          <figure>
-            <a href="images/gallery/Photo by Mehmet Turgut  Kirkgoz_white-geometric-building-corner-18075244.jpg">
-              <img src="images/gallery/Photo by Mehmet Turgut  Kirkgoz_white-geometric-building-corner-18075244.jpg" alt="Photo by Mehmet Turgut Kirkgoz">
-            </a>
-          </figure>
-          <figure>
-            <a href="images/gallery/icon1.png">
-              <img src="images/gallery/icon1.png" alt="abstract geometry">
-            </a>
-          </figure>
-          <figure>
-            <a href="images/gallery/icon2.png">
-              <img src="images/gallery/icon2.png" alt="abstract geometry">
-            </a>
-          </figure>
-          <figure>
-            <a href="images/gallery/icon3.png">
-              <img src="images/gallery/icon3.png" alt="abstract geometry">
-            </a>
-          </figure>
-          <figure>
-            <a href="images/gallery/icon4.png">
-              <img src="images/gallery/icon4.png" alt="abstract geometry">
-            </a>
-          </figure>
-          <figure>
-            <a href="images/gallery/icon5.png">
-              <img src="images/gallery/icon5.png" alt="abstract geometry">
-            </a>
-          </figure>
-          <figure>
-            <a href="images/gallery/icon6.png">
-              <img src="images/gallery/icon6.png" alt="abstract geometry">
-            </a>
-          </figure>
-          <figure>
-            <a href="images/gallery/icon7.png">
-              <img src="images/gallery/icon7.png" alt="abstract geometry">
-            </a>
-          </figure>
-          <figure>
-            <a href="images/gallery/icon8.png">
-              <img src="images/gallery/icon8.png" alt="abstract geometry">
-            </a>
-          </figure>
-
-        </ids-gallery>
-      </div>
-      <div class="ids__space XL"></div>
-    </div>
-
     </main>
-  
 
     <script src="./lib/photoswipe.umd.min.js"></script>
     <script src="./lib/photoswipe-lightbox.umd.min.js"></script>
     <script type="module">
-			   /**
-			    * @param {HTMLDivElement} node
-			    */
-			   const photoSwipeSize = (node) => {
-			     // get image tag inside of node
-			     if (node.hasAttribute('data-pswp-width') && node.hasAttribute('data-pswp-height')) {
-			       return;
-			     }
-			     /** @type {HTMLImageElement | null} */
-			     const img = node.querySelector('img');
-			     if (!img) {
-			       return;
-			     }
-			     let i = new Image();
-			     i.onload = () => {
-			       node.setAttribute('data-pswp-width', i.width.toString());
-			       node.setAttribute('data-pswp-height', i.height.toString());
-			     };
-			     i.src = img.src;
-			   };
+      /**
+       * @param {HTMLDivElement} node
+       */
+      const photoSwipeSize = (node) => {
+        // get image tag inside of node
+        if (node.hasAttribute("data-pswp-width") && node.hasAttribute("data-pswp-height")) {
+          return;
+        }
+        /** @type {HTMLImageElement | null} */
+        const img = node.querySelector("img");
+        if (!img) {
+          return;
+        }
+        let i = new Image();
+        i.onload = () => {
+          node.setAttribute("data-pswp-width", i.width.toString());
+          node.setAttribute("data-pswp-height", i.height.toString());
+        };
+        i.src = img.src;
+      };
 
-			   class IdsGallery extends HTMLElement {
-			     constructor() {
-			       super();
-			       this.classList.add('ids__gallery');
-			     }
+      class IdsGallery extends HTMLElement {
+        constructor() {
+          super();
+          this.classList.add("ids__gallery");
+        }
 
-			     connectedCallback() {
-			       this.lightbox = new PhotoSwipeLightbox({
-			         gallery: this,
-			         children: 'a',
-			         pswpModule: PhotoSwipe,
-			         padding: {top: 20, bottom: 40, left: 100, right: 100}
-			       });
+        connectedCallback() {
+          this.lightbox = new PhotoSwipeLightbox({
+            gallery: this,
+            children: "a",
+            pswpModule: PhotoSwipe,
+            padding: { top: 20, bottom: 40, left: 100, right: 100 },
+          });
 
-			       this.lightbox.on('uiRegister', () => {
-			         if (!this.getAttribute('zoom') && this.lightbox?.pswp?.ui?.uiElementsData?.length) {
-			           this.lightbox.pswp.ui.uiElementsData = this.lightbox.pswp.ui.uiElementsData.filter(el => el.name !== 'zoom')
-			         }
-			       });
+          this.lightbox.on("uiRegister", () => {
+            if (!this.getAttribute("zoom") && this.lightbox?.pswp?.ui?.uiElementsData?.length) {
+              this.lightbox.pswp.ui.uiElementsData = this.lightbox.pswp.ui.uiElementsData.filter((el) => el.name !== "zoom");
+            }
+          });
 
-			       this.lightbox.init();
+          this.lightbox.init();
 
-			       this.querySelectorAll('a').forEach(photoSwipeSize)
-			     }
+          this.querySelectorAll("a").forEach(photoSwipeSize);
+        }
 
-			     disconnectedCallback() {
-			       this.lightbox.destroy();
-			     }
-			   }
+        disconnectedCallback() {
+          this.lightbox.destroy();
+        }
+      }
 
-			   window.customElements.define('ids-gallery', IdsGallery);
+      window.customElements.define("ids-gallery", IdsGallery);
     </script>
 
     <script>
-      let observer = new IntersectionObserver((elements)=>{
-        elements.forEach((el) => {
-          if(el.intersectionRatio > .3) {
-            el.target.classList.remove("sleep");
-          } else {
-            el.target.classList.add("sleep");
-          }
-        })
-      }, {threshold: [0, .5]});
+      let observer = new IntersectionObserver(
+        (elements) => {
+          elements.forEach((el) => {
+            if (el.intersectionRatio > 0.3) {
+              el.target.classList.remove("sleep");
+            } else {
+              el.target.classList.add("sleep");
+            }
+          });
+        },
+        { threshold: [0, 0.5] }
+      );
 
-      document.querySelectorAll('.ids__snooze').forEach(el => {
+      document.querySelectorAll(".ids__snooze").forEach((el) => {
         observer.observe(el);
-      })
+      });
     </script>
-    <script>  
-
+    <script>
       class IdsNavbar extends HTMLElement {
         static #items = [];
         static #instances = [];
 
         constructor() {
           super();
-          this.classList.add('ids__navbar');
+          this.classList.add("ids__navbar");
           this.render();
         }
 
         static updateItems() {
           // Сейчас оно будет запускаться слишком часто, нужно будет переделать
-          this.#items = [...document.querySelectorAll('.ids__nav-item')];
+          this.#items = [...document.querySelectorAll(".ids__nav-item")];
           for (const instance of this.#instances) {
             instance.render();
           }
@@ -788,7 +883,7 @@
           for (let i = 0; i < this.#items.length; i++) {
             let { bottom, top } = this.#items[i].getBoundingClientRect() ?? {
               top: 0,
-              bottom: 0
+              bottom: 0,
             };
             let topPosition = (top + bottom) / 2;
             if (topPosition < 0) {
@@ -799,11 +894,11 @@
               break;
             }
           }
-          let id = this.#items[highestTopPositionIndex].getAttribute('id');
-          history.replaceState({}, '', `#${id}`);
+          let id = this.#items[highestTopPositionIndex].getAttribute("id");
+          history.replaceState({}, "", `#${id}`);
           for (const instance of this.#instances) {
-            for (const /** @type {HTMLElement} */ li of instance.querySelectorAll('li:has(a)')) {
-              li.classList.toggle('current', li.firstElementChild.getAttribute('href') === '#' + id);
+            for (const /** @type {HTMLElement} */ li of instance.querySelectorAll("li:has(a)")) {
+              li.classList.toggle("current", li.firstElementChild.getAttribute("href") === "#" + id);
             }
           }
         }
@@ -820,26 +915,29 @@
           // Тут стоит делать через манипуляции с dom и не пересоздавать одни и те же записи по 100 раз
           this.innerHTML = `
             <ul>
-                ${IdsNavbar.#items.map(item => `
+                ${IdsNavbar.#items
+                  .map(
+                    (item) => `
                     <li>
-                        <a href="#${item.getAttribute('id')}">
-                            ${item.getAttribute('label')}
+                        <a href="#${item.getAttribute("id")}">
+                            ${item.getAttribute("label")}
                         </a>
                     </li>
-                `).join('')}
+                `
+                  )
+                  .join("")}
             </ul>
-          `
+          `;
         }
-
       }
 
       // TODO можно добавлять/убирать этот лисенер
-      document.addEventListener('scroll', () => IdsNavbar.updateCurrent());
+      document.addEventListener("scroll", () => IdsNavbar.updateCurrent());
 
       class IdsNavItem extends HTMLElement {
         constructor() {
           super();
-          this.classList.add('ids__nav-item');
+          this.classList.add("ids__nav-item");
         }
 
         connectedCallback() {
@@ -850,9 +948,8 @@
         }
       }
 
-      window.customElements.define('ids-navbar', IdsNavbar);
-      window.customElements.define('ids-nav-item', IdsNavItem);
+      window.customElements.define("ids-navbar", IdsNavbar);
+      window.customElements.define("ids-nav-item", IdsNavItem);
     </script>
   </body>
-
 </html>

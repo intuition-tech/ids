@@ -10,6 +10,7 @@
   font-display: swap;
   src: url("../fonts/pt-root-ui_vf.woff2") format("woff2"),
     url("../fonts/pt-root-ui_vf.woff") format("woff");
+  font-weight: 300 700;
 }
 
 body {

@@ -7,12 +7,16 @@
     text-underline-offset: 0.2em;
     text-decoration-skip-ink: none;
     text-decoration-color: rgba(var(--ids__link-RGB), 0.2);
-    transition: color 0.5s ease, text-decoration 0.5s ease;
+    transition:
+      color 0.5s ease,
+      text-decoration 0.5s ease;
 
     &:hover {
       color: rgb(var(--ids__hover-RGB));
       text-decoration-color: rgba(var(--ids__hover-RGB), 0.2);
-      transition: color 0s ease, text-decoration 0s ease;
+      transition:
+        color 0s ease,
+        text-decoration 0s ease;
     }
   }
 
@@ -37,11 +41,15 @@
   }
 
   & h1 {
-    font-size: 4.6em;
+    font-size: 3.6em;
     font-weight: 700;
     letter-spacing: -0.01em;
     line-height: calc(var(--ids__density) / 1.3);
     margin-bottom: 0.4em;
+
+    @media (width < 767px) {
+      font-size: 2.6em;
+    }
 
     &.S {
       font-size: 2.4em;

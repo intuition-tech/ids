@@ -677,20 +677,38 @@
         <div class="section">
           <div class="ids__space L"></div>
           <ids-nav-item id="components" label="Компоненты"><h2>Компоненты</h2></ids-nav-item>
-          <p>TODO: что такое компоненты</p>
         </div>
 
         <div class="section">
           <div class="ids__space"></div>
-          <h3><code>.ids__snooze</code></h3>
-          <p>TODO: описание (реализация есть)</p>
+          <div class="ids__text-width">
+            <h3><code>.ids__sleepy</code></h3>
+            <p>Компонент для анимации появления элементов при скролле. Отслеживает видимость элементов и убирает класс <code>.is-sleeping</code>, когда элемент появляется на экране более чем на 30% своей высоты.</p>
+            <aside>
+              <p>Это метафора: «сонный» элемент за пределами экрана постоянно «спит», а при появлении «просыпается».</p>
+              <p>Может показаться странным, что мы выбрали добавлять класс on-screen, а убирать класс is-sleeping. Но идея в том, чтобы в дефолтном состоянии (без класса-модификатора) стили соответствовали «нормальному» виду – так их удобнее читать и понимать.</p>
+            </aside>
+
+            <p>Компонент автоматически инициализируется для всех элементов с классом <code>.ids__sleepy</code> при загрузке страницы. Он только добавляет и убирает класс-модификатор, больше ничего не делает.</p>
+
+            <p>Соответственно, чтобы анимация начала наботать, нужно</p>
+            <ul>
+              <li>добавить класс <code>.ids__sleepy</code> всем элементам, которые должны анимироваться при появлении на экране;</li>
+              <li>добавить этим элементам определение класса-модификатора <code>.is-sleeping</code> и в нём стили для неактивного состояния;</li>
+              <li>определить свойство transition, чтобы анимировать меняющиеся свойства.</li>
+            </ul>
+
+            <p>TODO: пример кода</p>
+
+
+          </div>
         </div>
 
-        <div class="section">
+        <!--<div class="section">
           <div class="ids__space"></div>
           <h3><code>.ids__footnote</code></h3>
           <p>TODO: реализация</p>
-        </div>
+        </div>-->
 
         <div class="section">
           <div class="ids__space"></div>
@@ -699,14 +717,16 @@
         </div>
         <div class="section">
           <div class="ids__space"></div>
-          <h3>Галерея</h3>
-          <p><code>ids-gallery</code> — специальный тег для Галереи.</p>
-          <p>Для разделения изображений используем тег <code>figure</code>.</p>
-          <p>
-            <code>a</code> содержит ссылку на полноразмерное изображение. Если оно отличается от того, которое используется для превью, ему нужно указать размеры в атрибутах
-            <code>data-pswp-width</code> и <code>data-pswp-height</code>
-          </p>
-          <div class="ids__space XL"></div>
+            <div class="ids__text-width">
+            <h3>Галерея</h3>
+            <p><code>ids-gallery</code> — специальный тег для Галереи.</p>
+            <p>Для разделения изображений используем тег <code>figure</code>.</p>
+            <p>
+              <code>a</code> содержит ссылку на полноразмерное изображение. Если оно отличается от того, которое используется для превью, ему нужно указать размеры в атрибутах
+              <code>data-pswp-width</code> и <code>data-pswp-height</code>
+            </p>
+            <div class="ids__space XL"></div>
+          </div>
         </div>
       </div>
       <div class="ids__wrapper L">
@@ -845,16 +865,16 @@
         (elements) => {
           elements.forEach((el) => {
             if (el.intersectionRatio > 0.3) {
-              el.target.classList.remove("sleep");
+              el.target.classList.remove("is-sleeping");
             } else {
-              el.target.classList.add("sleep");
+              el.target.classList.add("is-sleeping");
             }
           });
         },
         { threshold: [0, 0.5] }
       );
 
-      document.querySelectorAll(".ids__snooze").forEach((el) => {
+      document.querySelectorAll(".ids__sleepy").forEach((el) => {
         observer.observe(el);
       });
     </script>

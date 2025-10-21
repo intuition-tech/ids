@@ -123,6 +123,7 @@
 .ids__rounded {
   border-radius: var(--ids__radius);
   corner-shape: squircle;
+  overflow: hidden;
 }
 
 @supports not (corner-shape: squircle) {

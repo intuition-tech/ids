@@ -19,10 +19,11 @@ body {
   font-weight: 400;  
 }
 
-/* Density */
+/* Density and radius */
 
 :root {
   --ids__density: 1.3;
+  --ids__radius: 1.5em;
 }
 
 body {

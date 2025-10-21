@@ -801,6 +801,84 @@
         </div>
         <div class="ids__space XL"></div>
       </div>
+
+      <div class="ids__wrapper">
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3><code>.ids__rounded</code></h3>
+
+            <p>
+              Модификатор для плавной обрезки углов.
+              Обычное скругление грубое и неестественное.
+              А это приятное и математическое.
+            </p>
+
+            <aside>
+              <p>Такие углы скоро можно будет делать стандартным <code>corner-shape: squircle</code>, но пока не все браузеры договорились окончательно.</p>
+              <p>
+                IDS помогает сделать такие углы небольшим трюком.
+                Часто этого достаточно, но если применять скругление к компонентам с границами или тенями, нужно проверить что во всех браузерах эффект работает как ожидается.
+              </p>
+            </aside>
+            <div class="ids__space"></div>
+
+            <p>Вот, например.</p>
+
+            <div class="example-container">
+              <div class="ids__sequence L gap-L">
+                <div class="ids__sequence-item ids__rounded">
+                  <figure style="margin:0;padding:0">
+                    <img src="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11978833.jpg" alt="Photo by Jan van der Wolf" />
+                  </figure>
+                </div>
+                <div class="ids__sequence-item ids__rounded">
+                  <figure style="margin:0;padding:0">
+                    <img src="images/gallery/Photo by Jan van der Wolf_abstract-image-of-a-shadow-on-a-green-wall-and-blue-sky-11895895.jpg" alt="Photo by Jan van der Wolf" />
+                  </figure>
+                </div>
+                <div class="ids__sequence-item ids__rounded">
+                  <figure style="margin:0;padding:0">
+                    <img src="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11986204.jpg" alt="Photo by Jan van der Wolf" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="ids__space"></div>
+
+            <p>
+              Радиус углов указывается в переменной <code>--ids__radius</code>.
+              Его можно задать для всего документа, раздела, или для отдельного элемента.
+            </p>
+
+            <div class="ids__space S"></div>
+
+            <div class="example-container">
+              <div class="ids__sequence L gap-L">
+                <div class="ids__sequence-item ids__rounded">
+                  <figure style="margin:0;padding:0">
+                    <img src="images/gallery/Photo by Jan van der Wolf_abstract-image-of-a-shadow-on-a-green-wall-and-blue-sky-11895895.jpg" alt="Photo by Jan van der Wolf" />
+                  </figure>
+                </div>
+                <div class="ids__sequence-item ids__rounded" style="--ids__radius: 5em">
+                  <figure style="margin:0;padding:0">
+                    <img src="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11986204.jpg" alt="Photo by Jan van der Wolf" />
+                  </figure>
+                </div>
+                <div class="ids__sequence-item ids__rounded">
+                  <figure style="margin:0;padding:0">
+                    <img src="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11978833.jpg" alt="Photo by Jan van der Wolf" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="ids__space M"></div>
+          </div>
+        </div>
+        <div class="ids__space XL"></div>
+      </div>
     </main>
 
     <script src="./lib/photoswipe.umd.min.js"></script>

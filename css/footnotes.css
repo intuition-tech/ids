@@ -1,0 +1,169 @@
+/* ============================================
+   IDS Footnote Link
+   ============================================ */
+
+ids-footnote-link {
+  display: inline;
+  white-space: nowrap;
+
+  label {
+    cursor: pointer;
+    white-space: nowrap;
+  }
+}
+
+.ids-footnote-link__button {
+  appearance: none;
+  cursor: pointer;
+  padding: 0.5em 0.15em;
+  margin: 0 0 0.15em 0.15em;
+  transform: translateY(-0.3em);
+
+  /* Circle styling */
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 50%;
+  display: inline-grid;
+  font-size: 0.65em;
+  line-height: 1;
+  place-content: center;
+
+  /* Not selected state: outlined circle */
+  background: transparent;
+  border: 1px solid rgb(var(--ids__text-RGB));
+  color: rgb(var(--ids__text-RGB));
+
+  &.enlarge {
+    font-size: 0.85em;
+  }
+
+  /* Selected state: filled circle */
+  &.open {
+    background: rgb(var(--ids__text-RGB));
+    border: 1px solid transparent;
+    color: rgb(var(--ids__background-RGB));
+  }
+
+  /* Hover state for non-selected */
+  &:not(.open):hover {
+    border-color: rgb(var(--ids__hover-RGB));
+    color: rgb(var(--ids__hover-RGB));
+  }
+}
+
+/* ============================================
+   IDS Footnote
+   ============================================ */
+
+.ids-footnote-wrap {
+  left: 100%;
+  width: max-content;
+  height: auto;
+  position: relative;
+  top: var(--top);
+
+  > :not(aside) {
+    display: none;
+  }
+}
+
+aside.ids-footnote {
+  position: absolute;
+  width: 20em;
+  padding: calc(var(--ids__density) * 0.75em);
+  font-size: 0.8em;
+  z-index: 150;
+  box-shadow: 0 0.5em 1em rgba(var(--ids__text-RGB), 0.3);
+  background: rgb(var(--ids__background-RGB));
+  border-radius: 0.3em;
+
+  /* First paragraph badge - black filled circle */
+  p:first-child::before {
+    content: attr(data-index);
+    display: inline-grid;
+    place-items: center;
+    width: 1.3em;
+    height: 1.3em;
+    border-radius: 50%;
+    background: rgb(var(--ids__text-RGB));
+    color: rgb(var(--ids__background-RGB));
+    font-size: 1em;
+    line-height: 1;
+    margin-right: 0.3em;
+    vertical-align: middle;
+  }
+
+  &.enlarge-number p:first-child::before {
+    font-size: 1.1em;
+  }
+
+  /* Scrollability */
+  &.scrollable {
+    box-shadow:
+      0 0.5em 1em rgba(var(--ids__text-RGB), 0.5),
+      0 -10em 0 rgba(var(--ids__text-RGB), 0.3);
+    overflow: auto;
+  }
+}
+
+/* Mobile layout */
+@media (width < 767px) {
+  .ids-footnote-wrap {
+    left: 0;
+    bottom: 0;
+  }
+
+  aside.ids-footnote {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 1em;
+    max-height: calc(100dvh - 5em);
+    margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 0.5em 1em rgba(var(--ids__text-RGB), 0.3);
+  }
+}
+
+/* Scrollability - lock body scroll */
+html:has(.ids-footnote.scrollable) {
+  overflow: hidden;
+}
+
+/* Close button */
+:not(.scrollable) .ids-footnote__close {
+  display: none;
+}
+.scrollable .ids-footnote__close {
+  display: block;
+
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: rgba(var(--ids__link-RGB), 1);
+  cursor: pointer;
+  font-size: 0.9em;
+  padding: 0.5em 0;
+  margin-top: 1em;
+
+  &:hover,
+  &:active {
+    color: rgba(var(--ids__hover-RGB), 1);
+  }
+
+  svg {
+    width: 0.8em;
+    height: 0.8em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+  }
+
+  line {
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}

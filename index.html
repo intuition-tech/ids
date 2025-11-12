@@ -738,22 +738,151 @@
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3><code>.ids__sleepy</code></h3>
-            <p>Компонент для анимации появления элементов при скролле. Отслеживает видимость элементов и убирает класс <code>.is-sleeping</code>, когда элемент появляется на экране более чем на 30% своей высоты.</p>
-            <aside>
-              <p>Это метафора: «сонный» элемент за пределами экрана постоянно «спит», а при появлении «просыпается».</p>
-              <p>Может показаться странным, что мы выбрали добавлять класс on-screen, а убирать класс is-sleeping. Но идея в том, чтобы в дефолтном состоянии (без класса-модификатора) стили соответствовали «нормальному» виду – так их удобнее читать и понимать.</p>
-            </aside>
+            <p>
+              Компонент для анимации появления элементов при скролле.
+              Отслеживает видимость элементов и убирает класс
+              <code>.is-sleeping</code>, когда элемент появляется на экране
+              более чем на 30% своей высоты.
+            </p>
+            <div class="ids__space M"></div>
+          </div>
+          <style>
+            .icons {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 4em;
 
-            <p>Компонент автоматически инициализируется для всех элементов с классом <code>.ids__sleepy</code> при загрузке страницы. Он только добавляет и убирает класс-модификатор, больше ничего не делает.</p>
+              @media (max-width: 768px) {
+                gap: 3em;
+              }
 
-            <p>Соответственно, чтобы анимация начала наботать, нужно</p>
+              & .icon {
+                width: 3.5em;
+                opacity: 1;
+                transition: opacity 0.4s ease, transform 0.4s ease;
+
+                @media (max-width: 768px) {
+                  width: 2.5em;
+                }
+
+                &:nth-child(1) {
+                  transition-delay: 0;
+                }
+                &:nth-child(2) {
+                  transition-delay: 0.1s;
+                }
+                &:nth-child(3) {
+                  transition-delay: 0.2s;
+                }
+                &:nth-child(4) {
+                  transition-delay: 0.3s;
+                }
+                &:nth-child(5) {
+                  transition-delay: 0.4s;
+                }
+                &:nth-child(6) {
+                  transition-delay: 0.5s;
+                }
+                &:nth-child(7) {
+                  transition-delay: 0.6s;
+                }
+                &:nth-child(8) {
+                  transition-delay: 0.7s;
+                }
+                &:nth-child(9) {
+                  transition-delay: 0.8s;
+                }
+                &:nth-child(10) {
+                  transition-delay: 0.9s;
+                }
+                &:nth-child(11) {
+                  transition-delay: 1s;
+                }
+              }
+
+              &.is-sleeping {
+                & .icon {
+                  opacity: 0;
+                  transform: translateX(1em) rotate(7deg);
+                  transition: opacity 0s ease, transform 0s ease;
+                }
+              }
+            }
+          </style>
+          <div class="icons ids__sleepy">
+            <div class="icon">
+              <img src="images/icons/icon1.png">
+            </div>
+            <div class="icon">
+              <img src="images/icons/icon2.png">
+            </div>
+            <div class="icon">
+              <img src="images/icons/icon3.png">
+            </div>
+            <div class="icon">
+              <img src="images/icons/icon4.png">
+            </div>
+            <div class="icon">
+              <img src="images/icons/icon5.png">
+            </div>
+            <div class="icon">
+              <img src="images/icons/icon6.png">
+            </div>
+            <div class="icon">
+              <img src="images/icons/icon7.png">
+            </div>
+            <div class="icon">
+              <img src="images/icons/icon8.png">
+            </div>
+            <div class="icon">
+              <img src="images/icons/icon9.png">
+            </div>
+            <div class="icon">
+              <img src="images/icons/icon10.png">
+            </div>
+            <div class="icon">
+              <img src="images/icons/icon11.png">
+            </div>
+          </div>
+
+          <div class="ids__space L"></div>
+          <div class="ids__text-width">
+            <p>
+              Компонент автоматически инициализируется для всех элементов с
+              классом <code>.ids__sleepy</code> при загрузке страницы. Он
+              только добавляет и убирает класс-модификатор, больше ничего не
+              делает.
+            </p>
+
+            <p>Соответственно, чтобы анимация начала работать, нужно</p>
             <ul>
-              <li>добавить класс <code>.ids__sleepy</code> всем элементам, которые должны анимироваться при появлении на экране;</li>
-              <li>добавить этим элементам определение класса-модификатора <code>.is-sleeping</code> и в нём стили для неактивного состояния;</li>
-              <li>определить свойство transition, чтобы анимировать меняющиеся свойства.</li>
+              <li>
+                добавить класс <code>.ids__sleepy</code> всем элементам,
+                которые должны анимироваться при появлении на экране;
+              </li>
+              <li>
+                добавить этим элементам определение класса-модификатора
+                <code>.is-sleeping</code> и в нём стили для неактивного
+                состояния;
+              </li>
+              <li>
+                определить свойство transition, чтобы анимировать меняющиеся
+                свойства.
+              </li>
             </ul>
-
-            <p>TODO: пример кода</p>
+            <aside>
+              <p>
+                Это метафора: «сонный» элемент за пределами экрана постоянно
+                «спит», а при появлении «просыпается».
+              </p>
+              <p>
+                Может показаться странным, что мы выбрали не добавлять класс
+                on-screen, а убирать класс is-sleeping. Но идея в том, чтобы в
+                дефолтном состоянии (без класса-модификатора) стили
+                соответствовали «нормальному» виду – так их удобнее читать и
+                понимать.
+              </p>
+            </aside>
           </div>
         </div>
 

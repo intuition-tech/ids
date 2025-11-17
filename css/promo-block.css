@@ -33,5 +33,14 @@
       transition: filter 0s;
     }
   }
+
+  .ids__promo-block__pos {
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+
+    &::before {
+      content: attr(data-index) "/" attr(data-count);
+    }
+  }
 }
 

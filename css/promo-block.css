@@ -1,0 +1,37 @@
+.ids__promo-block {
+  display: grid;
+  gap: 0.2em;
+  position: relative;
+  touch-action: pan-y;
+
+  & > img {
+    display: block;
+    grid-area: 1/1;
+    width: 100%;
+    aspect-ratio: var(--img-aspect-ratio, 1/1);
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    visibility: hidden;
+    transition: filter 500ms ease;
+  }
+
+  & > img:first-child {
+    visibility: visible;
+  }
+
+  & > a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+
+  &:hover {
+    &:has(a) > img {
+      filter: brightness(102%);
+      transition: filter 0s;
+    }
+  }
+}
+

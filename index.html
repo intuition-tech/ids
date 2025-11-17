@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/ids.css" />
     <link rel="stylesheet" href="css/gallery.css" />
     <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/promo-block.css" />
     <link rel="stylesheet" href="css/footnotes.css" />
   </head>
 
@@ -1088,6 +1089,75 @@
         <div class="section">
           <div class="ids__space"></div>
           <div class="ids__text-width">
+            <h3>Промо-блок</h3>
+            <p>
+              Хорошая ссылка дает понять что за ней прячется.
+              А промо-блоки могут рассказать историю еще до того как нажать не них.
+              Они как видео, но лучше. Контроль всегда за пользователем.
+            </p>
+            <div class="ids__space M"></div>
+          </div>
+          <style>
+          .img-contained {
+            & > img {
+              object-fit: contain;
+              object-position: top left;
+            }
+          }
+          </style>
+          <div class="ids__sequence L gap-L">
+            <div class="ids__sequence-item">
+              <div class="ids__promo-block" style="--img-aspect-ratio: 1372/754;">
+                <img src="images/ids-promo/ids-promo-1.png">
+                <img src="images/ids-promo/ids-promo-2.png">
+                <img src="images/ids-promo/ids-promo-3.png">
+                <img src="images/ids-promo/ids-promo-4.png">
+                <img src="images/ids-promo/ids-promo-5.png">
+                <a href="https://intuition.team/ids">IDS Дизайн-система и стандарты</a>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="ids__promo-block" style="--img-aspect-ratio: 1024/658;">
+                <img src="images/horse/img1.jpeg">
+                <img src="images/horse/img2.jpeg">
+                <img src="images/horse/img3.jpeg">
+                <img src="images/horse/img4.jpeg">
+                <img src="images/horse/img5.jpeg">
+                <img src="images/horse/img6.jpeg">
+                <img src="images/horse/img7.jpeg">
+                <img src="images/horse/img8.jpeg">
+                <img src="images/horse/img9.jpeg">
+                <img src="images/horse/img10.jpeg">
+                <img src="images/horse/img11.jpeg">
+                <a href="https://ru.wikipedia.org/wiki/%D0%A5%D1%80%D0%BE%D0%BD%D0%BE%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F">Хронофотография</a>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="ids__promo-block img-contained" style="--img-aspect-ratio: 1/1;">
+                <img src="images/icons/icon1.png">
+                <img src="images/icons/icon2.png">
+                <img src="images/icons/icon3.png">
+                <img src="images/icons/icon4.png">
+                <img src="images/icons/icon5.png">
+                <img src="images/icons/icon6.png">
+                <img src="images/icons/icon7.png">
+                <img src="images/icons/icon8.png">
+                <img src="images/icons/icon9.png">
+                <img src="images/icons/icon10.png">
+                <img src="images/icons/icon11.png">
+              </div>
+            </div>
+          </div>
+
+          <div class="ids__space L"></div>
+          <div class="ids__text-width"></div>
+        </div>
+      </div>
+
+      <div class="ids__wrapper">
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
             <h3><code>.ids__rounded</code></h3>
 
             <p>
@@ -1822,5 +1892,6 @@
       window.customElements.define("ids-navbar", IdsNavbar);
       window.customElements.define("ids-nav-item", IdsNavItem);
     </script>
+    <script src="./js/promo-block.js"></script>
   </body>
 </html>

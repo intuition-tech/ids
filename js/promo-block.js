@@ -1,10 +1,37 @@
 const promoBlocks = document.querySelectorAll(".ids__promo-block");
 for (const block of promoBlocks) {
     const imgs = Array.from(block.children).filter(el => el.tagName === "IMG");
+
     const counter = block.querySelector(":scope > .ids__promo-block__pos");
     if (counter) {
         counter.dataset.index = 1;
         counter.dataset.count = imgs.length;
+    }
+
+    const dots = block.querySelector(":scope > .ids__promo-block__dots");
+    if (dots) {
+      for (let i = 0; i < imgs.length; i += 1) {
+        const dot = document.createElement("span");
+        dot.className = "ids__promo-block__dot";
+        if (i === 0) {
+          dot.classList.add("ids__promo-block__dot-active");
+        } else {
+          dot.style.order = String(i);
+        }
+        dots.appendChild(dot);
+      }
+    }
+
+    const dashes = block.querySelector(":scope > .ids__promo-block__dashes");
+    if (dashes) {
+      for (let i = 0; i < imgs.length; i += 1) {
+        const dash = document.createElement("span");
+        dash.className = "ids__promo-block__dash";
+        if (i === 0) {
+          dash.classList.add("ids__promo-block__dash-active");
+        }
+        dashes.appendChild(dash);
+      }
     }
 
     block.addEventListener("pointermove", function (event) {
@@ -29,6 +56,17 @@ for (const block of promoBlocks) {
         if (counter) {
             counter.dataset.index = Math.min(index + 1, imgs.length);
             counter.dataset.count = imgs.length;
+        }
+
+        if (dashes) {
+          for (let i = 0; i < dashes.children.length; i += 1) {
+            const dash = dashes.children[i];
+            if (i === index) {
+              dash.classList.add("ids__promo-block__dash-active");
+            } else {
+              dash.classList.remove("ids__promo-block__dash-active");
+            }
+          }
         }
       }
     }, true)

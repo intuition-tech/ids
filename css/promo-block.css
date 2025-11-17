@@ -42,5 +42,40 @@
       content: attr(data-index) "/" attr(data-count);
     }
   }
+
+  .ids__promo-block__dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.4em;
+
+    .ids__promo-block__dot {
+      width: 0.4em;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background-color: rgb(var(--ids__surface-RGB));
+    }
+
+    .ids__promo-block__dot-active {
+      background-color: rgb(var(--ids__text-RGB));
+      order: var(--index) !important;
+    }
+  }
+
+  .ids__promo-block__dashes {
+    display: flex;
+    justify-content: center;
+    gap: 0.4em;
+
+    .ids__promo-block__dash {
+      width: 0.5em;
+      height: 0.2em;
+      background-color: rgb(var(--ids__text-RGB));
+      transition: width 200ms ease;
+    }
+
+    .ids__promo-block__dash-active {
+      width: 1.4em;
+    }
+  }
 }
 

@@ -480,11 +480,13 @@
           <div class="ids__text-width">
             <h3>Текст</h3>
             <code>p</code>
-            <p>Вместо того, чтобы смотреть на дизайн — лучше смотреть сквозь дизайн и пытаться разглядеть будущее.</p>
+            <p>Информации для принятия решения не хватает всегда, по определению. Когда информации достаточно, правильный ход можно как бы «вычислить», определить с высокой точностью на основе данных, сложить два и два. Если информации достаточно – нечего решать.</p>
+            <div class="ids__space XS"></div>
             <code>p.loud</code>
-            <p class="loud">Дизайн цифровых продуктов – это в первую очередь дизайн взаимодействия.</p>
+            <p class="loud">Дизайнеру стоит быть самостоятельным, разносторонним, мультидисциплинарным и сложным.</p>
+            <div class="ids__space XS"></div>
             <code>p.huge</code>
-            <p class="huge">мы можем делать только то, во что верим.</p>
+            <p class="huge">Я передумал.</p>
             <code>mark</code>
             <code>code</code>
             <p>Используются, чтобы выделить <mark>важную мысль</mark> или <code>фрагмент кода</code>.</p>
@@ -1090,100 +1092,123 @@
         <div class="section">
           <div class="ids__space"></div>
           <div class="ids__text-width">
-            <h3><code>.ids__promo-block</code></h3>
+            <h3><code>.ids__inline-gallery</code></h3>
             <p>
-              Хорошая ссылка дает понять что за ней прячется.
-              А промо-блоки могут рассказать историю еще до того как нажать не них.
-              Они как видео, но лучше. Контроль всегда за пользователем.
+              Галерея, которая переключается горизонтальным движением курсора (и жестом «слайд» на мобиле). Собирается из последовательности статичных картинок и используется, когда нужна управляемая анимация. Ну или как придумаете. 
             </p>
-            <div class="ids__space M"></div>
-          </div>
-          <style>
-          .img-contained {
-            & > img {
-              object-fit: contain;
-              object-position: top left;
-            }
-          }
-          </style>
-          <div class="ids__sequence L gap-L">
-            <div class="ids__sequence-item">
-              <div class="ids__promo-block" style="--img-aspect-ratio: 1372/754;">
-                <img src="images/ids-promo/ids-promo-1.png">
-                <img src="images/ids-promo/ids-promo-2.png">
-                <img src="images/ids-promo/ids-promo-3.png">
-                <img src="images/ids-promo/ids-promo-4.png">
-                <img src="images/ids-promo/ids-promo-5.png">
-                <a href="https://intuition.team/ids">IDS Дизайн-система и стандарты</a>
+            <div class="ids__space XS"></div>
+            <div class="ids__sequence XL gap-L">
+              <div class="ids__sequence-item">
+                <div class="ids__inline-gallery" style="--img-aspect-ratio: 1024/658;">
+                  <img src="images/inline-gallery/horse/img1.jpeg">
+                  <img src="images/inline-gallery/horse/img2.jpeg">
+                  <img src="images/inline-gallery/horse/img3.jpeg">
+                  <img src="images/inline-gallery/horse/img4.jpeg">
+                  <img src="images/inline-gallery/horse/img5.jpeg">
+                  <img src="images/inline-gallery/horse/img6.jpeg">
+                  <img src="images/inline-gallery/horse/img7.jpeg">
+                  <img src="images/inline-gallery/horse/img8.jpeg">
+                  <img src="images/inline-gallery/horse/img9.jpeg">
+                  <img src="images/inline-gallery/horse/img10.jpeg">
+                  <img src="images/inline-gallery/horse/img11.jpeg">
+                </div>
+
               </div>
             </div>
-            <div class="ids__sequence-item">
-              <div class="ids__promo-block" style="--img-aspect-ratio: 1024/658;">
-                <img src="images/horse/img1.jpeg">
-                <img src="images/horse/img2.jpeg">
-                <img src="images/horse/img3.jpeg">
-                <img src="images/horse/img4.jpeg">
-                <img src="images/horse/img5.jpeg">
-                <img src="images/horse/img6.jpeg">
-                <img src="images/horse/img7.jpeg">
-                <img src="images/horse/img8.jpeg">
-                <img src="images/horse/img9.jpeg">
-                <img src="images/horse/img10.jpeg">
-                <img src="images/horse/img11.jpeg">
+              <p>
+                Элемент занимает ширину родительского контейнера. Пропорции задаются явно, через переменную <code>--img-aspect-ratio</code> в формате <code>width / height</code>. Это пропорции картинки, а не всего элемента – проще всего написать там размеры файла в пикселях.</p>
+                <p>
+                 Если пропорции картинок отличаются от заданных в переменной, картинки масштабируются, чтобы заполнить контейнер (<code>object-fit: cover</code>), и размещаются по центру. 
+              </p>
+              <p>
+                Можно добавить ссылку, и тогда областью клика станет весь элемент, а картинки по ховеру будут с увеличенной яркостью.
+              </p>
+              <p>
+                Есть индикаторы текущей позиции – численный и два варианта графических.
+              </p>
+              <div class="ids__space M"></div>
+              <div class="ids__sequence XL gap-L">
+                <div class="ids__sequence-item">
+                  <div class="ids__inline-gallery" style="--img-aspect-ratio: 1012/580;">
+                    <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-1.jpg">                    
+                    <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-2.jpg">                
+                    <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-3.jpg">
+                    <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-4.jpg">
+                    <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-5.jpg">
+                    <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-6.jpg">
+                    <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-7.jpg">
+                    <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-8.jpg">
+                    <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-9.jpg">
+                    <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-10.jpg">
+                    <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-11.jpg">
+                    <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-12.jpg">
+                    <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-13.jpg">
+                    <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-14.jpg">
+                    <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-15.jpg">
+                    <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-16.jpg">
+
+                    <a href="https://intuition.team/ru/how-to-design-with-code">
+                      <strong>Курс «Как дизайнить кодом вместо Фигмы»</strong></a>
+                  </div>
+                </div>
+
+                <div class="ids__sequence-item">
+                  <figure class="ids__inline-gallery" style="--img-aspect-ratio: 920/550;">
+                    <img src="images/inline-gallery/rocket/Rocket_v11_1.jpg">
+                    <img src="images/inline-gallery/rocket/Rocket_v11_2.jpg">
+                    <img src="images/inline-gallery/rocket/Rocket_v11_3.jpg">
+                    <img src="images/inline-gallery/rocket/Rocket_v11_4.jpg">
+                    <img src="images/inline-gallery/rocket/Rocket_v11_5.jpg">
+                    <img src="images/inline-gallery/rocket/Rocket_v11_6.jpg">
+                    <img src="images/inline-gallery/rocket/Rocket_v11_7.jpg">
+                    <img src="images/inline-gallery/rocket/Rocket_v11_8.jpg">
+                    <img src="images/inline-gallery/rocket/Rocket_v11_9.jpg">
+                    <img src="images/inline-gallery/rocket/Rocket_v11_10.jpg">
+                    <img src="images/inline-gallery/rocket/Rocket_v11_11.jpg">
+                    <img src="images/inline-gallery/rocket/Rocket_v11_12.jpg">
+                    <img src="images/inline-gallery/rocket/Rocket_v11_13.jpg">
+                    <img src="images/inline-gallery/rocket/Rocket_v11_14.jpg">
+                    <img src="images/inline-gallery/rocket/Rocket_v11_15.jpg">
+                    <img src="images/inline-gallery/rocket/Rocket_v11_16.jpg">
+      
+                    <figcaption class="ids__inline-gallery__pos"></figcaption>
+                  </figure>
+                </div>                     
+                <div class="ids__sequence-item">
+                  <figure class="ids__inline-gallery img-contained" style="--img-aspect-ratio: 1012/446;">
+                    <img src="images/inline-gallery/petrick/petrick-promo-1.png">
+                    <img src="images/inline-gallery/petrick/petrick-promo-2.png">
+                    <img src="images/inline-gallery/petrick/petrick-promo-3.png">
+                    <img src="images/inline-gallery/petrick/petrick-promo-4.png">
+                    <img src="images/inline-gallery/petrick/petrick-promo-5.png">
+                    <img src="images/inline-gallery/petrick/petrick-promo-6.png">
+                    <img src="images/inline-gallery/petrick/petrick-promo-7.png">
+                    <img src="images/inline-gallery/petrick/petrick-promo-8.png">
+                    <figcaption class="ids__inline-gallery__dashes"></figcaption>
+                  </figure>
+                </div>
+                  
+
+
+
+                <div class="ids__sequence-item">
+                  <figure class="ids__inline-gallery img-contained" style="--img-aspect-ratio: 1012/530;">
+                    <img src="images/inline-gallery/chaos/chaos-promo1.png">
+                    <img src="images/inline-gallery/chaos/chaos-promo2.png">
+                    <img src="images/inline-gallery/chaos/chaos-promo3.png">
+                    <img src="images/inline-gallery/chaos/chaos-promo4.png">
+                    <img src="images/inline-gallery/chaos/chaos-promo5.png">
+                    <img src="images/inline-gallery/chaos/chaos-promo6.png">
+      
+                    <figcaption class="ids__inline-gallery__dots"></figcaption>
+                  </figure>
+                </div>                           
               </div>
-            </div>
-            <div class="ids__sequence-item">
-              <figure class="ids__promo-block img-contained" style="--img-aspect-ratio: 1/1;">
-                <img src="images/icons/icon1.png">
-                <img src="images/icons/icon2.png">
-                <img src="images/icons/icon3.png">
-                <img src="images/icons/icon4.png">
-                <img src="images/icons/icon5.png">
-                <img src="images/icons/icon6.png">
-                <img src="images/icons/icon7.png">
-                <img src="images/icons/icon8.png">
-                <img src="images/icons/icon9.png">
-                <img src="images/icons/icon10.png">
-                <img src="images/icons/icon11.png">
-                <figcaption class="ids__promo-block__pos"></figcaption>
-              </figure>
-            </div>
-            <div class="ids__sequence-item">
-              <figure class="ids__promo-block img-contained" style="--img-aspect-ratio: 1/1;">
-                <img src="images/icons/icon1.png">
-                <img src="images/icons/icon2.png">
-                <img src="images/icons/icon3.png">
-                <img src="images/icons/icon4.png">
-                <img src="images/icons/icon5.png">
-                <img src="images/icons/icon6.png">
-                <img src="images/icons/icon7.png">
-                <img src="images/icons/icon8.png">
-                <img src="images/icons/icon9.png">
-                <img src="images/icons/icon10.png">
-                <img src="images/icons/icon11.png">
-                <figcaption class="ids__promo-block__dots"></figcaption>
-              </figure>
-            </div>
-            <div class="ids__sequence-item">
-              <figure class="ids__promo-block img-contained" style="--img-aspect-ratio: 1/1;">
-                <img src="images/icons/icon1.png">
-                <img src="images/icons/icon2.png">
-                <img src="images/icons/icon3.png">
-                <img src="images/icons/icon4.png">
-                <img src="images/icons/icon5.png">
-                <img src="images/icons/icon6.png">
-                <img src="images/icons/icon7.png">
-                <img src="images/icons/icon8.png">
-                <img src="images/icons/icon9.png">
-                <img src="images/icons/icon10.png">
-                <img src="images/icons/icon11.png">
-                <figcaption class="ids__promo-block__dashes"></figcaption>
-              </figure>
-            </div>
           </div>
+        </div>
+
 
           <div class="ids__space L"></div>
-          <div class="ids__text-width"></div>
         </div>
       </div>
 
@@ -1191,50 +1216,10 @@
         <div class="section">
           <div class="ids__space"></div>
           <div class="ids__text-width">
-            <h3><code>.ids__rounded</code></h3>
+            <h4><code>.ids__rounded</code></h4>
 
             <p>
-              Модификатор для плавной обрезки углов.
-              Обычное скругление грубое и неестественное.
-              А это приятное и математическое.
-            </p>
-
-            <aside>
-              <p>Такие углы скоро можно будет делать стандартным <code>corner-shape: squircle</code>, но пока не все браузеры договорились окончательно.</p>
-              <p>
-                IDS помогает сделать такие углы небольшим трюком.
-                Часто этого достаточно, но если применять скругление к компонентам с границами или тенями, нужно проверить что во всех браузерах эффект работает как ожидается.
-              </p>
-            </aside>
-            <div class="ids__space"></div>
-
-            <p>Вот, например.</p>
-
-            <div class="example-container">
-              <div class="ids__sequence L gap-L">
-                <div class="ids__sequence-item ids__rounded">
-                  <figure style="margin:0;padding:0">
-                    <img src="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11978833.jpg" alt="Photo by Jan van der Wolf" />
-                  </figure>
-                </div>
-                <div class="ids__sequence-item ids__rounded">
-                  <figure style="margin:0;padding:0">
-                    <img src="images/gallery/Photo by Jan van der Wolf_abstract-image-of-a-shadow-on-a-green-wall-and-blue-sky-11895895.jpg" alt="Photo by Jan van der Wolf" />
-                  </figure>
-                </div>
-                <div class="ids__sequence-item ids__rounded">
-                  <figure style="margin:0;padding:0">
-                    <img src="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11986204.jpg" alt="Photo by Jan van der Wolf" />
-                  </figure>
-                </div>
-              </div>
-            </div>
-
-            <div class="ids__space"></div>
-
-            <p>
-              Радиус углов указывается в переменной <code>--ids__radius</code>.
-              Его можно задать для всего документа, раздела, или для отдельного элемента.
+              Модификатор для скругления углов не сегментом окружности, а суперэллипсом.
             </p>
 
             <div class="ids__space S"></div>
@@ -1258,6 +1243,14 @@
                 </div>
               </div>
             </div>
+            <p>
+              Радиус скругления задаётся в переменной <code>--ids__radius</code>, а значит его можно задать и глобально, для всего документа, и локально, для отдельного раздела или элемента.
+            </p>
+
+            <aside>
+              <p>В Хроме уже работает <code>corner-shape: squircle</code>, в других браузерах ещё нет, поэтому мы сделали свою реализацию (она не работает для обводок, только для заливок). Когда браузеры договорятся, мы это выпилим.</p>
+              
+            </aside>
 
             <div class="ids__space M"></div>
           </div>

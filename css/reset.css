@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0
+}
+
+img {
+  display: block;
+  width: 100%;
+}

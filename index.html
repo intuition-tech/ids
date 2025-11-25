@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" href="images/favicon-inverted.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/colors.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/settings.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/ids.css" />
@@ -43,7 +43,7 @@
             </p>
             <aside>
               <p>Публичный репозиторий: <a href="https://github.com/intuition-tech/ids">github.com/intuition-tech/ids</a></p>
-              <p>Версия: 0.9.</p>
+              <p>Версия: 1.0.</p>
 
               <p>
                 Если у вас нет навыков разработчика, то простейший способ начать проект – скачать архив репозитория. Вы увидите там файл <code>index.html</code>, и в нём эту же
@@ -86,7 +86,7 @@
             </p>
             <aside>
               <p>
-                Когда подключаете отдельные шрифтовые файлы для разной насыщенности (например, regular и bold),убедитесь, что числовые значения в свойстве font-weight везде-везде
+                Когда подключаете отдельные шрифтовые файлы для разной насыщенности (например, regular и bold), убедитесь, что числовые значения в свойстве font-weight везде-везде
                 соответствуют насыщенности подключённого файла, указанной в блоке @font-face. Разные браузеры по-разному реагируют на несоответствие, могут добавлять буквам
                 обводку, чтобы восполнить «недостающую жирность».
               </p>
@@ -115,7 +115,7 @@
               значит мобила, больше – десктоп.
             </p>
             <p>
-              IDS реализует концепцию Fluid Typography – это когда в зависимости от ширины вьюпорта рассчитывается значение font-size для <code>body,</code> а затем единицы em или
+              IDS реализует концепцию Fluid Typography – это когда в зависимости от ширины вьюпорта рассчитывается значение font-size для <code>body</code>, а затем единицы em или
               rem используются не только для текста, но и для полей, отступов, радиусов скруглений, а иногда и габаритов отдельных элементов.
             </p>
             <aside>
@@ -480,9 +480,11 @@
           <div class="ids__text-width">
             <h3>Текст</h3>
             <code>p</code>
-            <p>TODO: показать абзац +помельче +покрупнее +супер-крупный</p>
+            <p>Вместо того, чтобы смотреть на дизайн — лучше смотреть сквозь дизайн и пытаться разглядеть будущее.</p>
             <code>p.loud</code>
             <p class="loud">Дизайн цифровых продуктов – это в первую очередь дизайн взаимодействия.</p>
+            <code>p.huge</code>
+            <p class="huge">мы можем делать только то, во что верим.</p>
             <code>mark</code>
             <code>code</code>
             <p>Используются, чтобы выделить <mark>важную мысль</mark> или <code>фрагмент кода</code>.</p>
@@ -674,6 +676,25 @@
             </p>
             <div class="ids__space"></div>
             <aside>
+              <style>
+                .ids table {
+                  tr {
+                    & td:first-child {
+                      text-align: center;
+
+                      & span {
+                        font-size: 7em;
+                        line-height: 0.8;
+                        font-weight: 700;
+
+                        @media (max-width: 768px) {
+                          font-size: 2em;
+                        }
+                      }
+                    }
+                  }
+                }
+              </style>
               <table>
                 <thead>
                   <tr>
@@ -890,7 +911,7 @@
         <div class="section">
           <div class="ids__space"></div>
           <div class="ids__text-width">
-            <h3>Сноски</h3>
+            <h3><code>ids-footnote</code></h3>
             <p>
               <code>ids-footnote-link</code> и <code>ids-footnote</code> —
               компоненты для создания всплывающих сносок с автоматической
@@ -954,42 +975,22 @@
 
             <p><strong>Структура разметки:</strong></p>
             <div class="ids__space XS"></div>
-            <p><code>&lt;p&gt;</code></p>
-            <p>Текст с</p>
             <p>
+              <code>&lt;p&gt;</code>
+              Текст с
               <code>&lt;ids-footnote-link&gt;</code>ссылкой на сноску<code
                 >&lt;/ids-footnote-link&gt;</code
               >
+              в тексте.
+              <code>&lt;/p&gt;</code>
             </p>
-            <p>в тексте.</p>
-            <p><code>&lt;/p&gt;</code></p>
-            <div class="ids__space XS"></div>
-            <p><code>&lt;ids-footnote&gt;</code></p>
             <p>
+              <code>&lt;ids-footnote&gt;</code>
               <code>&lt;p&gt;</code>Содержимое сноски.<code>&lt;/p&gt;</code>
+              <code>&lt;/ids-footnote&gt;</code>
             </p>
-            <p><code>&lt;/ids-footnote&gt;</code></p>
 
             <div class="ids__space M"></div>
-
-            <aside>
-              <h4>Важные детали</h4>
-              <ul>
-                <li>
-                  Порядок элементов <code>ids-footnote</code> должен совпадать с
-                  порядком соответствующих <code>ids-footnote-link</code>
-                </li>
-                <li>
-                  Номер автоматически появляется в начале первого параграфа
-                  сноски
-                </li>
-                <li>Одновременно может быть открыта только одна сноска</li>
-                <li>
-                  Клик по другой ссылке автоматически закрывает предыдущую
-                  сноску
-                </li>
-              </ul>
-            </aside>
           </div>
         </div>
 
@@ -1001,8 +1002,8 @@
         <div class="section">
           <div class="ids__space"></div>
           <div class="ids__text-width">
-            <h3>Галерея</h3>
-            <p><code>ids-gallery</code> — специальный тег для Галереи.</p>
+            <h3><code>ids-gallery</code></h3>
+            <p>Специальный тег для Галереи.</p>
             <p>Для разделения изображений используем тег <code>figure</code>.</p>
             <p>
               <code>a</code> содержит ссылку на полноразмерное изображение. Если оно отличается от того, которое используется для превью, ему нужно указать размеры в атрибутах
@@ -1089,7 +1090,7 @@
         <div class="section">
           <div class="ids__space"></div>
           <div class="ids__text-width">
-            <h3>Промо-блок</h3>
+            <h3><code>.ids__promo-block</code></h3>
             <p>
               Хорошая ссылка дает понять что за ней прячется.
               А промо-блоки могут рассказать историю еще до того как нажать не них.
@@ -1129,7 +1130,6 @@
                 <img src="images/horse/img9.jpeg">
                 <img src="images/horse/img10.jpeg">
                 <img src="images/horse/img11.jpeg">
-                <a href="https://ru.wikipedia.org/wiki/%D0%A5%D1%80%D0%BE%D0%BD%D0%BE%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F">Хронофотография</a>
               </div>
             </div>
             <div class="ids__sequence-item">

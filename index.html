@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Intuition Design System Template</title>
-    <link rel="icon" type="image/png" href="images/favicon-inverted.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/colors.css" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/settings.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/ids.css" />
-    <link rel="stylesheet" href="css/gallery.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/promo-block.css" />
-    <link rel="stylesheet" href="css/footnotes.css" />
+    <link rel="icon" type="image/png" href="images/favicon-inverted.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/ids.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/promo-block.css">
+    <link rel="stylesheet" href="css/footnotes.css">
   </head>
 
   <body class="ids">
@@ -166,7 +166,6 @@
                 <p>text</p>
               </div>
             </div>
-
             <div class="ids__sequence-item">
               <div class="guide-color-plate" style="background-color: rgba(var(--ids__link-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
                 <p>link</p>
@@ -182,7 +181,6 @@
                 <p>mark</p>
               </div>
             </div>
-
             <div class="ids__sequence-item">
               <div class="guide-color-plate" style="background-color: rgba(var(--ids__code-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
                 <p>code</p>
@@ -209,7 +207,6 @@
           <div class="ids__text-width">
             <p>Цветовая палитра живёт в файле <code>colors.css</code>.</p>
             <p>Каждая переменная хранит строку из трёх значений в пространстве RGB через запятую, например: <code>253, 47, 75</code>.</p>
-            <p></p>
 
             <div class="ids__space"></div>
             <aside>
@@ -234,25 +231,25 @@
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="section">
-            <div class="ids__space L"></div>
-            <div class="ids__text-width">
-              <ids-nav-item id="frame" label="Каркас страницы"><h2>Каркас страницы</h2></ids-nav-item>
-              <p>
-                IDS не использует модульные сетки или колонки для организации пространства страницы. Всё проще: страница состоит из «этажей», они идут сверху вниз друг за другом,
-                каждый занимает всю доступную ширину и может быть любой высоты. Такой подход не мешает внутри этажа создавать модульные сетки и сложные композиции, но
-                изолированность этажей позволяет легко менять их местами и избавляет от какой-либо взаимозависимости.
-              </p>
-            </div>
+        <div class="section">
+          <div class="ids__space L"></div>
+          <div class="ids__text-width">
+            <ids-nav-item id="frame" label="Каркас страницы"><h2>Каркас страницы</h2></ids-nav-item>
+            <p>
+              IDS не использует модульные сетки или колонки для организации пространства страницы. Всё проще: страница состоит из «этажей», они идут сверху вниз друг за другом,
+              каждый занимает всю доступную ширину и может быть любой высоты. Такой подход не мешает внутри этажа создавать модульные сетки и сложные композиции, но
+              изолированность этажей позволяет легко менять их местами и избавляет от какой-либо взаимозависимости.
+            </p>
           </div>
+        </div>
 
-          <div class="section">
-            <div class="ids__space"></div>
-            <div class="ids__text-width">
-              <h3>Обёртки</h3>
-              <p><code>.ids__wrapper</code> – стандартный этаж c большими полями на десктопе и с минимальными на мобиле.</p>
-            </div>
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Обёртки</h3>
+            <p><code>.ids__wrapper</code> – стандартный этаж c большими полями на десктопе и с минимальными на мобиле.</p>
           </div>
         </div>
       </div>
@@ -1123,13 +1120,13 @@
                   <img src="images/inline-gallery/horse/img10.jpeg">
                   <img src="images/inline-gallery/horse/img11.jpeg">
                 </div>
-
               </div>
             </div>
               <p>
-                Элемент занимает ширину родительского контейнера. Пропорции задаются явно, через переменную <code>--img-aspect-ratio</code> в формате <code>width / height</code>. Это пропорции картинки, а не всего элемента – проще всего написать там размеры файла в пикселях.</p>
-                <p>
-                 Если пропорции картинок отличаются от заданных в переменной, картинки масштабируются, чтобы заполнить контейнер (<code>object-fit: cover</code>), и размещаются по центру. 
+                Элемент занимает ширину родительского контейнера. Пропорции задаются явно, через переменную <code>--img-aspect-ratio</code> в формате <code>width / height</code>. Это пропорции картинки, а не всего элемента – проще всего написать там размеры файла в пикселях.
+              </p>
+              <p>
+                Если пропорции картинок отличаются от заданных в переменной, картинки масштабируются, чтобы заполнить контейнер (<code>object-fit: cover</code>), и размещаются по центру. 
               </p>
               <p>
                 Можно добавить ссылку, и тогда областью клика станет весь элемент, а картинки по ховеру будут с увеличенной яркостью.
@@ -1159,7 +1156,8 @@
                     <img src="images/inline-gallery/how-to-design-with-code/code-design-promo-16.jpg">
 
                     <a href="https://intuition.team/ru/how-to-design-with-code">
-                      <strong>Курс «Как дизайнить кодом вместо Фигмы»</strong></a>
+                      <strong>Курс «Как дизайнить кодом вместо Фигмы»</strong>
+                    </a>
                   </div>
                 </div>
 
@@ -1198,9 +1196,6 @@
                     <figcaption class="ids__inline-gallery__dashes"></figcaption>
                   </figure>
                 </div>
-                  
-
-
 
                 <div class="ids__sequence-item">
                   <figure class="ids__inline-gallery img-contained" style="--img-aspect-ratio: 1012/530;">
@@ -1215,9 +1210,8 @@
                   </figure>
                 </div>                           
               </div>
+            </div>
           </div>
-        </div>
-
 
           <div class="ids__space L"></div>
         </div>

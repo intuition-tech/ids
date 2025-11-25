@@ -229,12 +229,18 @@
 
   & table {
     border-spacing: 0;
+    background-color: inherit;
 
     @media (max-width: 768px) {
       font-size: 0.7em;
     }
 
+    thead {
+      background-color: inherit;
+    }
+
     tr {
+      background-color: inherit;
 
       & th {
         position: sticky;
@@ -242,7 +248,7 @@
         text-align: left;
         border-bottom: 2px solid rgba(var(--ids__text-RGB), 1);
         padding-bottom: 0.3em;
-        background-color: rgba(var(--ids__surface-RGB), 1);
+        background-color: inherit;
 
         @media (max-width: 768px) {
           padding-top: 0.8em;

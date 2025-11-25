@@ -21,7 +21,7 @@
   }
 
   .ids__promo-link {
-    margin: 0.5em 0 1em;
+    display: flex;
 
     & a {
       display: inline-block;
@@ -51,9 +51,9 @@
         text-decoration: none;
         cursor: default;
       }
-      
+
       &.active::after {
-        content: "↓";
+        content: " ↓";
       }
     }
   }

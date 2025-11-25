@@ -911,7 +911,7 @@
         </div>
 
         <div class="section">
-          <div class="ids__space"></div>
+          <div class="ids__space L"></div>
           <div class="ids__text-width">
             <h3><code>ids-footnote</code></h3>
             <p>
@@ -997,18 +997,24 @@
         </div>
 
         <div class="section">
-          <div class="ids__space"></div>
-          <h3><code>.ids__navbar</code></h3>
-          <p>TODO: описание (реализация есть)</p>
+          <div class="ids__space L"></div>
+          <h3><code>ids-navbar</code></h3>
+          <div class="ids__text-width">
+          <p>Компонент формирует группу ссылок для скролл-навигации из элементов, обёрнутых в тег <code>ids-nav-item</code>. Обязательные атрибуты:</p>
+          <ul>
+            <li><code>id</code> – уникальный идентификатор заголовка</li>
+            <li><code>label</code> – текст ссылки</li>
+          </ul>
+          </div>
         </div>
         <div class="section">
-          <div class="ids__space"></div>
+          <div class="ids__space L"></div>
           <div class="ids__text-width">
             <h3><code>ids-gallery</code></h3>
-            <p>Специальный тег для Галереи.</p>
-            <p>Для разделения изображений используем тег <code>figure</code>.</p>
+            <p>Галерея картинок, которые открываются и листаются в модальном окне.</p>
+            
             <p>
-              <code>a</code> содержит ссылку на полноразмерное изображение. Если оно отличается от того, которое используется для превью, ему нужно указать размеры в атрибутах
+              В атрибуте <code>src</code> тега <code>img</code> указывается уменьшенная превьюшка, а в атрибуте <code>href</code> тега <code>a</code> — ссылка на полный размер. (Они могут совпадать, если некогда заморачиваться с превьюшками). Если полноразмерное изображение отличается, ему нужно указать размеры в атрибутах
               <code>data-pswp-width</code> и <code>data-pswp-height</code>
             </p>
             <div class="ids__space XL"></div>
@@ -1022,26 +1028,31 @@
               <a href="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11978833.jpg">
                 <img src="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11978833.jpg" alt="Photo by Jan van der Wolf" />
               </a>
+              <figcaption>Photo: Jan van der Wolf</figcaption>
             </figure>
             <figure>
               <a href="images/gallery/Photo by Mehmet Turgut  Kirkgoz_geometric-modern-architecture-16615613.jpg">
                 <img src="images/gallery/Photo by Mehmet Turgut  Kirkgoz_geometric-modern-architecture-16615613.jpg" alt="Photo by Mehmet Turgut Kirkgoz" />
               </a>
+              <figcaption>Photo: Mehmet Turgut Kirkgoz</figcaption>
             </figure>
             <figure>
               <a href="images/gallery/Photo by Jan van der Wolf_abstract-image-of-a-shadow-on-a-green-wall-and-blue-sky-11895895.jpg">
                 <img src="images/gallery/Photo by Jan van der Wolf_abstract-image-of-a-shadow-on-a-green-wall-and-blue-sky-11895895.jpg" alt="Photo by Jan van der Wolf" />
               </a>
+              <figcaption>Photo: Jan van der Wolf</figcaption>
             </figure>
             <figure>
               <a href="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11986204.jpg">
                 <img src="images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11986204.jpg" alt="Photo by Jan van der Wolf" />
               </a>
+              <figcaption>Photo: Jan van der Wolf</figcaption>
             </figure>
             <figure>
               <a href="images/gallery/Photo by Mehmet Turgut  Kirkgoz_white-geometric-building-corner-18075244.jpg">
                 <img src="images/gallery/Photo by Mehmet Turgut  Kirkgoz_white-geometric-building-corner-18075244.jpg" alt="Photo by Mehmet Turgut Kirkgoz" />
               </a>
+              <figcaption>Photo: Mehmet Turgut Kirkgoz</figcaption>
             </figure>
             <figure>
               <a href="images/gallery/icon1.png">

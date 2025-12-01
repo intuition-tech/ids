@@ -30,3 +30,36 @@ ids-gallery, .ids__gallery {
         }
     }
 }
+
+/* PhotoSwipe lightbox caption */
+.pswp .pswp__caption {
+    position: absolute;
+    left: 50%;
+    bottom: calc(var(--ids__density, 1.5) * 1em);
+    transform: translateX(-50%);
+
+    color: rgb(var(--ids__background-RGB));
+    background: rgba(var(--ids__text-RGB), 0.8);
+    font-size: 0.8em;
+    line-height: var(--ids__density, 1.5);
+    padding: 0.4em 0.8em;
+
+    max-width: 80%;
+    text-align: center;
+
+    figcaption {
+        /* Reset figcaption styling from ids.css */
+        opacity: 1;
+        margin: 0;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: underline;
+        text-underline-offset: 0.15em;
+    }
+
+    a:hover {
+        opacity: 0.7;
+    }
+}

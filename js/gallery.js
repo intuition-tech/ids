@@ -37,6 +37,21 @@ class IdsGallery extends HTMLElement {
       if (!this.getAttribute("zoom") && this.lightbox?.pswp?.ui?.uiElementsData?.length) {
         this.lightbox.pswp.ui.uiElementsData = this.lightbox.pswp.ui.uiElementsData.filter((el) => el.name !== "zoom");
       }
+
+      this.lightbox.pswp.ui.registerElement({
+        name: "caption",
+        appendTo: "root",
+        onInit: (el, pswp) => {
+          pswp.on("change", () => {
+            const figcaption = pswp.currSlide.data.element?.closest("figure")?.querySelector("figcaption")?.cloneNode(true);
+
+            el.innerHTML = "";
+            if (figcaption) {
+              el.appendChild(figcaption);
+            }
+          });
+        },
+      });
     });
 
     this.lightbox.init();

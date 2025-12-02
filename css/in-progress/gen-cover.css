@@ -1,0 +1,30 @@
+.gen-cover {
+  position: relative;
+  aspect-ratio: 16/9;
+  
+  margin-bottom: 1em;
+
+  & .gen-cover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(var(--ids__accent-RGB), 1);
+  }
+
+  & .gen-cover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1em;    
+    color: white;
+
+    & h1 {
+      margin: 0;
+      font-size: 2em;
+      line-height: 1.2;
+    }
+  }
+}

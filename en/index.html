@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Intuition Design System Template</title>
+    <link rel="icon" type="image/png" href="../images/favicon-inverted.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/ids.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/promo-block.css">
+    <link rel="stylesheet" href="../css/footnotes.css">
+  </head>
+
+  <body class="ids">
+    <header></header>
+
+    <main>
+      <div class="ids__wrapper">
+        <div class="section" id="intro">
+          <div class="ids__space XL"></div>
+          <div class="ids__text-width">
+            <ids-nav-item id="intro" label="About the design system">
+              <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0">.ids</h1>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.52 148.95" style="width: 15em">
+                <path
+                  style="fill: rgba(var(--ids__accent-RGB), 1)"
+                  d="M87.51,42.44c-13.74,34.36-24.86,69.73-24.86,84.88,0,10.11,10.71,20.21,21.22,20.21,8.08,0,20.01-7.88,28.9-19.2l-13.95-10.91c-6.06,6.06-11.12,9.9-14.15,9.9-1.01,0-2.02-1.01-2.02-3.03,0-7.07,5.46-29.3,23.85-74.78l-19-7.07ZM40.42,128.34c0,9.9-9.9,20.21-20.21,20.21S0,138.44,0,128.34s10.11-20.21,20.21-20.21c10.71,0,20.21,10.71,20.21,20.21M125.51,17.18c0,8.49-8.49,17.18-17.18,17.18s-17.18-8.69-17.18-17.18S99.84,0,108.33,0s17.18,8.49,17.18,17.18M318.52,57.8c-7.68-11.72-20.61-21.42-33.75-21.42-17.99,0-34.36,16.98-34.36,31.73,0,26.27,38.6,33.75,38.6,47.9,0,6.06-8.49,12.33-16.57,12.33-10.11,0-17.79-8.08-23.85-16.17l-13.34,13.14c6.26,9.1,21.83,22.23,38.2,22.23,18.19,0,36.38-17.38,36.38-34.56,0-23.24-40.22-32.74-40.22-47.49,0-5.66,6.06-11.32,13.34-11.32,8.29,0,15.16,6.27,22.23,16.57l13.34-12.93ZM199.07,78.82c-15.16,29.31-38.4,48.51-45.47,48.51-3.03,0-5.05-3.03-5.05-6.06,0-15.16,19.2-64.67,31.33-64.67,8.09,0,16.17,13.14,19.2,22.23M204.13,66.09l9.09,11.72c-3.03-23.24-21.22-41.43-35.37-41.43-29.3,0-50.53,66.69-50.53,87.91,0,12.13,12.13,24.25,24.25,24.25,15.16,0,34.36-20.21,61.64-62.65l-15.97,12.53c-3.43,15.16-9.09,31.12-13.14,46.28l20.21,4.24c11.12-47.49,22.03-94.99,36.18-142.48l-20.21-4.45c-5.05,20.21-10.51,43.65-16.17,64.07" />
+              </svg>
+            </ids-nav-item>
+            <div class="ids__space S"></div>
+
+            <p>Intuition Design System, IDS &ndash; a design system for building landing pages, online publications, and any digital web products that are based on narratives.</p>
+            <ids-navbar></ids-navbar>
+            <p>
+              Technically, IDS is a set of CSS classes and JS components. It&rsquo;s not a library, but a ready-made layout template. You don&rsquo;t include IDS in your project as a dependency, you don&rsquo;t extend
+              classes, you don&rsquo;t override properties. Instead, you simply copy its source code and modify it however you like. No compatibility issues and no breaking updates.
+            </p>
+            <aside>
+              <p>Public repository: <a href="https://github.com/intuition-tech/ids">github.com/intuition-tech/ids</a></p>
+              <p>Version: 1.0.</p>
+
+              <p>
+                If you don&rsquo;t have developer skills, the simplest way to start a project is to download the repository archive. You&rsquo;ll find an <code>en/index.html</code> file there, containing this very
+                page, which serves both as instructions and as a layout example. Open the files in a code editor and feel free to make them your own. The instructions won&rsquo;t be lost &ndash; they&rsquo;re always here: <a href="https://intuition-tech.github.io/ids">intuition-tech.github.io/ids</a>.
+              </p>
+              <p>
+                If you&rsquo;re a developer &ndash; do whatever you want. IDS works as static files, has zero dependencies, and uses vanilla JS. If you notice a bug, please submit
+                a pull request.
+              </p>
+            </aside>
+            <p>
+              IDS is distributed under the MIT license &ndash; you can use and modify it for free, no restrictions. We also don&rsquo;t accept complaints, can&rsquo;t provide guidance, and there&rsquo;s no
+              support service. If you&rsquo;re interested but not sure how to work with it &ndash; welcome to the course
+              <a href="https://intuition.team/how-to-design-with-code">&ldquo;How to Design with Code&rdquo;</a>, it will help.
+            </p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space L"></div>
+          <div class="ids__text-width">
+            <ids-nav-item id="setup" label="Setup"><h2>Setup</h2></ids-nav-item>
+            <p>Basic design system parameters are set in the <code>settings.css</code> file.</p>
+          </div>
+        </div>
+
+        <div class="section" id="font">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Font</h3>
+            <p>
+              IDS uses the <a href="https://www.paratype.com/fonts/pt/pt-root-ui" target="_BLANK">PT Root UI</a> font by default, the variable web version. It&rsquo;s great!
+              But the design system isn&rsquo;t tied to a specific font &ndash; you can use any font. Just place the font files in the <code>fonts</code> folder and edit the
+              Fonts section in the <code>settings.css</code> file. Please try not to pirate fonts.
+            </p>
+            <aside>
+              <p>
+                When connecting separate font files for different weights (e.g., <code>regular</code> and <code>bold</code>), make sure the numeric values in the <code>font-weight</code> property everywhere
+                match the weight of the connected file specified in the <code>@font-face</code> block. Different browsers react differently to mismatches and may add
+                strokes to letters to compensate for the &ldquo;missing weight.&rdquo;
+              </p>
+            </aside>
+          </div>
+        </div>
+
+        <div class="section" id="density">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Density</h3>
+            <p>Different fonts suit different layout densities. Additionally, density is an aesthetic choice &ndash; sometimes you need tight layout, sometimes airy.</p>
+            <p>
+              IDS has a variable <code>--ids__density</code> that affects text line-height, as well as margins and paddings of all text elements. To adjust layout
+              density, first try to find the optimal value for this variable, then edit individual styles.
+            </p>
+          </div>
+        </div>
+
+        <div class="section" id="fluid">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Responsiveness</h3>
+            <p>
+              IDS assumes there are only two types of devices: mobile and desktop. This is determined by viewport width (simplified: browser window width): less than 768 px
+              means mobile, more means desktop.
+            </p>
+            <p>
+              IDS implements the Fluid Typography concept &ndash; where the font-size for <code>body</code> is calculated based on viewport width, and then em or
+              rem units are used not only for text but also for margins, paddings, border radii, and sometimes element dimensions.
+            </p>
+            <aside>
+              <p>Of course, stroke thickness is better set in px, and for sizes depending on parent container dimensions, only %, vh, and vw will work.</p>
+            </aside>
+
+            <p>
+              This approach simplifies design debugging. First, you need to find the optimal font-size range suitable for the chosen font and desired size of &ldquo;regular&rdquo;
+              text.
+            </p>
+            <p>
+              This range is set by the variables <code>--desktop-font-size-min</code> and <code>--desktop-font-size-max</code>. You need to find values such that when the
+              width changes, the text scales while preserving line breaks. Then you can check the layout at just one width, knowing that at any width the element
+              arrangement will be preserved.
+            </p>
+            <p>
+              For mobile, you need to find your own pair of values <code>--mobile-font-size-min</code> and <code>--mobile-font-size-max</code>, but the idea is exactly the same &ndash; consistent layout on
+              phones of different widths.
+            </p>
+            <aside>
+              <p>
+                This approach has a downside: the reader won&rsquo;t be able to enlarge text through browser zoom (Zoom In/Out, Ctrl/Cmd+/&ndash;). We consider this acceptable because
+                a) we recommend not using small text in the first place, so zooming isn&rsquo;t needed, b) pinch-to-zoom on screens and trackpads works.
+              </p>
+              <p>If you consider this issue critical &ndash; disable the entire <code>Font-size calculation using variables</code> block in the <code>settings.css</code> file.</p>
+            </aside>
+          </div>
+        </div>
+
+        <div class="section" id="color">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Color</h3>
+            <p>IDS stores the color palette in variables. Color naming is functional: named after what it&rsquo;s used for.</p>
+          </div>
+          <style>
+            .guide-color-plate {
+              height: 6em;
+              font-size: 0.8em;
+              padding: 0.6em 0.8em;
+            }
+          </style>
+
+          <div class="ids__space"></div>
+          <div class="ids__sequence M">
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: rgba(var(--ids__text-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
+                <p>text</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: rgba(var(--ids__link-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
+                <p>link</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: rgba(var(--ids__hover-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
+                <p>hover</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: rgba(var(--ids__mark-RGB), 1)">
+                <p>mark</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: rgba(var(--ids__code-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
+                <p>code</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: rgba(var(--ids__accent-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
+                <p>accent</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: rgba(var(--ids__surface-RGB), 1)">
+                <p>surface</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: rgba(var(--ids__background-RGB), 1)">
+                <p>background</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <p>The color palette lives in the <code>colors.css</code> file.</p>
+            <p>Each variable stores a string of three comma-separated values in RGB space, for example: <code>253, 47, 75</code>.</p>
+
+            <div class="ids__space"></div>
+            <aside>
+              <h4>Why this way</h4>
+
+              <p>
+                It&rsquo;s more convenient to store transparency information in selector properties rather than in variables. Instead of 30-40 variables for each transparency variant &ndash; a dozen colors with
+                clear names and obvious code in selector properties.
+              </p>
+            </aside>
+            <div class="ids__sequence XL">
+              <div class="ids__sequence-item">
+                <p>Not like this</p>
+                <p>
+                  <code><s>color: var(--ids__accent-RGB);</s></code>
+                </p>
+              </div>
+              <div class="ids__sequence-item">
+                <p>But like this</p>
+                <p><code>color: rgb(var(--ids__accent-RGB));</code></p>
+                <p><code>color: rgba(var(--ids__accent-RGB), 0.5);</code></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space L"></div>
+          <div class="ids__text-width">
+            <ids-nav-item id="frame" label="Page frame"><h2>Page frame</h2></ids-nav-item>
+            <p>
+              IDS doesn&rsquo;t use modular grids or columns for page space organization. It&rsquo;s simpler: the page consists of &ldquo;floors&rdquo; that go from top to bottom one after another,
+              each takes up the full available width and can be any height. This approach doesn&rsquo;t prevent creating modular grids and complex compositions inside a floor, but
+              the isolation of floors allows easily rearranging them and eliminates any interdependency.
+            </p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Wrappers</h3>
+            <p><code>.ids__wrapper</code> &ndash; standard floor with large margins on desktop and minimal on mobile.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+        <div class="ids__wrapper">
+          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+            <div class="ids__space XL"></div>
+            <div class="ids__space XL"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ids__wrapper">
+        <div class="section">
+          <div class="ids__space M"></div>
+          <div class="ids__text-width">
+            <p><code>.ids__wrapper.L</code> &ndash; floor with increased width. Different only on desktop, on mobile it matches the standard.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+        <div class="ids__wrapper L">
+          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+            <div class="ids__space XL"></div>
+            <div class="ids__space XL"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ids__wrapper">
+        <div class="section">
+          <div class="ids__space M"></div>
+          <div class="ids__text-width">
+            <p><code>.ids__wrapper.XL</code> &ndash; full-width floor with minimal margins. Different only on desktop, on mobile it matches the standard.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+        <div class="ids__wrapper XL">
+          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+            <div class="ids__space XL"></div>
+            <div class="ids__space XL"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ids__wrapper">
+        <div class="section" id="">
+          <div class="ids__space M"></div>
+          <p><code>.ids__wrapper.XXL</code> &ndash; full-width floor without margins, on mobile too.</p>
+        </div>
+      </div>
+
+      <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+        <div class="ids__wrapper XXL">
+          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+            <div class="ids__space XL"></div>
+            <div class="ids__space XL"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ids__wrapper">
+        <div class="section">
+          <div class="ids__space M"></div>
+          <div class="ids__text-width">
+            <p>
+              For single-column text inside a standard floor, an additional wrapper is used that reduces the width and leaves extra margin on the right. This is only
+              on desktop; on mobile, full width remains.
+            </p>
+          </div>
+          <p><code>.ids__text-width</code></p>
+          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+            <div class="ids__text-width">
+              <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+                <div class="ids__space XL"></div>
+                <div class="ids__space XL"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space L"></div>
+          <div class="ids__text-width">
+            <h3>Vertical spacing system</h3>
+            <p>In IDS, wrappers have zero margins, and most other elements have only a minimal bottom margin, to lay out elements in a continuous flow.</p>
+
+            <p>
+              When noticeable spacing is needed &ndash; for example, between floors or before a heading so it doesn&rsquo;t stick to the previous paragraph &ndash; special spacers are used.
+            </p>
+          </div>
+          <div class="ids__space M"></div>
+          <div class="ids__sequence M gap-S">
+            <div class="ids__sequence-item">
+              <p><code>ids__space.S</code></p>
+              <div class="ids__space S" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+            </div>
+            <div class="ids__sequence-item">
+              <p><code>ids__space.M</code></p>
+              <div class="ids__space M" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+            </div>
+            <div class="ids__sequence-item">
+              <p><code>ids__space.L</code></p>
+              <div class="ids__space L" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+            </div>
+            <div class="ids__sequence-item">
+              <p><code>ids__space.XL</code></p>
+              <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+            </div>
+          </div>
+          <div class="ids__space L"></div>
+          <div class="ids__text-width">
+            <aside>
+              <h4>Why this way</h4>
+
+              <p>
+                Spacers are a fairly primitive solution, like lead blocks in the days of manual metal typesetting. Isn&rsquo;t there a more elegant way? Practice has shown that
+                there isn&rsquo;t.
+              </p>
+              <p>
+                If we decided to store spacing information in individual element properties, we&rsquo;d have to account for all possible contexts. For example, on this very card,
+                the top margin on the &ldquo;Why this way&rdquo; heading would prevent placing it neatly in the corner &ndash; we&rsquo;d have to add a modifier class to cancel the margin, or write more
+                complex conditional styles that are less obvious and more fragile.
+              </p>
+              <p>And even after that, elements couldn&rsquo;t always know what spacing is needed &ndash; only the designer knows that. So we have lead blocks.</p>
+            </aside>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space L"></div>
+          <div class="ids__text-width">
+            <ids-nav-item id="tags-style" label="Tag styling"><h2>Tag styling</h2></ids-nav-item>
+            <p>
+              IDS styles some commonly used tags so you can lay out large volumes of text while keeping minimal markup. Tag styles are defined only
+              inside the <code>.ids</code> container.
+            </p>
+            <aside>
+              <p>
+                In our standard template, the <code>.ids</code> class is on the <code>body</code> tag, meaning tags are styled everywhere. This can interfere &ndash; for example, any link becomes
+                underlined, not just text links; any unordered list gets bullets and margins, even when it&rsquo;s not text.
+              </p>
+              <p>
+                To avoid this effect, move the <code>.ids</code> class somewhere deeper, where your main text flow begins. The <code>.ids</code> class isolates
+                only tag styles. Scaling will continue to work everywhere, and classes with the <code>.ids__</code> prefix too.
+              </p>
+            </aside>
+            <p>Here are the tags styled inside <code>.ids</code>.</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space M"></div>
+          <div class="ids__text-width">
+            <h3>Headings</h3>
+            <code>h1</code>
+            <div class="ids__space M"></div>
+            <h1>Main page heading</h1>
+            <div class="ids__space"></div>
+            <hr />
+            <code>h2</code>
+            <div class="ids__space M"></div>
+            <h2>Second level heading</h2>
+            <div class="ids__space"></div>
+            <hr />
+            <code>h3</code>
+            <div class="ids__space M"></div>
+            <h3>Third level heading</h3>
+            <div class="ids__space"></div>
+            <hr />
+            <code>h4</code>
+            <div class="ids__space M"></div>
+            <h4>Fourth level heading</h4>
+            <div class="ids__space"></div>
+            <hr />
+            <code>h5</code>
+            <div class="ids__space M"></div>
+            <h5>Fifth level heading</h5>
+            <div class="ids__space"></div>
+            <hr />
+            <code>h6</code>
+            <div class="ids__space M"></div>
+            <h6>Sixth level heading</h6>
+            <div class="ids__space"></div>
+            <hr />
+
+            <div class="ids__space"></div>
+            <p>
+              Sometimes you don&rsquo;t visually need headings as large as h1 or h2. But according to accessibility standards, the page must have an h1, and the next level must be h2,
+              and so on, without gaps. To resolve this contradiction, we&rsquo;ve prepared special classes that reduce h1 and h2:
+            </p>
+
+            <code>h1.S</code>
+            <h1 class="S">Main heading, reduced</h1>
+            <hr />
+            <code>h1.XS</code>
+            <h1 class="XS">Main heading, reduced even more</h1>
+            <hr />
+            <code>h2.XS</code>
+            <h2 class="XS">Second level heading, reduced</h2>
+            <hr />
+
+            <div class="ids__space"></div>
+            <p>Sometimes you want to attach a label, tag, or badge above a heading. For this, the <code>hgroup</code> tag is used.</p>
+
+            <div class="ids__space XS"></div>
+            <p><code>hgroup</code></p>
+            <p>    <code>p</code></p>
+            <p>    <code>h1</code></p>
+            <div class="ids__space S"></div>
+
+            <hgroup>
+              <p>Heading label</p>
+              <h1>Main page heading</h1>
+            </hgroup>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space M"></div>
+          <div class="ids__text-width">
+            <h3>Text</h3>
+            <code>p</code>
+            <p>There&rsquo;s never enough information for making decisions, by definition. When there&rsquo;s enough information, the right move can be &ldquo;calculated,&rdquo; determined with high accuracy based on data, adding two and two. If there&rsquo;s enough information &ndash; there&rsquo;s nothing to decide.</p>
+            <div class="ids__space XS"></div>
+            <code>p.loud</code>
+            <p class="loud">A designer should be independent, versatile, multidisciplinary, and complex.</p>
+            <div class="ids__space XS"></div>
+            <code>p.huge</code>
+            <p class="huge">I changed my mind.</p>
+            <code>mark</code>
+            <code>code</code>
+            <p>Used to highlight an <mark>important thought</mark> or a <code>code fragment</code>.</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Illustration</h3>
+            <p><code>figure</code> <code>figcaption</code></p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>List</h3>
+            <p><code>ul</code> <code>li</code></p>
+            <p><code>ol</code> <code>li</code></p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Link</h3>
+            <p><code>a</code></p>
+            <p><code>.ids__promo-link</code></p>
+            <p>Pseudo-radio group for scroll navigation</p>
+            <div class="ids__space"></div>
+            <div class="ids__promo-link">
+              <a class="active" href="#one">One</a>
+              <a href="#two">Two</a>
+              <a href="#three">Three</a>
+            </div>
+            <div class="ids__space"></div>
+            <div class="ids__promo-link">
+              <a href="#one">One</a>
+              <a class="active" href="#two">Two</a>
+              <a href="#three">Three</a>
+            </div>
+            <div class="ids__space"></div>
+            <div class="ids__promo-link">
+              <a href="#one">One</a>
+              <a href="#two">Two</a>
+              <a class="active" href="#three">Three</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Additional text</h3>
+            <p><code>aside</code></p>
+            <p><code>.ids__note</code></p>
+          </div>
+        </div>
+
+        <div class="ids__space M"></div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Grid</h3>
+            <p>
+              Using the <code>.ids__sequence</code> class, you can quickly create a grid of identical elements, implemented via <code>display: flex</code>. Make
+              <code>.ids__sequence</code> the parent, and wrap each grid cell in <code>.ids__sequence-item</code>:
+            </p>
+            <div class="ids__space XS"></div>
+            <p><code>.ids__sequence</code></p>
+            <p>    <code>.ids__sequence-item</code></p>
+            <p>    <code>.ids__sequence-item</code></p>
+            <div class="ids__space S"></div>
+            <aside>
+              We recommend never styling the cell itself, but always adding another container inside and setting the background color, border radius, margins, and everything
+              else on that.
+            </aside>
+
+            <div class="ids__space S"></div>
+            <h4>Size modifier</h4>
+
+            <p><code>ids__sequence.XL</code></p>
+            <div class="ids__sequence XL gap-S">
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+                  <p>Text in cell</p>
+                </div>
+              </div>
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+                  <p>Text in cell</p>
+                </div>
+              </div>
+            </div>
+            <div class="ids__space S"></div>
+            <p><code>ids__sequence.L</code></p>
+            <div class="ids__sequence L gap-S">
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+            </div>
+
+            <div class="ids__space S"></div>
+            <p><code>ids__sequence.S</code></p>
+
+            <div class="ids__sequence S gap-S">
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+              <div class="ids__sequence-item">
+                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              </div>
+            </div>
+
+            <div class="ids__space S"></div>
+
+            <h4>Gap control</h4>
+
+            <p><code>.ids__sequence.XL.gap-L</code></p>
+            <div class="example-container" style="background-color: rgb(255, 235, 237); padding-bottom: 0.001em">
+              <div class="ids__sequence XL gap-L">
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+              </div>
+            </div>
+            <div class="ids__space M"></div>
+
+            <p><code>.ids__sequence.XL.gap-M</code></p>
+            <div class="example-container" style="background-color: rgb(255, 235, 237); padding-bottom: 0.001em">
+              <div class="ids__sequence XL gap-M">
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ids__space S"></div>
+
+            <p><code>.ids__sequence.XL.gap-S</code></p>
+            <div class="example-container" style="background-color: rgb(255, 235, 237); padding-bottom: 0.001em">
+              <div class="ids__sequence XL gap-S">
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+                <div class="ids__sequence-item">
+                  <div class="ids__space XL" style="background-color: rgb(255, 218, 221)"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ids__space M"></div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3>Table</h3>
+            <p><code>table</code> &ndash; regular table</p>
+            <p>
+              <code>tr</code>, <code>th</code>, <code>td</code> &ndash; standard table elements. Well, except <code>th</code> sticks to the top of the window.
+            </p>
+            <div class="ids__space"></div>
+            <aside>
+              <style>
+                .ids table {
+                  tr {
+                    & td:first-child {
+                      text-align: center;
+
+                      & span {
+                        font-size: 7em;
+                        line-height: 0.8;
+                        font-weight: 700;
+
+                        @media (max-width: 768px) {
+                          font-size: 2em;
+                        }
+                      }
+                    }
+                  }
+                }
+              </style>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th></th>
+                    <th>Description</th>
+                    <th>Recommendations</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span>D</span></td>
+                    <td>Dominance</td>
+                    <td>
+                      <p>Assertive, decisive leaders who enjoy challenges, make quick decisions, and prefer direct com&shy;munication. They thrive in roles requiring strong leadership and rapid results.</p>
+                    </td>
+                    <td>
+                      <p>Set clear goals, provide autonomy, communicate directly, and offer regular recognition.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span>I</span></td>
+                    <td>Influence</td>
+                    <td>
+                      <p>Enthusiastic and persuasive leaders who excel in social interactions, motivation, and teamwork. They inspire others and value positive relationships.</p>
+                    </td>
+                    <td>
+                      <p>Engage in team activities, provide frequent recogni&shy;tion, and encourage open, creative discussions.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span>S</span></td>
+                    <td>Steadiness</td>
+                    <td>
+                      <p>Calm, reliable leaders who value stability, harmony, and cooperation. They prefer steady environments and consistent, incremental progress.</p>
+                    </td>
+                    <td>
+                      <p>Offer clear expectations, maintain a stable environment, and appreciate their consistent reliability.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span>C</span></td>
+                    <td>Compliance</td>
+                    <td>
+                      <p>Analytical, syste&shy;matic leaders focused on accuracy, quality, and detail. They excel in structured settings and careful planning.</p>
+                    </td>
+                    <td>
+                      <p>Provide detailed instructions, allow time for analysis, and recognize their meticulous approach.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </aside>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space L"></div>
+          <ids-nav-item id="components" label="Components"><h2>Components</h2></ids-nav-item>
+        </div>
+
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3><code>.ids__sleepy</code></h3>
+            <p>
+              Component for animating element appearance on scroll.
+              Tracks element visibility and removes the
+              <code>.is-sleeping</code> class when more than 30% of the element
+              is visible on screen.
+            </p>
+            <div class="ids__space M"></div>
+          </div>
+          <style>
+            .icons {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 4em;
+
+              @media (max-width: 768px) {
+                gap: 3em;
+              }
+
+              & .icon {
+                width: 3.5em;
+                opacity: 1;
+                transition: opacity 0.4s ease, transform 0.4s ease;
+
+                @media (max-width: 768px) {
+                  width: 2.5em;
+                }
+
+                &:nth-child(1) {
+                  transition-delay: 0;
+                }
+                &:nth-child(2) {
+                  transition-delay: 0.1s;
+                }
+                &:nth-child(3) {
+                  transition-delay: 0.2s;
+                }
+                &:nth-child(4) {
+                  transition-delay: 0.3s;
+                }
+                &:nth-child(5) {
+                  transition-delay: 0.4s;
+                }
+                &:nth-child(6) {
+                  transition-delay: 0.5s;
+                }
+                &:nth-child(7) {
+                  transition-delay: 0.6s;
+                }
+                &:nth-child(8) {
+                  transition-delay: 0.7s;
+                }
+                &:nth-child(9) {
+                  transition-delay: 0.8s;
+                }
+                &:nth-child(10) {
+                  transition-delay: 0.9s;
+                }
+                &:nth-child(11) {
+                  transition-delay: 1s;
+                }
+              }
+
+              &.is-sleeping {
+                & .icon {
+                  opacity: 0;
+                  transform: translateX(1em) rotate(7deg);
+                  transition: opacity 0s ease, transform 0s ease;
+                }
+              }
+            }
+          </style>
+          <div class="icons ids__sleepy">
+            <div class="icon">
+              <img src="../images/icons/icon1.png">
+            </div>
+            <div class="icon">
+              <img src="../images/icons/icon2.png">
+            </div>
+            <div class="icon">
+              <img src="../images/icons/icon3.png">
+            </div>
+            <div class="icon">
+              <img src="../images/icons/icon4.png">
+            </div>
+            <div class="icon">
+              <img src="../images/icons/icon5.png">
+            </div>
+            <div class="icon">
+              <img src="../images/icons/icon6.png">
+            </div>
+            <div class="icon">
+              <img src="../images/icons/icon7.png">
+            </div>
+            <div class="icon">
+              <img src="../images/icons/icon8.png">
+            </div>
+            <div class="icon">
+              <img src="../images/icons/icon9.png">
+            </div>
+            <div class="icon">
+              <img src="../images/icons/icon10.png">
+            </div>
+            <div class="icon">
+              <img src="../images/icons/icon11.png">
+            </div>
+          </div>
+
+          <div class="ids__space L"></div>
+          <div class="ids__text-width">
+            <p>
+              The component automatically initializes for all elements with
+              the <code>.ids__sleepy</code> class on page load. It
+              only adds and removes the modifier class, nothing more.
+            </p>
+
+            <p>Accordingly, for the animation to work, you need to</p>
+            <ul>
+              <li>
+                add the <code>.ids__sleepy</code> class to all elements
+                that should animate when appearing on screen;
+              </li>
+              <li>
+                add the <code>.is-sleeping</code> modifier class definition
+                to these elements with styles for the inactive state;
+              </li>
+              <li>
+                define the transition property to animate the changing
+                properties.
+              </li>
+            </ul>
+            <aside>
+              <p>
+                It&rsquo;s a metaphor: a &ldquo;sleepy&rdquo; element off-screen constantly
+                &ldquo;sleeps,&rdquo; and when it appears, it &ldquo;wakes up.&rdquo;
+              </p>
+              <p>
+                It might seem strange that we chose to remove the is-sleeping class
+                rather than add an on-screen class. But the idea is that in the
+                default state (without modifier class) the styles should correspond
+                to the &ldquo;normal&rdquo; appearance &ndash; it&rsquo;s easier to read and understand them.
+              </p>
+            </aside>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space L"></div>
+          <div class="ids__text-width">
+            <h3><code>ids-footnote</code></h3>
+            <p>
+              <code>ids-footnote-link</code> and <code>ids-footnote</code> &ndash;
+              components for creating popup footnotes with automatic
+              numbering.
+            </p>
+
+            <p>
+              The system consists of two parts: the trigger link
+              (<code>ids-footnote-link</code>) and the container with footnote content
+              (<code>ids-footnote</code>).
+            </p>
+
+            <aside>
+              <h4>How it works</h4>
+              <p>
+                Footnote numbering happens automatically based on element order in the
+                DOM. The first link gets number 1, the second &ndash; 2, and so on.
+                Numbers are displayed in circles: an inactive link shows as an
+                outline circle with a border, and when the footnote opens, the circle
+                fills with black with a white number. Inside the footnote itself,
+                the number is also displayed in a black circle.
+              </p>
+              <p>
+                On desktop, the footnote opens to the right of the link. On mobile
+                devices &ndash; at the bottom of the screen as a modal. Clicking outside
+                the footnote or pressing Escape closes it.
+              </p>
+            </aside>
+
+            <div class="ids__space S"></div>
+            <p><strong>Usage example:</strong></p>
+
+            <p>
+              This is simple text with a
+              <ids-footnote-link>first footnote</ids-footnote-link>
+              and another
+              <ids-footnote-link>second footnote</ids-footnote-link>
+              for demonstration.
+            </p>
+
+            <ids-footnote>
+              <p>
+                This is the content of the first footnote. It can include any markup:
+                paragraphs, links, lists.
+              </p>
+            </ids-footnote>
+
+            <ids-footnote>
+              <p>
+                And this is the second footnote. Note that the number appears
+                automatically.
+              </p>
+              <p>
+                A footnote can contain multiple paragraphs. If the content
+                is too long and doesn&rsquo;t fit on the screen, a &ldquo;Close&rdquo; button appears,
+                and main page scrolling is blocked.
+              </p>
+            </ids-footnote>
+
+            <div class="ids__space M"></div>
+
+            <p><strong>Markup structure:</strong></p>
+            <div class="ids__space XS"></div>
+            <p>
+              <code>&lt;p&gt;</code>
+              Text with
+              <code>&lt;ids-footnote-link&gt;</code>footnote link<code
+                >&lt;/ids-footnote-link&gt;</code
+              >
+              in the text.
+              <code>&lt;/p&gt;</code>
+            </p>
+            <p>
+              <code>&lt;ids-footnote&gt;</code>
+              <code>&lt;p&gt;</code>Footnote content.<code>&lt;/p&gt;</code>
+              <code>&lt;/ids-footnote&gt;</code>
+            </p>
+
+            <div class="ids__space M"></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="ids__space L"></div>
+          <h3><code>ids-navbar</code></h3>
+          <div class="ids__text-width">
+          <p>The component forms a group of links for scroll navigation from elements wrapped in the <code>ids-nav-item</code> tag. Required attributes:</p>
+          <ul>
+            <li><code>id</code> &ndash; unique heading identifier</li>
+            <li><code>label</code> &ndash; link text</li>
+          </ul>
+          </div>
+        </div>
+        <div class="section">
+          <div class="ids__space L"></div>
+          <div class="ids__text-width">
+            <h3><code>ids-gallery</code></h3>
+            <p>Image gallery that opens and navigates in a modal window.</p>
+
+            <p>
+              The <code>src</code> attribute of the <code>img</code> tag specifies a reduced thumbnail, and the <code>href</code> attribute of the <code>a</code> tag &ndash; the link to full size. (They can match if you don&rsquo;t want to bother with thumbnails). If the full-size image is different, you need to specify its dimensions in the
+              <code>data-pswp-width</code> and <code>data-pswp-height</code> attributes.
+            </p>
+            <p>
+              The content of <code>figcaption</code> is displayed under the preview in the grid and in the modal window when viewing.
+            </p>
+            <div class="ids__space XL"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ids__wrapper L">
+        <div class="section">
+          <ids-gallery>
+            <figure>
+              <a href="../images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11978833.jpg">
+                <img src="../images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11978833.jpg" alt="Photo by Jan van der Wolf" />
+              </a>
+              <figcaption>Photo: Jan van der Wolf</figcaption>
+            </figure>
+            <figure>
+              <a href="../images/gallery/Photo by Mehmet Turgut  Kirkgoz_geometric-modern-architecture-16615613.jpg">
+                <img src="../images/gallery/Photo by Mehmet Turgut  Kirkgoz_geometric-modern-architecture-16615613.jpg" alt="Photo by Mehmet Turgut Kirkgoz" />
+              </a>
+              <figcaption>Photo: Mehmet Turgut Kirkgoz</figcaption>
+            </figure>
+            <figure>
+              <a href="../images/gallery/Photo by Jan van der Wolf_abstract-image-of-a-shadow-on-a-green-wall-and-blue-sky-11895895.jpg">
+                <img src="../images/gallery/Photo by Jan van der Wolf_abstract-image-of-a-shadow-on-a-green-wall-and-blue-sky-11895895.jpg" alt="Photo by Jan van der Wolf" />
+              </a>
+              <figcaption>Photo: Jan van der Wolf</figcaption>
+            </figure>
+            <figure>
+              <a href="../images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11986204.jpg">
+                <img src="../images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11986204.jpg" alt="Photo by Jan van der Wolf" />
+              </a>
+              <figcaption>Photo: Jan van der Wolf</figcaption>
+            </figure>
+            <figure>
+              <a href="../images/gallery/Photo by Mehmet Turgut  Kirkgoz_white-geometric-building-corner-18075244.jpg">
+                <img src="../images/gallery/Photo by Mehmet Turgut  Kirkgoz_white-geometric-building-corner-18075244.jpg" alt="Photo by Mehmet Turgut Kirkgoz" />
+              </a>
+              <figcaption>Photo: Mehmet Turgut Kirkgoz</figcaption>
+            </figure>
+            <figure>
+              <a href="../images/gallery/icon1.png">
+                <img src="../images/gallery/icon1.png" alt="abstract geometry" />
+              </a>
+            </figure>
+            <figure>
+              <a href="../images/gallery/icon2.png">
+                <img src="../images/gallery/icon2.png" alt="abstract geometry" />
+              </a>
+            </figure>
+            <figure>
+              <a href="../images/gallery/icon3.png">
+                <img src="../images/gallery/icon3.png" alt="abstract geometry" />
+              </a>
+            </figure>
+            <figure>
+              <a href="../images/gallery/icon4.png">
+                <img src="../images/gallery/icon4.png" alt="abstract geometry" />
+              </a>
+            </figure>
+            <figure>
+              <a href="../images/gallery/icon5.png">
+                <img src="../images/gallery/icon5.png" alt="abstract geometry" />
+              </a>
+            </figure>
+            <figure>
+              <a href="../images/gallery/icon6.png">
+                <img src="../images/gallery/icon6.png" alt="abstract geometry" />
+              </a>
+            </figure>
+            <figure>
+              <a href="../images/gallery/icon7.png">
+                <img src="../images/gallery/icon7.png" alt="abstract geometry" />
+              </a>
+            </figure>
+            <figure>
+              <a href="../images/gallery/icon8.png">
+                <img src="../images/gallery/icon8.png" alt="abstract geometry" />
+              </a>
+            </figure>
+          </ids-gallery>
+        </div>
+        <div class="ids__space XL"></div>
+      </div>
+
+      <div class="ids__wrapper">
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h3><code>.ids__inline-gallery</code></h3>
+            <p>
+              Gallery that switches with horizontal cursor movement (and swipe gesture on mobile). Built from a sequence of static images and used when you need controlled animation. Or whatever else you can think of.
+            </p>
+            <div class="ids__space XS"></div>
+            <div class="ids__sequence XL gap-L">
+              <div class="ids__sequence-item">
+                <div class="ids__inline-gallery" style="--img-aspect-ratio: 1024/658;">
+                  <img src="../images/inline-gallery/horse/img1.jpeg">
+                  <img src="../images/inline-gallery/horse/img2.jpeg">
+                  <img src="../images/inline-gallery/horse/img3.jpeg">
+                  <img src="../images/inline-gallery/horse/img4.jpeg">
+                  <img src="../images/inline-gallery/horse/img5.jpeg">
+                  <img src="../images/inline-gallery/horse/img6.jpeg">
+                  <img src="../images/inline-gallery/horse/img7.jpeg">
+                  <img src="../images/inline-gallery/horse/img8.jpeg">
+                  <img src="../images/inline-gallery/horse/img9.jpeg">
+                  <img src="../images/inline-gallery/horse/img10.jpeg">
+                  <img src="../images/inline-gallery/horse/img11.jpeg">
+                </div>
+              </div>
+            </div>
+              <p>
+                The element takes the width of the parent container. Proportions are set explicitly via the <code>--img-aspect-ratio</code> variable in <code>width / height</code> format. These are the image proportions, not the entire element &ndash; it&rsquo;s easiest to write the file dimensions in pixels there.
+              </p>
+              <p>
+                If image proportions differ from those set in the variable, images scale to fill the container (<code>object-fit: cover</code>) and are centered.
+              </p>
+              <p>
+                You can add a link, and then the entire element becomes clickable, and images on hover will have increased brightness.
+              </p>
+              <p>
+                There are current position indicators &ndash; numeric and two graphical variants.
+              </p>
+              <div class="ids__space M"></div>
+              <div class="ids__sequence XL gap-L">
+                <div class="ids__sequence-item">
+                  <div class="ids__inline-gallery" style="--img-aspect-ratio: 1012/580;">
+                    <img src="../images/inline-gallery/how-to-design-with-code/code-design-promo-1.jpg">
+                    <img src="../images/inline-gallery/how-to-design-with-code/code-design-promo-2.jpg">
+                    <img src="../images/inline-gallery/how-to-design-with-code/code-design-promo-3.jpg">
+                    <img src="../images/inline-gallery/how-to-design-with-code/code-design-promo-4.jpg">
+                    <img src="../images/inline-gallery/how-to-design-with-code/code-design-promo-5.jpg">
+                    <img src="../images/inline-gallery/how-to-design-with-code/code-design-promo-6.jpg">
+                    <img src="../images/inline-gallery/how-to-design-with-code/code-design-promo-7.jpg">
+                    <img src="../images/inline-gallery/how-to-design-with-code/code-design-promo-8.jpg">
+                    <img src="../images/inline-gallery/how-to-design-with-code/code-design-promo-9.jpg">
+                    <img src="../images/inline-gallery/how-to-design-with-code/code-design-promo-10.jpg">
+                    <img src="../images/inline-gallery/how-to-design-with-code/code-design-promo-11.jpg">
+                    <img src="../images/inline-gallery/how-to-design-with-code/code-design-promo-12.jpg">
+                    <img src="../images/inline-gallery/how-to-design-with-code/code-design-promo-13.jpg">
+                    <img src="../images/inline-gallery/how-to-design-with-code/code-design-promo-14.jpg">
+                    <img src="../images/inline-gallery/how-to-design-with-code/code-design-promo-15.jpg">
+                    <img src="../images/inline-gallery/how-to-design-with-code/code-design-promo-16.jpg">
+
+                    <a href="https://intuition.team/how-to-design-with-code">
+                      <strong>Course &ldquo;How to Design with Code Instead of Figma&rdquo;</strong>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="ids__sequence-item">
+                  <figure class="ids__inline-gallery" style="--img-aspect-ratio: 920/550;">
+                    <img src="../images/inline-gallery/rocket/Rocket_v11_1.jpg">
+                    <img src="../images/inline-gallery/rocket/Rocket_v11_2.jpg">
+                    <img src="../images/inline-gallery/rocket/Rocket_v11_3.jpg">
+                    <img src="../images/inline-gallery/rocket/Rocket_v11_4.jpg">
+                    <img src="../images/inline-gallery/rocket/Rocket_v11_5.jpg">
+                    <img src="../images/inline-gallery/rocket/Rocket_v11_6.jpg">
+                    <img src="../images/inline-gallery/rocket/Rocket_v11_7.jpg">
+                    <img src="../images/inline-gallery/rocket/Rocket_v11_8.jpg">
+                    <img src="../images/inline-gallery/rocket/Rocket_v11_9.jpg">
+                    <img src="../images/inline-gallery/rocket/Rocket_v11_10.jpg">
+                    <img src="../images/inline-gallery/rocket/Rocket_v11_11.jpg">
+                    <img src="../images/inline-gallery/rocket/Rocket_v11_12.jpg">
+                    <img src="../images/inline-gallery/rocket/Rocket_v11_13.jpg">
+                    <img src="../images/inline-gallery/rocket/Rocket_v11_14.jpg">
+                    <img src="../images/inline-gallery/rocket/Rocket_v11_15.jpg">
+                    <img src="../images/inline-gallery/rocket/Rocket_v11_16.jpg">
+
+                    <figcaption class="ids__inline-gallery__pos"></figcaption>
+                  </figure>
+                </div>
+                <div class="ids__sequence-item">
+                  <figure class="ids__inline-gallery img-contained" style="--img-aspect-ratio: 1012/446;">
+                    <img src="../images/inline-gallery/petrick/petrick-promo-1.png">
+                    <img src="../images/inline-gallery/petrick/petrick-promo-2.png">
+                    <img src="../images/inline-gallery/petrick/petrick-promo-3.png">
+                    <img src="../images/inline-gallery/petrick/petrick-promo-4.png">
+                    <img src="../images/inline-gallery/petrick/petrick-promo-5.png">
+                    <img src="../images/inline-gallery/petrick/petrick-promo-6.png">
+                    <img src="../images/inline-gallery/petrick/petrick-promo-7.png">
+                    <img src="../images/inline-gallery/petrick/petrick-promo-8.png">
+                    <figcaption class="ids__inline-gallery__dashes"></figcaption>
+                  </figure>
+                </div>
+
+                <div class="ids__sequence-item">
+                  <figure class="ids__inline-gallery img-contained" style="--img-aspect-ratio: 1012/530;">
+                    <img src="../images/inline-gallery/chaos/chaos-promo1.png">
+                    <img src="../images/inline-gallery/chaos/chaos-promo2.png">
+                    <img src="../images/inline-gallery/chaos/chaos-promo3.png">
+                    <img src="../images/inline-gallery/chaos/chaos-promo4.png">
+                    <img src="../images/inline-gallery/chaos/chaos-promo5.png">
+                    <img src="../images/inline-gallery/chaos/chaos-promo6.png">
+
+                    <figcaption class="ids__inline-gallery__dots"></figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ids__space L"></div>
+        </div>
+      </div>
+
+      <div class="ids__wrapper">
+        <div class="section">
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <h4><code>.ids__rounded</code></h4>
+
+            <p>
+              Modifier for rounding corners not with a circle segment, but with a superellipse.
+            </p>
+
+            <div class="ids__space S"></div>
+
+            <div class="example-container">
+              <div class="ids__sequence L gap-L">
+                <div class="ids__sequence-item ids__rounded">
+                  <figure style="margin:0;padding:0">
+                    <img src="../images/gallery/Photo by Jan van der Wolf_abstract-image-of-a-shadow-on-a-green-wall-and-blue-sky-11895895.jpg" alt="Photo by Jan van der Wolf" />
+                  </figure>
+                </div>
+                <div class="ids__sequence-item ids__rounded" style="--ids__radius: 5em">
+                  <figure style="margin:0;padding:0">
+                    <img src="../images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11986204.jpg" alt="Photo by Jan van der Wolf" />
+                  </figure>
+                </div>
+                <div class="ids__sequence-item ids__rounded">
+                  <figure style="margin:0;padding:0">
+                    <img src="../images/gallery/Photo by Jan van der Wolf_pexels-jan-van-der-wolf-11680885-11978833.jpg" alt="Photo by Jan van der Wolf" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <p>
+              The rounding radius is set in the <code>--ids__radius</code> variable, which means it can be set both globally, for the entire document, and locally, for a specific section or element.
+            </p>
+
+            <aside>
+              <p>Chrome already supports <code>corner-shape: squircle</code>, other browsers don&rsquo;t yet, so we made our own implementation (it doesn&rsquo;t work for strokes, only for fills). When browsers agree, we&rsquo;ll remove this.</p>
+
+            </aside>
+
+            <div class="ids__space M"></div>
+          </div>
+        </div>
+        <div class="ids__space XL"></div>
+      </div>
+    </main>
+
+    <script src="../js/lib/photoswipe.umd.min.js"></script>
+    <script src="../js/lib/photoswipe-lightbox.umd.min.js"></script>
+    <script src="../js/gallery.js"></script>
+
+    <script src="../js/sleepy.js"></script>
+    <script src="../js/footnotes.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/promo-block.js"></script>
+  </body>
+</html>

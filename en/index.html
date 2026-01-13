@@ -24,7 +24,7 @@
         <div class="section" id="intro">
           <div class="ids__space XL"></div>
           <div class="ids__text-width">
-            <ids-nav-item id="intro" label="About the design system">
+            <ids-nav-item id="intro" label="About">
               <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0">.ids</h1>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.52 148.95" style="width: 15em">
                 <path
@@ -34,7 +34,7 @@
             </ids-nav-item>
             <div class="ids__space S"></div>
 
-            <p>Intuition Design System, IDS &ndash; a design system for building landing pages, online publications, and any digital web products that are based on narratives.</p>
+            <p>Intuition Design System, IDS&nbsp;&ndash; a design system for building landing pages, online publications, and any digital web products that are based on narratives.</p>
             <ids-navbar></ids-navbar>
             <p>
               Technically, IDS is a set of CSS classes and JS components. It&rsquo;s not a library, but a ready-made layout template. You don&rsquo;t include IDS in your project as a dependency, you don&rsquo;t extend
@@ -46,16 +46,16 @@
 
               <p>
                 If you don&rsquo;t have developer skills, the simplest way to start a project is to download the repository archive. You&rsquo;ll find an <code>en/index.html</code> file there, containing this very
-                page, which serves both as instructions and as a layout example. Open the files in a code editor and feel free to make them your own. The instructions won&rsquo;t be lost &ndash; they&rsquo;re always here: <a href="https://intuition-tech.github.io/ids">intuition-tech.github.io/ids</a>.
+                page, which serves both as instructions and as a layout example. Open the files in a code editor and feel free to make them your own. The instructions won&rsquo;t be lost&nbsp;&ndash; they&rsquo;re always here: <a href="https://intuition-tech.github.io/ids">intuition-tech.github.io/ids</a>.
               </p>
               <p>
-                If you&rsquo;re a developer &ndash; do whatever you want. IDS works as static files, has zero dependencies, and uses vanilla JS. If you notice a bug, please submit
+                If you&rsquo;re a developer&nbsp;&ndash; do whatever you want. IDS works as static files, has zero dependencies, and uses vanilla JS. If you notice a bug, please submit
                 a pull request.
               </p>
             </aside>
             <p>
-              IDS is distributed under the MIT license &ndash; you can use and modify it for free, no restrictions. We also don&rsquo;t accept complaints, can&rsquo;t provide guidance, and there&rsquo;s no
-              support service. If you&rsquo;re interested but not sure how to work with it &ndash; welcome to the course
+              IDS is distributed under the MIT license&nbsp;&ndash; you can use and modify it for free, no restrictions. We also don&rsquo;t accept complaints, can&rsquo;t provide guidance, and there&rsquo;s no
+              support service. If you&rsquo;re interested but not sure how to work with it&nbsp;&ndash; welcome to the course
               <a href="https://intuition.team/how-to-design-with-code">&ldquo;How to Design with Code&rdquo;</a>, it will help.
             </p>
           </div>
@@ -75,7 +75,7 @@
             <h3>Font</h3>
             <p>
               IDS uses the <a href="https://www.paratype.com/fonts/pt/pt-root-ui" target="_BLANK">PT Root UI</a> font by default, the variable web version. It&rsquo;s great!
-              But the design system isn&rsquo;t tied to a specific font &ndash; you can use any font. Just place the font files in the <code>fonts</code> folder and edit the
+              But the design system isn&rsquo;t tied to a specific font&nbsp;&ndash; you can use any font. Just place the font files in the <code>fonts</code> folder and edit the
               Fonts section in the <code>settings.css</code> file. Please try not to pirate fonts.
             </p>
             <aside>
@@ -92,7 +92,7 @@
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Density</h3>
-            <p>Different fonts suit different layout densities. Additionally, density is an aesthetic choice &ndash; sometimes you need tight layout, sometimes airy.</p>
+            <p>Different fonts suit different layout densities. Additionally, density is an aesthetic choice&nbsp;&ndash; sometimes you need tight layout, sometimes airy.</p>
             <p>
               IDS has a variable <code>--ids__density</code> that affects text line-height, as well as margins and paddings of all text elements. To adjust layout
               density, first try to find the optimal value for this variable, then edit individual styles.
@@ -109,7 +109,7 @@
               means mobile, more means desktop.
             </p>
             <p>
-              IDS implements the Fluid Typography concept &ndash; where the font-size for <code>body</code> is calculated based on viewport width, and then em or
+              IDS implements the Fluid Typography concept&nbsp;&ndash; where the font-size for <code>body</code> is calculated based on viewport width, and then em or
               rem units are used not only for text but also for margins, paddings, border radii, and sometimes element dimensions.
             </p>
             <aside>
@@ -126,7 +126,7 @@
               arrangement will be preserved.
             </p>
             <p>
-              For mobile, you need to find your own pair of values <code>--mobile-font-size-min</code> and <code>--mobile-font-size-max</code>, but the idea is exactly the same &ndash; consistent layout on
+              For mobile, you need to find your own pair of values <code>--mobile-font-size-min</code> and <code>--mobile-font-size-max</code>, but the idea is exactly the same&nbsp;&ndash; consistent layout on
               phones of different widths.
             </p>
             <aside>
@@ -134,7 +134,7 @@
                 This approach has a downside: the reader won&rsquo;t be able to enlarge text through browser zoom (Zoom In/Out, Ctrl/Cmd+/&ndash;). We consider this acceptable because
                 a) we recommend not using small text in the first place, so zooming isn&rsquo;t needed, b) pinch-to-zoom on screens and trackpads works.
               </p>
-              <p>If you consider this issue critical &ndash; disable the entire <code>Font-size calculation using variables</code> block in the <code>settings.css</code> file.</p>
+              <p>If you consider this issue critical&nbsp;&ndash; disable the entire <code>Font-size calculation using variables</code> block in the <code>settings.css</code> file.</p>
             </aside>
           </div>
         </div>
@@ -207,7 +207,7 @@
               <h4>Why this way</h4>
 
               <p>
-                It&rsquo;s more convenient to store transparency information in selector properties rather than in variables. Instead of 30-40 variables for each transparency variant &ndash; a dozen colors with
+                It&rsquo;s more convenient to store transparency information in selector properties rather than in variables. Instead of 30-40 variables for each transparency variant&nbsp;&ndash; a dozen colors with
                 clear names and obvious code in selector properties.
               </p>
             </aside>
@@ -243,7 +243,7 @@
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Wrappers</h3>
-            <p><code>.ids__wrapper</code> &ndash; standard floor with large margins on desktop and minimal on mobile.</p>
+            <p><code>.ids__wrapper</code>&nbsp;&ndash; standard floor with large margins on desktop and minimal on mobile.</p>
           </div>
         </div>
       </div>
@@ -261,7 +261,7 @@
         <div class="section">
           <div class="ids__space M"></div>
           <div class="ids__text-width">
-            <p><code>.ids__wrapper.L</code> &ndash; floor with increased width. Different only on desktop, on mobile it matches the standard.</p>
+            <p><code>.ids__wrapper.L</code>&nbsp;&ndash; floor with increased width. Different only on desktop, on mobile it matches the standard.</p>
           </div>
         </div>
       </div>
@@ -279,7 +279,7 @@
         <div class="section">
           <div class="ids__space M"></div>
           <div class="ids__text-width">
-            <p><code>.ids__wrapper.XL</code> &ndash; full-width floor with minimal margins. Different only on desktop, on mobile it matches the standard.</p>
+            <p><code>.ids__wrapper.XL</code>&nbsp;&ndash; full-width floor with minimal margins. Different only on desktop, on mobile it matches the standard.</p>
           </div>
         </div>
       </div>
@@ -296,7 +296,7 @@
       <div class="ids__wrapper">
         <div class="section" id="">
           <div class="ids__space M"></div>
-          <p><code>.ids__wrapper.XXL</code> &ndash; full-width floor without margins, on mobile too.</p>
+          <p><code>.ids__wrapper.XXL</code>&nbsp;&ndash; full-width floor without margins, on mobile too.</p>
         </div>
       </div>
 
@@ -336,7 +336,7 @@
             <p>In IDS, wrappers have zero margins, and most other elements have only a minimal bottom margin, to lay out elements in a continuous flow.</p>
 
             <p>
-              When noticeable spacing is needed &ndash; for example, between floors or before a heading so it doesn&rsquo;t stick to the previous paragraph &ndash; special spacers are used.
+              When noticeable spacing is needed&nbsp;&ndash; for example, between floors or before a heading so it doesn&rsquo;t stick to the previous paragraph&nbsp;&ndash; special spacers are used.
             </p>
           </div>
           <div class="ids__space M"></div>
@@ -369,10 +369,10 @@
               </p>
               <p>
                 If we decided to store spacing information in individual element properties, we&rsquo;d have to account for all possible contexts. For example, on this very card,
-                the top margin on the &ldquo;Why this way&rdquo; heading would prevent placing it neatly in the corner &ndash; we&rsquo;d have to add a modifier class to cancel the margin, or write more
+                the top margin on the &ldquo;Why this way&rdquo; heading would prevent placing it neatly in the corner&nbsp;&ndash; we&rsquo;d have to add a modifier class to cancel the margin, or write more
                 complex conditional styles that are less obvious and more fragile.
               </p>
-              <p>And even after that, elements couldn&rsquo;t always know what spacing is needed &ndash; only the designer knows that. So we have lead blocks.</p>
+              <p>And even after that, elements couldn&rsquo;t always know what spacing is needed&nbsp;&ndash; only the designer knows that. So we have lead blocks.</p>
             </aside>
           </div>
         </div>
@@ -387,7 +387,7 @@
             </p>
             <aside>
               <p>
-                In our standard template, the <code>.ids</code> class is on the <code>body</code> tag, meaning tags are styled everywhere. This can interfere &ndash; for example, any link becomes
+                In our standard template, the <code>.ids</code> class is on the <code>body</code> tag, meaning tags are styled everywhere. This can interfere&nbsp;&ndash; for example, any link becomes
                 underlined, not just text links; any unordered list gets bullets and margins, even when it&rsquo;s not text.
               </p>
               <p>
@@ -471,7 +471,7 @@
           <div class="ids__text-width">
             <h3>Text</h3>
             <code>p</code>
-            <p>There&rsquo;s never enough information for making decisions, by definition. When there&rsquo;s enough information, the right move can be &ldquo;calculated,&rdquo; determined with high accuracy based on data, adding two and two. If there&rsquo;s enough information &ndash; there&rsquo;s nothing to decide.</p>
+            <p>There&rsquo;s never enough information for making decisions, by definition. When there&rsquo;s enough information, the right move can be &ldquo;calculated,&rdquo; determined with high accuracy based on data, adding two and two. If there&rsquo;s enough information&nbsp;&ndash; there&rsquo;s nothing to decide.</p>
             <div class="ids__space XS"></div>
             <code>p.loud</code>
             <p class="loud">A designer should be independent, versatile, multidisciplinary, and complex.</p>
@@ -681,9 +681,9 @@
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Table</h3>
-            <p><code>table</code> &ndash; regular table</p>
+            <p><code>table</code>&nbsp;&ndash; regular table</p>
             <p>
-              <code>tr</code>, <code>th</code>, <code>td</code> &ndash; standard table elements. Well, except <code>th</code> sticks to the top of the window.
+              <code>tr</code>, <code>th</code>, <code>td</code>&nbsp;&ndash; standard table elements. Well, except <code>th</code> sticks to the top of the window.
             </p>
             <div class="ids__space"></div>
             <aside>
@@ -910,7 +910,7 @@
                 It might seem strange that we chose to remove the is-sleeping class
                 rather than add an on-screen class. But the idea is that in the
                 default state (without modifier class) the styles should correspond
-                to the &ldquo;normal&rdquo; appearance &ndash; it&rsquo;s easier to read and understand them.
+                to the &ldquo;normal&rdquo; appearance&nbsp;&ndash; it&rsquo;s easier to read and understand them.
               </p>
             </aside>
           </div>
@@ -921,7 +921,7 @@
           <div class="ids__text-width">
             <h3><code>ids-footnote</code></h3>
             <p>
-              <code>ids-footnote-link</code> and <code>ids-footnote</code> &ndash;
+              <code>ids-footnote-link</code> and <code>ids-footnote</code>&nbsp;&ndash;
               components for creating popup footnotes with automatic
               numbering.
             </p>
@@ -936,7 +936,7 @@
               <h4>How it works</h4>
               <p>
                 Footnote numbering happens automatically based on element order in the
-                DOM. The first link gets number 1, the second &ndash; 2, and so on.
+                DOM. The first link gets number 1, the second&nbsp;&ndash; 2, and so on.
                 Numbers are displayed in circles: an inactive link shows as an
                 outline circle with a border, and when the footnote opens, the circle
                 fills with black with a white number. Inside the footnote itself,
@@ -944,7 +944,7 @@
               </p>
               <p>
                 On desktop, the footnote opens to the right of the link. On mobile
-                devices &ndash; at the bottom of the screen as a modal. Clicking outside
+                devices&nbsp;&ndash; at the bottom of the screen as a modal. Clicking outside
                 the footnote or pressing Escape closes it.
               </p>
             </aside>
@@ -1008,8 +1008,8 @@
           <div class="ids__text-width">
           <p>The component forms a group of links for scroll navigation from elements wrapped in the <code>ids-nav-item</code> tag. Required attributes:</p>
           <ul>
-            <li><code>id</code> &ndash; unique heading identifier</li>
-            <li><code>label</code> &ndash; link text</li>
+            <li><code>id</code>&nbsp;&ndash; unique heading identifier</li>
+            <li><code>label</code>&nbsp;&ndash; link text</li>
           </ul>
           </div>
         </div>
@@ -1020,7 +1020,7 @@
             <p>Image gallery that opens and navigates in a modal window.</p>
 
             <p>
-              The <code>src</code> attribute of the <code>img</code> tag specifies a reduced thumbnail, and the <code>href</code> attribute of the <code>a</code> tag &ndash; the link to full size. (They can match if you don&rsquo;t want to bother with thumbnails). If the full-size image is different, you need to specify its dimensions in the
+              The <code>src</code> attribute of the <code>img</code> tag specifies a reduced thumbnail, and the <code>href</code> attribute of the <code>a</code> tag&nbsp;&ndash; the link to full size. (They can match if you don&rsquo;t want to bother with thumbnails). If the full-size image is different, you need to specify its dimensions in the
               <code>data-pswp-width</code> and <code>data-pswp-height</code> attributes.
             </p>
             <p>
@@ -1135,7 +1135,7 @@
               </div>
             </div>
               <p>
-                The element takes the width of the parent container. Proportions are set explicitly via the <code>--img-aspect-ratio</code> variable in <code>width / height</code> format. These are the image proportions, not the entire element &ndash; it&rsquo;s easiest to write the file dimensions in pixels there.
+                The element takes the width of the parent container. Proportions are set explicitly via the <code>--img-aspect-ratio</code> variable in <code>width / height</code> format. These are the image proportions, not the entire element&nbsp;&ndash; it&rsquo;s easiest to write the file dimensions in pixels there.
               </p>
               <p>
                 If image proportions differ from those set in the variable, images scale to fill the container (<code>object-fit: cover</code>) and are centered.
@@ -1144,7 +1144,7 @@
                 You can add a link, and then the entire element becomes clickable, and images on hover will have increased brightness.
               </p>
               <p>
-                There are current position indicators &ndash; numeric and two graphical variants.
+                There are current position indicators&nbsp;&ndash; numeric and two graphical variants.
               </p>
               <div class="ids__space M"></div>
               <div class="ids__sequence XL gap-L">

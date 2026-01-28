@@ -13,7 +13,7 @@
 
 ## Typography
 - Curly quotes: use `&ldquo;` `&rdquo;` for double, `&lsquo;` `&rsquo;` for single/apostrophe
-- Dashes: use `&ndash;` for en-dash, prepend with non-breaking space `&nbsp;`
+- Dashes: use `&mdash;` for en-dash, prepend with non-breaking space `&nbsp;`
 
 ## Terminology to preserve
 - "floors" — intentional metaphor for horizontal page sections (like building floors)

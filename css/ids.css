@@ -70,8 +70,6 @@
     &.huge {
       font-size: 6em;
       line-height: 1;
-      -webkit-text-stroke: 1px rgba(var(--ids__text-RGB), 1);
-      -webkit-text-fill-color:transparent;
 
       @media (max-width: 767px) {
         &.huge {
@@ -221,7 +219,7 @@
 
   & code {
     font-size: 0.9em;
-    font-family: "Root UI";
+    font-family: "Inter";
     letter-spacing: 0.02em;
     font-weight: 450;
     padding: 0.1em 0.25em;

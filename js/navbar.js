@@ -32,13 +32,6 @@ class IdsNavbar extends HTMLElement {
         break;
       }
     }
-    let id = this.#items[highestTopPositionIndex].getAttribute("id");
-    const newHash = `#${id}`;
-    if (window.location.hash !== newHash) {
-      try {
-        history.replaceState({}, "", newHash);
-      } catch (e) {}
-    }
 
     for (const instance of this.#instances) {
       instance.setCurrent(highestTopPositionIndex);

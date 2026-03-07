@@ -20,7 +20,7 @@
   width: 70%;
   margin: 0 auto;
 
-  @media (width < 767px) {
+  @media (width < 768px) {
     width: 100%;
     padding: 0 calc(var(--ids__density) * 0.6em);
   }
@@ -28,7 +28,7 @@
   &.L {
     width: 85%;
 
-    @media (width < 767px) {
+    @media (width < 768px) {
       width: 100%;
       padding: 0 calc(var(--ids__density) * 0.6em);
     }
@@ -37,14 +37,14 @@
     width: 100%;
     padding: 0 calc(var(--ids__density) * 0.75em);
 
-    @media (width < 767px) {
+    @media (width < 768px) {
       padding: 0 calc(var(--ids__density) * 0.6em);
     }
   }
   &.XXL {
     width: 100%;
 
-    @media (width < 767px) {
+    @media (width < 768px) {
       padding: 0;
     }
   }
@@ -52,7 +52,7 @@
   & .ids__text-width {
     width: 85%;
 
-    @media (width < 767px) {
+    @media (width < 768px) {
       width: 100%;
     }
   }
@@ -84,7 +84,7 @@
     --columns: 4;
     width: calc((100% - var(--gap) * (var(--columns) - 1)) / var(--columns));
 
-    @media (width < 767px) {
+    @media (width < 768px) {
       --columns: 2;
     }
   }
@@ -93,7 +93,7 @@
     .ids__sequence-item {
       --columns: 2;
 
-      @media (width < 767px) {
+      @media (width < 768px) {
         --columns: 1;
       }
     }
@@ -103,7 +103,7 @@
     .ids__sequence-item {
       --columns: 3;
 
-      @media (width < 767px) {
+      @media (width < 768px) {
         --columns: 2;
       }
     }
@@ -113,7 +113,7 @@
     .ids__sequence-item {
       --columns: 6;
 
-      @media (width < 767px) {
+      @media (width < 768px) {
         --columns: 3;
       }
     }

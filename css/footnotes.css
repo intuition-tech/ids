@@ -107,7 +107,7 @@ aside.ids-footnote {
 }
 
 /* Mobile layout */
-@media (width < 767px) {
+@media (width < 768px) {
   .ids-footnote-wrap {
     left: 0;
     bottom: 0;

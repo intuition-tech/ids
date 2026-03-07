@@ -5,7 +5,7 @@
     left: 0.3em;
     z-index: 1;
 
-    @media (width < 767px) { 
+    @media (width < 768px) { 
         position: static;
         margin: 1em 0;
 
@@ -23,7 +23,7 @@
         content: '';
     }
 
-    @media (width < 767px) { 
+    @media (width < 768px) { 
         font-size: 1em;
     }
     
@@ -33,7 +33,7 @@
         display: block;
         text-decoration: none;
 
-        @media (width < 767px) { 
+        @media (width < 768px) { 
             padding: 0.2em 0;
         }
     }
@@ -44,13 +44,13 @@
     a {
         background-color: rgba(var(--ids__link-RGB), 0.1);
 
-        @media (width < 767px) { 
+        @media (width < 768px) { 
             background-color: transparent;
         }
 
         &:hover {
             background-color: rgba(var(--ids__hover-RGB), 0.1);
-            @media (width < 767px) { 
+            @media (width < 768px) { 
             background-color: transparent;
         }
         }

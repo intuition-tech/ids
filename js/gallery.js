@@ -30,7 +30,12 @@ class IdsGallery extends HTMLElement {
       gallery: this,
       children: "a",
       pswpModule: PhotoSwipe,
-      padding: { top: 20, bottom: 40, left: 100, right: 100 },
+      paddingFn: (viewportSize) => ({
+        top: 20,
+        bottom: 40,
+        left: viewportSize.x < 768 ? 0 : 100,
+        right: viewportSize.x < 768 ? 0 : 100,
+      }),
     });
 
     this.lightbox.on("uiRegister", () => {

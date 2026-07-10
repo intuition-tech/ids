@@ -1,25 +1,27 @@
-.gen-cover {
+ids-gen-cover {
+  display: block;
   position: relative;
   aspect-ratio: 16/9;
-  
   margin-bottom: 1em;
 
-  & .gen-cover-image {
+  & .ids__gen-cover__image {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--ids__accent);
+    inset: 0;
+
+    & svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
   }
 
-  & .gen-cover-text {
+  & .ids__gen-cover__text {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 1em;    
-    color: white;
+    padding: 1em;
+    color: var(--ids__color-white);
 
     & h1 {
       margin: 0;

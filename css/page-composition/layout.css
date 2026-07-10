@@ -1,0 +1,145 @@
+.ids__space {
+  height: var(--ids__spacer-s);
+
+  &.S {
+    height: var(--ids__spacer-s);
+  }
+  &.M {
+    height: var(--ids__spacer-m);
+  }
+  &.L {
+    height: var(--ids__spacer-l);
+  }
+  &.XL {
+    height: var(--ids__spacer-xl);
+  }
+}
+
+.ids__wrapper {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+
+  @media (width < 768px) {
+    width: 100%;
+    padding: 0 calc(var(--ids__density) * 0.6rem);
+  }
+
+  &.L {
+    width: 85%;
+
+    @media (width < 768px) {
+      width: 100%;
+      padding: 0 calc(var(--ids__density) * 0.6rem);
+    }
+  }
+  &.XL {
+    width: 100%;
+    padding: 0 calc(var(--ids__density) * 0.75rem);
+
+    @media (width < 768px) {
+      padding: 0 calc(var(--ids__density) * 0.6rem);
+    }
+  }
+  &.XXL {
+    width: 100%;
+
+    @media (width < 768px) {
+      padding: 0;
+    }
+  }
+
+  & .ids__text-width {
+    width: 85%;
+
+    @media (width < 768px) {
+      width: 100%;
+    }
+  }
+}
+
+.ids__sequence {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: calc(var(--ids__density) * 0.4rem);
+  --gap: 0rem;
+  gap: var(--gap);
+
+  &.gap-L {
+    --gap: var(--ids__gap-l);
+    margin-bottom: calc(var(--gap) * 1.5);
+  }
+
+  &.gap-M {
+    --gap: var(--ids__gap-m);
+    margin-bottom: calc(var(--gap) * 1.5);
+  }
+
+  &.gap-S {
+    --gap: var(--ids__gap-s);
+    margin-bottom: calc(var(--gap) * 1.5);
+  }
+
+  .ids__sequence-item {
+    --columns: 4;
+    width: calc((100% - var(--gap) * (var(--columns) - 1)) / var(--columns));
+
+    @media (width < 768px) {
+      --columns: 2;
+    }
+  }
+
+  &.XL {
+    .ids__sequence-item {
+      --columns: 2;
+
+      @media (width < 768px) {
+        --columns: 1;
+      }
+    }
+  }
+
+  &.L {
+    .ids__sequence-item {
+      --columns: 3;
+
+      @media (width < 768px) {
+        --columns: 2;
+      }
+    }
+  }
+
+  &.S {
+    .ids__sequence-item {
+      --columns: 6;
+
+      @media (width < 768px) {
+        --columns: 3;
+      }
+    }
+  }
+}
+
+.ids__rounded {
+  border-radius: var(--ids__radius);
+  corner-shape: squircle;
+  overflow: hidden;
+}
+
+@supports not (corner-shape: squircle) {
+  .ids__rounded {
+    border-radius: 0;
+    border-radius: initial;
+    mask:
+      url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="m0,1 c0,-1 0,-1 1,-1 l99,0 l0,100 l-100,0 Z"/></svg>') top left / calc(var(--ids__radius) * 100) no-repeat intersect,
+      url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="m0,0 l99,0 c1,0 1,0 1,1 l0,99 l-100,0 l0,-100 Z"/></svg>') top right / calc(var(--ids__radius) * 100) no-repeat intersect,
+      url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="m0,0 l100,0 l0,99 c0,1 -0,1 -1,1 l-99,0 Z"/></svg>') bottom right / calc(var(--ids__radius) * 100) no-repeat intersect,
+      url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="m0,0 l100,0 l0,100 l-99,0 c-1,0 -1,-0 -1,-1 Z"/></svg>') bottom left / calc(var(--ids__radius) * 100) no-repeat intersect
+    ;
+  }
+}
+
+header,
+footer {
+  padding: calc(var(--ids__density) * 1rem);
+}

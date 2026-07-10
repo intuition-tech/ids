@@ -1,0 +1,31 @@
+/* Именованные шкалы размеров.
+
+   Спейсеры и гэпы — в rem: считаются от корневого (флюидного) фонт-сайза
+   и не зависят от фонт-сайза окружения.
+   Радиусы — в em: скругление масштабируется вместе с текстом компонента. */
+
+:root {
+  --ids__spacer-s: calc(var(--ids__density) * 0.7rem);
+  --ids__spacer-m: calc(var(--ids__density) * 1.4rem);
+  --ids__spacer-l: calc(var(--ids__density) * 2.4rem);
+  --ids__spacer-xl: calc(var(--ids__density) * 4rem);
+
+  --ids__gap-s: 0.5rem;
+  --ids__gap-m: 1rem;
+  --ids__gap-l: 1.5rem;
+
+  --ids__radius-s: 0.2em;
+  --ids__radius-m: 0.3em;
+  --ids__radius-pill: 9999px;
+
+  /* Радиус сквиркла .ids__rounded. Можно переопределять локально. */
+  --ids__radius: 1.5em;
+
+  --ids__border-width-s: 1px;
+  --ids__border-width-m: 2px;
+
+  --ids__duration-instant: 0s;
+  --ids__duration-fast: 0.1s;
+  --ids__duration-base: 0.5s;
+  --ids__easing-base: ease;
+}

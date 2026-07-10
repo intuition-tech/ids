@@ -11,6 +11,11 @@ body {
   &:focus:not(:focus-visible) {
     outline: none;
   }
+
+  &:focus-visible {
+    outline: var(--ids__border-width-m) solid var(--ids__link);
+    outline-offset: 2px;
+  }
 }
 
 button,

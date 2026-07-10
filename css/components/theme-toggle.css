@@ -1,0 +1,55 @@
+.ids__theme-toggle {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+
+  /* Левый рэйл, под фиксированным ids-navbar: доступен из любого места страницы */
+  position: fixed;
+  left: 0.6em;
+  bottom: 0.6em;
+  z-index: 1;
+
+  .ids__theme-toggle__track {
+    display: flex;
+    align-items: center;
+    width: 2.05em;
+    height: 1em;
+    border-radius: var(--ids__radius-pill);
+    background: linear-gradient(
+      90deg,
+      var(--ids__surface) 0%,
+      var(--ids__text) 200%
+    );
+    /* Рамка — внутренней тенью, а не бордером: у пары «градиент + полупрозрачный
+       бордер» на скруглениях пилюли просвечивает фон страницы */
+    box-shadow: inset 0 0 0 var(--ids__border-width-s) var(--ids__border);
+    padding: calc(0.12em + var(--ids__border-width-s));
+  }
+
+  .ids__theme-toggle__thumb {
+    width: 0.68em;
+    height: 0.68em;
+    border-radius: 50%;
+    background-color: var(--ids__text);
+    transform: translateX(0);
+    transition: transform var(--ids__duration-fast) var(--ids__easing-base);
+  }
+
+  &[aria-checked="true"] .ids__theme-toggle__thumb {
+    /* Ход бегунка: внутренняя ширина трека минус бегунок,
+       чтобы справа оставался тот же зазор, что и слева */
+    transform: translateX(calc(1.13em - 2 * var(--ids__border-width-s)));
+  }
+
+  &[aria-checked="true"] .ids__theme-toggle__track {
+    background: linear-gradient(
+      90deg,
+      var(--ids__text) -100%,
+      var(--ids__surface) 100%
+    );
+  }
+}

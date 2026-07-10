@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/tokens/palette.css" />
     <link rel="stylesheet" href="css/tokens/colors.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/tokens/scales.css" />
     <link rel="stylesheet" href="css/settings.css" />
     <link rel="stylesheet" href="css/page-composition/layout.css" />
     <link rel="stylesheet" href="css/components/ids.css" />
     <link rel="stylesheet" href="css/components/gallery.css" />
     <link rel="stylesheet" href="css/components/navbar.css" />
-    <link rel="stylesheet" href="css/in-progress/gen-cover.css" />
+    <link rel="stylesheet" href="css/components/gen-cover.css" />
   </head>
 
   <body class="ids">
@@ -24,13 +24,10 @@
       <div class="ids__wrapper">
         <div class="ids__space L"></div>
         <div class="ids__text-width">
-          <div class="gen-cover ids__rounded">
-            <div class="gen-cover-image"></div>
-            <div class="gen-cover-text">
-              <h1>Intuition Design System</h1>              
-            </div>
-          </div>
-          
+          <ids-gen-cover class="ids__rounded" seed-a="27" seed-b="4">
+            <h1>Intuition Design System</h1>
+          </ids-gen-cover>
+
           <p>Intuition Design System, IDS – дизайн-система для вёрстки лендингов, онлайн-изданий и любых цифровых продуктов для веба, в основе которых лежат нарративы.</p>
           <p>Технически IDS представляет собой набор CSS-классов и JS-компонентов, разработанных с фокусом на простоту использования и максимальную гибкость настройки. Это не библиотека в традиционном понимании, а готовый шаблон вёрстки, который можно адаптировать под любые потребности проекта.</p>
           <p>Вы не подключаете IDS в проект как зависимость, не расширяете классы, не переопределяете свойства через сложные конфигурационные файлы. Вместо этого вы просто копируете исходный код дизайн-системы и меняете его как захочется, без оглядки на совместимость версий и без страха получить ломающие апдейты. Такой подход исключает проблемы с конфликтами зависимостей и позволяет полностью контролировать поведение каждого компонента. Если у вас нет навыков разработчика, простейший способ начать проект – скачать архив репозитория, открыть файл index.html в редакторе кода и смело делать из него что-то своё.</p>
@@ -40,5 +37,7 @@
     </main>
 
     <footer>© 2025</footer>
+
+    <script src="./js/gen-cover.js"></script>
   </body>
 </html>

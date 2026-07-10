@@ -158,7 +158,10 @@ class IdsFootnoteLink extends HTMLElement {
     this.#button.setAttribute("aria-expanded", isOpen);
     this.#button.setAttribute("aria-controls", `ids-footnote-${index}`);
     this.#button.classList.toggle("open", isOpen);
-    this.#button.classList.toggle("enlarge", index >= 10);
+    this.#button.classList.toggle(
+      "ids-footnote-link__button--pill",
+      symbol.length >= 2,
+    );
   };
 
   get index() {
@@ -346,15 +349,16 @@ class IdsFootnote extends HTMLElement {
   }
 
   #addFirstParagraphBadge(index) {
+    const symbol = getFootnoteSymbol(index);
     const firstP = this.#aside.querySelector("p:first-child");
     if (firstP) {
-      firstP.setAttribute("data-index", getFootnoteSymbol(index));
+      firstP.setAttribute("data-index", symbol);
     }
 
-    // Add enlarge-number class if index >= 10
-    if (index >= 10) {
-      this.#aside.classList.add("enlarge-number");
-    }
+    this.#aside.classList.toggle(
+      "ids-footnote--pill-badge",
+      symbol.length >= 2,
+    );
   }
 
   #setupEventListeners() {

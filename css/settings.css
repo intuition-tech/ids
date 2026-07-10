@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 /* Fonts */
 
 @font-face {
@@ -46,14 +42,13 @@
 body {
   font-family: "Inter";
   -webkit-font-smoothing: antialiased;
-  font-weight: 400;  
+  font-weight: 400;
 }
 
-/* Density and radius */
+/* Density */
 
 :root {
   --ids__density: 1.3;
-  --ids__radius: 1.5em;
 }
 
 body {
@@ -103,7 +98,7 @@ html {
     font-size: calc(var(--desktop-font-size-max) * 1px);
   }
 
-  
+
 }
 
 /* Smooth scroll for anchored links */

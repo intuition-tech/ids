@@ -10,7 +10,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(var(--ids__accent-RGB), 1);
+    background-color: var(--ids__accent);
   }
 
   & .gen-cover-text {

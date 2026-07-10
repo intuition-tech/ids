@@ -6,19 +6,34 @@
     <link rel="icon" type="image/png" href="../images/favicon-inverted.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preload" href="../fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../css/colors.css">
-    <link rel="stylesheet" href="../css/reset.css">
+    <script>
+      (function () {
+        var theme = localStorage.getItem("ids-theme");
+        if (theme === "dark" || (!theme && matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="../css/tokens/palette.css">
+    <link rel="stylesheet" href="../css/tokens/colors.css">
+    <link rel="stylesheet" href="../css/tokens/scales.css">
     <link rel="stylesheet" href="../css/settings.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/ids.css">
-    <link rel="stylesheet" href="../css/gallery.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/promo-block.css">
-    <link rel="stylesheet" href="../css/footnotes.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/page-composition/layout.css">
+    <link rel="stylesheet" href="../css/components/ids.css">
+    <link rel="stylesheet" href="../css/components/gallery.css">
+    <link rel="stylesheet" href="../css/components/navbar.css">
+    <link rel="stylesheet" href="../css/components/promo-block.css">
+    <link rel="stylesheet" href="../css/components/footnotes.css">
+    <link rel="stylesheet" href="../css/components/theme-toggle.css">
   </head>
 
   <body class="ids">
-    <header></header>
+    <header>
+      <button class="ids__theme-toggle" role="switch" aria-checked="false" aria-label="Dark theme">
+        <span class="ids__theme-toggle__track"><span class="ids__theme-toggle__thumb"></span></span>
+      </button>
+    </header>
 
     <main>
       <div class="ids__wrapper">
@@ -29,7 +44,7 @@
               <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0">.ids</h1>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.52 148.95" style="width: 15em">
                 <path
-                  style="fill: rgba(var(--ids__accent-RGB), 1)"
+                  style="fill: var(--ids__accent)"
                   d="M87.51,42.44c-13.74,34.36-24.86,69.73-24.86,84.88,0,10.11,10.71,20.21,21.22,20.21,8.08,0,20.01-7.88,28.9-19.2l-13.95-10.91c-6.06,6.06-11.12,9.9-14.15,9.9-1.01,0-2.02-1.01-2.02-3.03,0-7.07,5.46-29.3,23.85-74.78l-19-7.07ZM40.42,128.34c0,9.9-9.9,20.21-20.21,20.21S0,138.44,0,128.34s10.11-20.21,20.21-20.21c10.71,0,20.21,10.71,20.21,20.21M125.51,17.18c0,8.49-8.49,17.18-17.18,17.18s-17.18-8.69-17.18-17.18S99.84,0,108.33,0s17.18,8.49,17.18,17.18M318.52,57.8c-7.68-11.72-20.61-21.42-33.75-21.42-17.99,0-34.36,16.98-34.36,31.73,0,26.27,38.6,33.75,38.6,47.9,0,6.06-8.49,12.33-16.57,12.33-10.11,0-17.79-8.08-23.85-16.17l-13.34,13.14c6.26,9.1,21.83,22.23,38.2,22.23,18.19,0,36.38-17.38,36.38-34.56,0-23.24-40.22-32.74-40.22-47.49,0-5.66,6.06-11.32,13.34-11.32,8.29,0,15.16,6.27,22.23,16.57l13.34-12.93ZM199.07,78.82c-15.16,29.31-38.4,48.51-45.47,48.51-3.03,0-5.05-3.03-5.05-6.06,0-15.16,19.2-64.67,31.33-64.67,8.09,0,16.17,13.14,19.2,22.23M204.13,66.09l9.09,11.72c-3.03-23.24-21.22-41.43-35.37-41.43-29.3,0-50.53,66.69-50.53,87.91,0,12.13,12.13,24.25,24.25,24.25,15.16,0,34.36-20.21,61.64-62.65l-15.97,12.53c-3.43,15.16-9.09,31.12-13.14,46.28l20.21,4.24c11.12-47.49,22.03-94.99,36.18-142.48l-20.21-4.45c-5.05,20.21-10.51,43.65-16.17,64.07" />
               </svg>
             </ids-nav-item>
@@ -66,7 +81,7 @@
           <div class="ids__space L"></div>
           <div class="ids__text-width">
             <ids-nav-item id="setup" label="Setup"><h2>Setup</h2></ids-nav-item>
-            <p>Basic design system parameters are set in the <code>settings.css</code> file.</p>
+            <p>Basic design system parameters are set in the <code>css/settings.css</code> file.</p>
           </div>
         </div>
 
@@ -77,13 +92,13 @@
             <p>
               IDS uses the <a href="https://rsms.me/inter/" target="_BLANK">Inter</a> font by default, the variable web version. It&rsquo;s great!
               But the design system isn&rsquo;t tied to a specific font&nbsp;&mdash; you can use any font. Just place the font files in the <code>fonts</code> folder and edit the
-              Fonts section in the <code>settings.css</code> file. Please try not to pirate fonts.
+              Fonts section in the <code>css/settings.css</code> file. Please try not to pirate fonts.
             </p>
             <aside>
               <p>
                 When connecting separate font files for different weights (e.g., <code>regular</code> and <code>bold</code>), make sure the numeric values in the <code>font-weight</code> property everywhere
-                match the weight of the connected file specified in the <code>@font-face</code> block. Different browsers react differently to mismatches and may add
-                strokes to letters to compensate for the &ldquo;missing weight.&rdquo;
+                match the weight of the connected file specified in the <code>@font-face</code> block. Different browsers react differently to mismatches and may render
+                faux bold&nbsp;&mdash; adding strokes to letters to make up the missing weight.
               </p>
             </aside>
           </div>
@@ -110,7 +125,7 @@
               means mobile, more means desktop.
             </p>
             <p>
-              IDS implements the Fluid Typography concept&nbsp;&mdash; where the font-size for <code>body</code> is calculated based on viewport width, and then em or
+              IDS implements the Fluid Typography concept&nbsp;&mdash; where the font-size for the whole document (the <code>html</code> element) is calculated based on viewport width, and then em or
               rem units are used not only for text but also for margins, paddings, border radii, and sometimes element dimensions.
             </p>
             <aside>
@@ -135,7 +150,7 @@
                 This approach has a downside: the reader won&rsquo;t be able to enlarge text through browser zoom (Zoom In/Out, Ctrl/Cmd+/-). We consider this acceptable because
                 a) we recommend not using small text in the first place, so zooming isn&rsquo;t needed, b) pinch-to-zoom on screens and trackpads works.
               </p>
-              <p>If you consider this issue critical&nbsp;&mdash; disable the entire <code>Font-size calculation using variables</code> block in the <code>settings.css</code> file.</p>
+              <p>If you consider this issue critical&nbsp;&mdash; disable the entire <code>Font-size calculation using variables</code> block in the <code>css/settings.css</code> file.</p>
             </aside>
           </div>
         </div>
@@ -144,64 +159,227 @@
           <div class="ids__space"></div>
           <div class="ids__text-width">
             <h3>Color</h3>
-            <p>IDS stores the color palette in variables. Color naming is functional: named after what it&rsquo;s used for.</p>
+            <p>Color in IDS lives in variables and is split into two layers.</p>
+            <p>
+              The first layer is the palette, the <code>css/tokens/palette.css</code> file: raw color values with names like <code>--ids__color-blue-500</code>. The palette is
+              theme-independent and is never used directly anywhere except the second layer.
+            </p>
           </div>
           <style>
             .guide-color-plate {
               height: 6em;
               font-size: 0.8em;
               padding: 0.6em 0.8em;
+
+              & p {
+                margin-bottom: 0.2em;
+              }
+
+              & .guide-color-value {
+                font-size: 0.8em;
+                opacity: 0.8;
+              }
+            }
+            .guide-colors .ids__sequence-item {
+              --columns: 5;
+
+              @media (width < 768px) {
+                --columns: 3;
+              }
+            }
+            .guide-ref-dark {
+              display: none;
+            }
+            .dark .guide-ref-light {
+              display: none;
+            }
+            .dark .guide-ref-dark {
+              display: inline;
             }
           </style>
 
           <div class="ids__space"></div>
-          <div class="ids__sequence M">
+          <div class="ids__sequence M guide-colors">
             <div class="ids__sequence-item">
-              <div class="guide-color-plate" style="background-color: rgba(var(--ids__text-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
-                <p>text</p>
+              <div class="guide-color-plate" style="background-color: var(--ids__color-white); color: var(--ids__color-gray-950); border: var(--ids__border-width-s) solid var(--ids__border)">
+                <p>white</p>
+                <p class="guide-color-value">rgb(255, 255, 255)</p>
               </div>
             </div>
             <div class="ids__sequence-item">
-              <div class="guide-color-plate" style="background-color: rgba(var(--ids__link-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
-                <p>link</p>
+              <div class="guide-color-plate" style="background-color: var(--ids__color-gray-100); color: var(--ids__color-gray-950)">
+                <p>gray-100</p>
+                <p class="guide-color-value">rgb(238, 240, 242)</p>
               </div>
             </div>
             <div class="ids__sequence-item">
-              <div class="guide-color-plate" style="background-color: rgba(var(--ids__hover-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
-                <p>hover</p>
+              <div class="guide-color-plate" style="background-color: var(--ids__color-gray-200); color: var(--ids__color-gray-950)">
+                <p>gray-200</p>
+                <p class="guide-color-value">rgb(220, 221, 223)</p>
               </div>
             </div>
             <div class="ids__sequence-item">
-              <div class="guide-color-plate" style="background-color: rgba(var(--ids__mark-RGB), 1)">
-                <p>mark</p>
+              <div class="guide-color-plate" style="background-color: var(--ids__color-gray-400); color: var(--ids__color-gray-950)">
+                <p>gray-400</p>
+                <p class="guide-color-value">rgb(153, 156, 160)</p>
               </div>
             </div>
             <div class="ids__sequence-item">
-              <div class="guide-color-plate" style="background-color: rgba(var(--ids__code-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
-                <p>code</p>
+              <div class="guide-color-plate" style="background-color: var(--ids__color-gray-500); color: var(--ids__color-white)">
+                <p>gray-500</p>
+                <p class="guide-color-value">rgb(115, 120, 125)</p>
               </div>
             </div>
             <div class="ids__sequence-item">
-              <div class="guide-color-plate" style="background-color: rgba(var(--ids__accent-RGB), 1); color: rgba(var(--ids__background-RGB), 1)">
-                <p>accent</p>
+              <div class="guide-color-plate" style="background-color: var(--ids__color-gray-600); color: var(--ids__color-white)">
+                <p>gray-600</p>
+                <p class="guide-color-value">rgb(85, 88, 92)</p>
               </div>
             </div>
             <div class="ids__sequence-item">
-              <div class="guide-color-plate" style="background-color: rgba(var(--ids__surface-RGB), 1)">
-                <p>surface</p>
+              <div class="guide-color-plate" style="background-color: var(--ids__color-gray-700); color: var(--ids__color-white)">
+                <p>gray-700</p>
+                <p class="guide-color-value">rgb(55, 58, 62)</p>
               </div>
             </div>
             <div class="ids__sequence-item">
-              <div class="guide-color-plate" style="background-color: rgba(var(--ids__background-RGB), 1)">
-                <p>background</p>
+              <div class="guide-color-plate" style="background-color: var(--ids__color-gray-800); color: var(--ids__color-white)">
+                <p>gray-800</p>
+                <p class="guide-color-value">rgb(32, 33, 36)</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__color-gray-900); color: var(--ids__color-white)">
+                <p>gray-900</p>
+                <p class="guide-color-value">rgb(18, 18, 20)</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__color-gray-950); color: var(--ids__color-white)">
+                <p>gray-950</p>
+                <p class="guide-color-value">rgb(5, 5, 5)</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__color-blue-450); color: var(--ids__color-white)">
+                <p>blue-450</p>
+                <p class="guide-color-value">rgb(60, 130, 250)</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__color-blue-500); color: var(--ids__color-white)">
+                <p>blue-500</p>
+                <p class="guide-color-value">rgb(0, 100, 240)</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__color-green-450); color: var(--ids__color-gray-950)">
+                <p>green-450</p>
+                <p class="guide-color-value">rgb(40, 215, 40)</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__color-green-500); color: var(--ids__color-gray-950)">
+                <p>green-500</p>
+                <p class="guide-color-value">rgb(0, 200, 0)</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__color-green-600); color: var(--ids__color-white)">
+                <p>green-600</p>
+                <p class="guide-color-value">rgb(30, 170, 60)</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__color-red-450); color: var(--ids__color-white)">
+                <p>red-450</p>
+                <p class="guide-color-value">rgb(255, 70, 95)</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__color-red-500); color: var(--ids__color-white)">
+                <p>red-500</p>
+                <p class="guide-color-value">rgb(253, 47, 75)</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__color-yellow-500); color: var(--ids__color-gray-950)">
+                <p>yellow-500</p>
+                <p class="guide-color-value">rgb(255, 225, 0)</p>
               </div>
             </div>
           </div>
 
           <div class="ids__space"></div>
           <div class="ids__text-width">
-            <p>The color palette lives in the <code>colors.css</code> file.</p>
-            <p>Each variable stores a string of three comma-separated values in RGB space, for example: <code>253, 47, 75</code>.</p>
+            <p>
+              The second layer is semantic colors, the <code>css/tokens/colors.css</code> file: naming is functional, named after what it&rsquo;s used for. Each semantic color
+              references the palette. The dark theme is just a different set of references to the same palette: each tile is labeled with the palette color the token references
+              in the current theme.
+            </p>
+          </div>
+
+          <div class="ids__space"></div>
+          <div class="ids__sequence M guide-colors">
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__text); color: var(--ids__background)">
+                <p>text</p>
+                <p class="guide-color-value"><span class="guide-ref-light">gray-950</span><span class="guide-ref-dark">gray-200</span></p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__link); color: var(--ids__background)">
+                <p>link</p>
+                <p class="guide-color-value"><span class="guide-ref-light">blue-500</span><span class="guide-ref-dark">blue-450</span></p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__hover); color: var(--ids__background)">
+                <p>hover</p>
+                <p class="guide-color-value"><span class="guide-ref-light">green-500</span><span class="guide-ref-dark">green-450</span></p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__mark); color: var(--ids__color-gray-950)">
+                <p>mark</p>
+                <p class="guide-color-value">yellow-500</p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__code); color: var(--ids__background)">
+                <p>code</p>
+                <p class="guide-color-value"><span class="guide-ref-light">gray-500</span><span class="guide-ref-dark">gray-400</span></p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__text-caption); color: var(--ids__background)">
+                <p>text-caption</p>
+                <p class="guide-color-value"><span class="guide-ref-light">gray-600</span><span class="guide-ref-dark">gray-400</span></p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__accent); color: var(--ids__background)">
+                <p>accent</p>
+                <p class="guide-color-value"><span class="guide-ref-light">red-500</span><span class="guide-ref-dark">red-450</span></p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__surface)">
+                <p>surface</p>
+                <p class="guide-color-value"><span class="guide-ref-light">gray-100</span><span class="guide-ref-dark">gray-800</span></p>
+              </div>
+            </div>
+            <div class="ids__sequence-item">
+              <div class="guide-color-plate" style="background-color: var(--ids__background); border: var(--ids__border-width-s) solid var(--ids__border)">
+                <p>background</p>
+                <p class="guide-color-value"><span class="guide-ref-light">white</span><span class="guide-ref-dark">gray-900</span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ids__space"></div>
+          <div class="ids__text-width">
+            <p>Only semantic colors are used in layout. Semi-transparent variants are not stored in variables&nbsp;&mdash; they are derived in place with <code>color-mix</code>.</p>
 
             <div class="ids__space"></div>
             <aside>
@@ -209,20 +387,20 @@
 
               <p>
                 It&rsquo;s more convenient to store transparency information in selector properties rather than in variables. Instead of 30-40 variables for each transparency variant&nbsp;&mdash; a dozen colors with
-                clear names and obvious code in selector properties.
+                clear names and obvious code in selector properties. And since a semi-transparent color is derived from a semantic one, it adapts to the theme automatically.
               </p>
             </aside>
             <div class="ids__sequence XL">
               <div class="ids__sequence-item">
                 <p>Not like this</p>
                 <p>
-                  <code><s>color: var(--ids__accent-RGB);</s></code>
+                  <code><s>color: var(--ids__accent-50);</s></code>
                 </p>
               </div>
               <div class="ids__sequence-item">
                 <p>But like this</p>
-                <p><code>color: rgb(var(--ids__accent-RGB));</code></p>
-                <p><code>color: rgba(var(--ids__accent-RGB), 0.5);</code></p>
+                <p><code>color: var(--ids__accent);</code></p>
+                <p><code>color: color-mix(in srgb, var(--ids__accent) 50%, transparent);</code></p>
               </div>
             </div>
           </div>
@@ -249,9 +427,9 @@
         </div>
       </div>
 
-      <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+      <div style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)">
         <div class="ids__wrapper">
-          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+          <div style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)">
             <div class="ids__space XL"></div>
             <div class="ids__space XL"></div>
           </div>
@@ -267,9 +445,9 @@
         </div>
       </div>
 
-      <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+      <div style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)">
         <div class="ids__wrapper L">
-          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+          <div style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)">
             <div class="ids__space XL"></div>
             <div class="ids__space XL"></div>
           </div>
@@ -285,9 +463,9 @@
         </div>
       </div>
 
-      <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+      <div style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)">
         <div class="ids__wrapper XL">
-          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+          <div style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)">
             <div class="ids__space XL"></div>
             <div class="ids__space XL"></div>
           </div>
@@ -301,9 +479,9 @@
         </div>
       </div>
 
-      <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+      <div style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)">
         <div class="ids__wrapper XXL">
-          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+          <div style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)">
             <div class="ids__space XL"></div>
             <div class="ids__space XL"></div>
           </div>
@@ -320,9 +498,9 @@
             </p>
           </div>
           <p><code>.ids__text-width</code></p>
-          <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+          <div style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)">
             <div class="ids__text-width">
-              <div style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+              <div style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)">
                 <div class="ids__space XL"></div>
                 <div class="ids__space XL"></div>
               </div>
@@ -344,19 +522,19 @@
           <div class="ids__sequence M gap-S">
             <div class="ids__sequence-item">
               <p><code>ids__space.S</code></p>
-              <div class="ids__space S" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              <div class="ids__space S" style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)"></div>
             </div>
             <div class="ids__sequence-item">
               <p><code>ids__space.M</code></p>
-              <div class="ids__space M" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              <div class="ids__space M" style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)"></div>
             </div>
             <div class="ids__sequence-item">
               <p><code>ids__space.L</code></p>
-              <div class="ids__space L" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              <div class="ids__space L" style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)"></div>
             </div>
             <div class="ids__sequence-item">
               <p><code>ids__space.XL</code></p>
-              <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+              <div class="ids__space XL" style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)"></div>
             </div>
           </div>
           <div class="ids__space L"></div>
@@ -486,7 +664,7 @@
         </div>
 
         <div class="section">
-          <div class="ids__space"></div>
+          <div class="ids__space M"></div>
           <div class="ids__text-width">
             <h3>Illustration</h3>
             <p><code>figure</code> <code>figcaption</code></p>
@@ -498,7 +676,7 @@
         </div>
 
         <div class="section">
-          <div class="ids__space"></div>
+          <div class="ids__space M"></div>
           <div class="ids__text-width">
             <h3>List</h3>
             <p><code>ul</code> <code>li</code></p>
@@ -518,7 +696,7 @@
         </div>
 
         <div class="section">
-          <div class="ids__space"></div>
+          <div class="ids__space M"></div>
           <div class="ids__text-width">
             <h3>Link</h3>
             <p><code>a</code></p>
@@ -546,7 +724,7 @@
         </div>
 
         <div class="section">
-          <div class="ids__space"></div>
+          <div class="ids__space M"></div>
           <div class="ids__text-width">
             <h3>Additional text</h3>
             <p><code>aside</code></p>
@@ -559,10 +737,8 @@
           </div>
         </div>
 
-        <div class="ids__space M"></div>
-
         <div class="section">
-          <div class="ids__space"></div>
+          <div class="ids__space M"></div>
           <div class="ids__text-width">
             <h3>Grid</h3>
             <p>
@@ -585,12 +761,12 @@
             <p><code>ids__sequence.XL</code></p>
             <div class="ids__sequence XL gap-S">
               <div class="ids__sequence-item">
-                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+                <div class="ids__space XL" style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)">
                   <p>Text in cell</p>
                 </div>
               </div>
               <div class="ids__sequence-item">
-                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)">
+                <div class="ids__space XL" style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)">
                   <p>Text in cell</p>
                 </div>
               </div>
@@ -599,13 +775,13 @@
             <p><code>ids__sequence.L</code></p>
             <div class="ids__sequence L gap-S">
               <div class="ids__sequence-item">
-                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+                <div class="ids__space XL" style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)"></div>
               </div>
               <div class="ids__sequence-item">
-                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+                <div class="ids__space XL" style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)"></div>
               </div>
               <div class="ids__sequence-item">
-                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+                <div class="ids__space XL" style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)"></div>
               </div>
             </div>
 
@@ -614,22 +790,22 @@
 
             <div class="ids__sequence S gap-S">
               <div class="ids__sequence-item">
-                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+                <div class="ids__space XL" style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)"></div>
               </div>
               <div class="ids__sequence-item">
-                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+                <div class="ids__space XL" style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)"></div>
               </div>
               <div class="ids__sequence-item">
-                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+                <div class="ids__space XL" style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)"></div>
               </div>
               <div class="ids__sequence-item">
-                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+                <div class="ids__space XL" style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)"></div>
               </div>
               <div class="ids__sequence-item">
-                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+                <div class="ids__space XL" style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)"></div>
               </div>
               <div class="ids__sequence-item">
-                <div class="ids__space XL" style="background-color: rgba(var(--ids__accent-RGB), 0.1)"></div>
+                <div class="ids__space XL" style="background-color: color-mix(in srgb, var(--ids__accent) 10%, transparent)"></div>
               </div>
             </div>
 
@@ -696,10 +872,8 @@
           </div>
         </div>
 
-        <div class="ids__space M"></div>
-
         <div class="section">
-          <div class="ids__space"></div>
+          <div class="ids__space M"></div>
           <div class="ids__text-width">
             <h3>Table</h3>
             <p><code>table</code>&nbsp;&mdash; regular table</p>
@@ -1000,6 +1174,66 @@
               </p>
             </ids-footnote>
 
+            <p>
+              And here is a longer paragraph to show footnotes with two-digit numbers. A good footnote doesn&rsquo;t interrupt
+              <ids-footnote-link>reading</ids-footnote-link>&nbsp;&mdash; it complements it: it holds
+              <ids-footnote-link>terms</ids-footnote-link>,
+              <ids-footnote-link>sources</ids-footnote-link>,
+              <ids-footnote-link>digressions</ids-footnote-link> and other
+              <ids-footnote-link>details</ids-footnote-link> that don&rsquo;t belong in the main text. Once a footnote number
+              becomes two-digit, it no longer fits in the
+              <ids-footnote-link>circle</ids-footnote-link>&nbsp;&mdash; and the badge stretches into a
+              <ids-footnote-link>pill</ids-footnote-link>. You can see it on the
+              <ids-footnote-link>tenth</ids-footnote-link>,
+              <ids-footnote-link>eleventh</ids-footnote-link> and
+              <ids-footnote-link>twelfth</ids-footnote-link> footnotes of this
+              <ids-footnote-link>paragraph</ids-footnote-link>.
+            </p>
+
+            <ids-footnote>
+              <p>The third footnote: reading really wasn&rsquo;t interrupted.</p>
+            </ids-footnote>
+
+            <ids-footnote>
+              <p>A term is a word or phrase that needs an explanation. For example, &ldquo;footnote.&rdquo;</p>
+            </ids-footnote>
+
+            <ids-footnote>
+              <p>A link to the original source could go here.</p>
+            </ids-footnote>
+
+            <ids-footnote>
+              <p>A digression is a thought too good to throw away, but one that breaks the rhythm of the main text.</p>
+            </ids-footnote>
+
+            <ids-footnote>
+              <p>Details are for those who read this far.</p>
+            </ids-footnote>
+
+            <ids-footnote>
+              <p>The eighth footnote is about the circle. Single-digit numbers fit in it entirely.</p>
+            </ids-footnote>
+
+            <ids-footnote>
+              <p>A pill is a rectangle with fully rounded ends. The ninth footnote is the last one in a circle.</p>
+            </ids-footnote>
+
+            <ids-footnote>
+              <p>The tenth footnote: the number no longer fits in the circle, so the badge became a pill.</p>
+            </ids-footnote>
+
+            <ids-footnote>
+              <p>The eleventh footnote&nbsp;&mdash; to check that the pill doesn&rsquo;t fall apart.</p>
+            </ids-footnote>
+
+            <ids-footnote>
+              <p>The twelfth footnote. You can stop counting now.</p>
+            </ids-footnote>
+
+            <ids-footnote>
+              <p>The paragraph is over, and so are the footnotes.</p>
+            </ids-footnote>
+
             <div class="ids__space M"></div>
 
             <p><strong>Markup structure:</strong></p>
@@ -1032,6 +1266,12 @@
             <li><code>id</code>&nbsp;&mdash; unique heading identifier</li>
             <li><code>label</code>&nbsp;&mdash; link text</li>
           </ul>
+          <p>
+            You can see an example of such a navbar in the top left corner of this page&nbsp;&mdash; the section navigation of this guide is built with it.
+          </p>
+          <p>
+            The menu doesn&rsquo;t have to be fixed relative to the window: the component can be placed anywhere, including right in the text flow.
+          </p>
           </div>
         </div>
         <div class="section">
@@ -1305,5 +1545,6 @@
     <script src="../js/footnotes.js"></script>
     <script src="../js/navbar.js"></script>
     <script src="../js/promo-block.js"></script>
+    <script src="../js/theme-toggle.js"></script>
   </body>
 </html>

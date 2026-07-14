@@ -4,7 +4,8 @@
  *
  * Markup: [data-gen-cover-demo] with [data-gen-cover-palette],
  * [data-gen-cover-frames], [data-gen-cover-randomize-all],
- * [data-gen-cover-grain]; gallery [data-gen-cover-gallery] nearby.
+ * [data-gen-cover-grain], [data-gen-cover-rounded];
+ * gallery [data-gen-cover-gallery] nearby.
  */
 (function () {
   const SEED_MAX = 99;
@@ -251,7 +252,7 @@
     const host =
       root.querySelector("[data-gen-cover-frames]") ||
       root.querySelector("[data-gen-cover-frame]");
-    if (!host) return { getCovers: () => [firstCover], randomizeAll() {}, setGrain() {} };
+    if (!host) return { getCovers: () => [firstCover], randomizeAll() {}, setGrain() {}, setRounded() {} };
 
     host.replaceChildren();
     host.classList.add("ids__gen-cover-demo__frames");
@@ -490,16 +491,29 @@
       return input && !input.checked ? "off" : null;
     }
 
+    function roundedEnabled() {
+      const input = root.querySelector("[data-gen-cover-rounded]");
+      return !input || input.checked;
+    }
+
     function applyGrain(cover) {
       const off = grainAttr();
       if (off) cover.setAttribute("grain", off);
       else cover.removeAttribute("grain");
     }
 
+    function applyRounded(cover) {
+      cover.classList.toggle("ids__rounded", roundedEnabled());
+    }
+
+    function coverBaseClass() {
+      return roundedEnabled() ? "ids__rounded" : "";
+    }
+
     plus.addEventListener("click", () => {
       const prev = readPreviousSize();
       const next = document.createElement("ids-gen-cover");
-      next.className = firstCover.className || "ids__rounded";
+      next.className = coverBaseClass();
       next.setAttribute("palette", prev.palette);
       next.setAttribute("seed-a", String(randomSeed()));
       next.setAttribute("seed-b", String(randomSeed()));
@@ -508,10 +522,11 @@
     });
 
     const [firstLayout, ...restLayouts] = DEFAULT_LAYOUTS;
+    applyRounded(firstCover);
     addItem(firstCover, firstLayout);
     for (const layout of restLayouts) {
       const next = document.createElement("ids-gen-cover");
-      next.className = firstCover.className || "ids__rounded";
+      next.className = coverBaseClass();
       next.setAttribute(
         "palette",
         firstCover.getAttribute("palette") || "prism",
@@ -537,6 +552,11 @@
         for (const item of items) {
           if (enabled) item.cover.removeAttribute("grain");
           else item.cover.setAttribute("grain", "off");
+        }
+      },
+      setRounded(enabled) {
+        for (const item of items) {
+          item.cover.classList.toggle("ids__rounded", enabled);
         }
       },
     };
@@ -572,6 +592,14 @@
         galleryApi.setGrain(grain.checked);
       });
       galleryApi.setGrain(grain.checked);
+    }
+
+    const rounded = root.querySelector("[data-gen-cover-rounded]");
+    if (rounded) {
+      rounded.addEventListener("change", () => {
+        galleryApi.setRounded(rounded.checked);
+      });
+      galleryApi.setRounded(rounded.checked);
     }
   }
 

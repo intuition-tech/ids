@@ -1,10 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>Intuition Design System Template</title>
     <link rel="icon" type="image/png" href="images/favicon-inverted.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      (function () {
+        var theme = localStorage.getItem("ids-theme");
+        if (
+          theme === "dark" ||
+          (!theme && matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
     <link rel="stylesheet" href="css/tokens/palette.css" />
     <link rel="stylesheet" href="css/tokens/colors.css" />
     <link rel="stylesheet" href="css/reset.css" />
@@ -14,30 +25,65 @@
     <link rel="stylesheet" href="css/components/ids.css" />
     <link rel="stylesheet" href="css/components/gallery.css" />
     <link rel="stylesheet" href="css/components/navbar.css" />
+    <link rel="stylesheet" href="css/components/theme-toggle.css" />
     <link rel="stylesheet" href="css/components/gen-cover.css" />
   </head>
 
   <body class="ids">
-    <header><a href="index.html">←IDS</a></header>
+    <header>
+      <a href="index.html">←IDS</a>
+      <button
+        class="ids__theme-toggle"
+        role="switch"
+        aria-checked="false"
+        aria-label="Тёмная тема">
+        <span class="ids__theme-toggle__track"
+          ><span class="ids__theme-toggle__thumb"></span
+        ></span>
+      </button>
+    </header>
 
     <main>
       <div class="ids__wrapper">
         <div class="ids__space L"></div>
         <div class="ids__text-width">
-          <ids-gen-cover class="ids__rounded" seed-a="27" seed-b="4">
-            <h1>Intuition Design System</h1>
-          </ids-gen-cover>
-
-          <p>Intuition Design System, IDS – дизайн-система для вёрстки лендингов, онлайн-изданий и любых цифровых продуктов для веба, в основе которых лежат нарративы.</p>
-          <p>Технически IDS представляет собой набор CSS-классов и JS-компонентов, разработанных с фокусом на простоту использования и максимальную гибкость настройки. Это не библиотека в традиционном понимании, а готовый шаблон вёрстки, который можно адаптировать под любые потребности проекта.</p>
-          <p>Вы не подключаете IDS в проект как зависимость, не расширяете классы, не переопределяете свойства через сложные конфигурационные файлы. Вместо этого вы просто копируете исходный код дизайн-системы и меняете его как захочется, без оглядки на совместимость версий и без страха получить ломающие апдейты. Такой подход исключает проблемы с конфликтами зависимостей и позволяет полностью контролировать поведение каждого компонента. Если у вас нет навыков разработчика, простейший способ начать проект – скачать архив репозитория, открыть файл index.html в редакторе кода и смело делать из него что-то своё.</p>
+          <div class="ids__gen-cover-demo" data-gen-cover-demo>
+            <div data-gen-cover-frames></div>
+            <div class="ids__gen-cover-demo__toolbar">
+              <div class="ids__gen-cover-demo__field">
+                <span class="ids__gen-cover-demo__label">Palette</span>
+                <div data-gen-cover-palette></div>
+              </div>
+              <button type="button" data-gen-cover-randomize-all>
+                Randomize all
+              </button>
+              <label class="ids__gen-cover-demo__field">
+                <input type="checkbox" data-gen-cover-grain checked />
+                <span class="ids__gen-cover-demo__label">Grain</span>
+              </label>
+            </div>
+          </div>
         </div>
+
+        <div class="ids__space S"></div>
+
+        <div data-gen-cover-gallery>
+          <ids-gen-cover
+            class="ids__rounded"
+            palette="prism"
+            seed-a="27"
+            seed-b="4">
+          </ids-gen-cover>
+        </div>
+
         <div class="ids__space XL"></div>
       </div>
     </main>
 
     <footer>© 2025</footer>
 
+    <script src="./js/theme-toggle.js"></script>
     <script src="./js/gen-cover.js"></script>
+    <script src="./js/gen-cover-demo.js"></script>
   </body>
 </html>

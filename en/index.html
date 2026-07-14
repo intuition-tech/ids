@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../css/components/promo-block.css">
     <link rel="stylesheet" href="../css/components/footnotes.css">
     <link rel="stylesheet" href="../css/components/theme-toggle.css">
+    <link rel="stylesheet" href="../css/components/gen-cover.css">
     <style>
       /* Example highlight for the documentation */
       .guide-tint {
@@ -889,7 +890,7 @@
             <div class="ids__space"></div>
             <aside>
               <style>
-                .ids table {
+                .ids table.disc-demo {
                   tr {
                     & td:first-child {
                       text-align: center;
@@ -907,7 +908,7 @@
                   }
                 }
               </style>
-              <table>
+              <table class="disc-demo">
                 <thead>
                   <tr>
                     <th>Type</th>
@@ -1540,6 +1541,43 @@
           </div>
         </div>
 
+        <div class="section">
+          <div class="ids__space L"></div>
+          <div class="ids__text-width">
+            <h3><code>ids-gen-cover</code></h3>
+            <p>
+              Generative cover. The image is built deterministically from two numbers in the <code>seed-a</code> and <code>seed-b</code> attributes: the same seeds always produce the same picture. Tag content becomes a caption over the image.
+            </p>
+            <p>
+              On hover the color window shifts one palette step. Film grain sits on top (SVG noise, <code>mix-blend-mode: overlay</code>); turn it off with <code>grain=&quot;off&quot;</code>.
+            </p>
+            <div class="ids__space S"></div>
+
+            <div class="ids__gen-cover-demo" data-gen-cover-demo>
+              <div data-gen-cover-frames></div>
+              <div class="ids__gen-cover-demo__toolbar">
+                <div class="ids__gen-cover-demo__field">
+                  <span class="ids__gen-cover-demo__label">Palette</span>
+                  <div data-gen-cover-palette></div>
+                </div>
+                <button type="button" data-gen-cover-randomize-all>Randomize all</button>
+                <label class="ids__gen-cover-demo__field">
+                  <input type="checkbox" data-gen-cover-grain checked />
+                  <span class="ids__gen-cover-demo__label">Grain</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div data-gen-cover-gallery>
+            <ids-gen-cover class="ids__rounded" palette="prism" seed-a="27" seed-b="4">
+              <h1>Intuition Design System</h1>
+            </ids-gen-cover>
+          </div>
+
+          <div class="ids__space M"></div>
+        </div>
+
         <div class="ids__space XL"></div>
       </div>
     </main>
@@ -1553,5 +1591,7 @@
     <script src="../js/navbar.js"></script>
     <script src="../js/promo-block.js"></script>
     <script src="../js/theme-toggle.js"></script>
+    <script src="../js/gen-cover.js"></script>
+    <script src="../js/gen-cover-demo.js"></script>
   </body>
 </html>
